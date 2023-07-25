@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGV</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      #wrap {
+        width: 100%;
+      }
+      header {
+        width: 100%;
+        height: 30px;
+        background: #e32213;
+      }
+      header > .head {
+        width: 1025px;
+        margin: 0 auto;
+      }
+      header > .head > .top {
+        float: right;
+        height: 100%;
+        line-height: 30px;
+      }
+      header > .head > .top > li {
+        float: left;
+        padding-left: 40px;
+      }
+      header > .head > .top > li > a {
+        color: #fff;
+        font-size: 14px;
+      }
+      header > .head > .top > li:hover > a {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+      }
+      nav {
+        width: 1025px;
+        height: 80px;
+        clear: both;
+        margin: 0 auto 5px;
+        overflow: hidden;
+        line-height: 80px;
+      }
+      nav > a {
+        float: left;
+      }
+      nav > a > img {
+        vertical-align: middle;
+      }
+      nav > .menu {
+        float: right;
+      }
+      nav > .menu > ul {
+        line-height: 80px;
+      }
+      nav > .menu > ul > li {
+        float: left;
+        font-size: 16px;
+        font-weight: 900;
+        padding-left: 50px;
+        margin-top: 5px;
+      }
+      nav > .menu > ul > li > a {
+        color: #e32213;
+      }
+      nav > .menu > ul > li:hover a {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+      }
+      section {
+        width: 1025px;
+        margin: 0 auto;
+      }
+      section > .visual > li > img {
+        width: 100%;
+        height: 312px;
+        border-radius: 20px;
+      }
+      section > .content {
+        width: 100%;
+        margin: 50px 0;
+        overflow: hidden;
+      }
+      section > .content > ul > li {
+        width: 25%;
+        text-align: center;
+        float: left;
+      }
+      article {
+        width: 1025px;
+        margin: 0 auto 30px;
+      }
+      article h1 {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      article > .left {
+        float: left;
+        width: 50%;
+      }
+      article > .left > p {
+        text-align: right;
+        margin: 0 20px;
+      }
+      article > .right {
+        width: 50%;
+        display: table;
+      }
+      article > .right table {
+        width: 100%;
+        table-layout: fixed;
+        cursor: pointer;
+      }
+      article > .right tr td {
+        padding-bottom: 10px;
+      }
+      article > .right tr td:first-child {
+        width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      article > .right tr td:last-child {
+        text-align: right;
+      }
+      footer {
+        width: 1025px;
+        height: 100px;
+        clear: both;
+        margin: 0 auto;
+        background: #d8b978;
+        line-height: 100px;
+        font-size: 20px;
+      }
+      footer > p {
+        padding-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="head">
+          <ul class="top">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">English</a></li>
+          </ul>
+        </div>
+      </header>
+      <nav>
+        <a href="#"><img src="images/CGV/image/logo.gif" alt="logo" /></a>
+        <div class="menu">
+          <ul>
+            <li><a href="#">영화예매</a></li>
+            <li><a href="#">신작개봉</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">CGV매점</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <ul class="visual">
+          <li><img src="images/CGV/image/visual.jpg" alt="visual" /></li>
+        </ul>
+        <div class="content">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="images/CGV/image/img01.png" alt="img01"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/CGV/image/img02.png" alt="img02"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/CGV/image/img03.png" alt="img03"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/CGV/image/img04.png" alt="img04"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <article>
+        <div class="left">
+          <h1>이벤트</h1>
+          <p><img src="images/CGV/image/banner.jpg" alt="banner" /></p>
+        </div>
+        <div class="right">
+          <h1>공지사항</h1>
+          <table>
+            <tr>
+              <td>공지사항 제목이 들어갑니다.</td>
+              <td>2023-07-20</td>
+            </tr>
+            <tr>
+              <td>공지사항 제목이 들어갑니다.</td>
+              <td>2023-07-20</td>
+            </tr>
+            <tr>
+              <td>공지사항 제목이 들어갑니다.</td>
+              <td>2023-07-20</td>
+            </tr>
+            <tr>
+              <td>공지사항 제목이 들어갑니다.</td>
+              <td>2023-07-20</td>
+            </tr>
+            <tr>
+              <td>
+                공지사항 제목이 들어갑니다. 공지사항 제목이 들어갑니다. 공지사항
+                제목이 들어갑니다.
+              </td>
+              <td>2023-07-20</td>
+            </tr>
+          </table>
+        </div>
+      </article>
+      <footer>
+        <p>All Copyrights Reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

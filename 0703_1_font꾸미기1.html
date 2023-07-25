@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>font꾸미기</title>
+    <style>
+      body {
+        font-family: Arial, "나눔고딕", Dotum, sans-serif;
+      }
+      p {
+        /* letter-spacing은 자간 조절 */
+        letter-spacing: 10px;
+        /* word-spacing은 단어 사이 간격 조절 */
+        word-spacing: 20px;
+        /* text-decoration: line-through; 취소선*/
+        /* overline은 윗줄 */
+        text-decoration: overline;
+        /* capitalize는 단어의 앞글자들을 대문자로 바꿔줌 */
+        text-transform: capitalize;
+        text-align: center;
+        height: 50px;
+        border: 1px solid #000;
+        /* line-height: 50px; */
+        vertical-align: middle;
+      }
+      div {
+        width: 100px;
+        border: 1px solid #000;
+        vertical-align: middle;
+        display: inline-block;
+        /* text-indent는 들여쓰기 */
+        text-indent: 20px;
+      }
+      div.one {
+        height: 100px;
+        /* line-height로 수직정렬할때는 두줄 이상일 때 안됨 */
+        line-height: 100px;
+      }
+      div.two {
+        height: 50px;
+        line-height: 50px;
+        text-shadow: 2px 2px 0 rgba(255, 0, 0, 1);
+      }
+      .justify {
+        width: 500px;
+        /* justify는 양쪽정렬 */
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <p>green computer academy</p>
+    <p>그린 컴퓨터 아카데미</p>
+    <span>green computer academy</span><br />
+    <span>그린 컴퓨터 아카데미</span>
+    <div class="one">one<br />one</div>
+    <div class="two">two</div>
+    <div class="justify">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </div>
+    <div class="justify">
+      <!-- 한글은 정렬시 단어를 분리해서 밑으로 내리지만 영어는 단어를 분리해서 내리지 않음 -->
+      국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은
+      이를 해제하여야 한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한
+      재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인
+      때에는 부결된 것으로 본다.
+    </div>
+  </body>
+</html>

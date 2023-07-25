@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Growth Clinic Story제작(내가한거)</title>
+    <style>
+      @font-face {
+        font-family: "noto";
+        src: url(webfonts/NotoSansKR-Medium.otf) format(otf);
+      }
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "noto", sans-serif;
+      }
+      #wrap {
+        width: 100%;
+      }
+      header {
+        width: 1001px;
+        margin: 50px auto 50px;
+      }
+      nav {
+        width: 100%;
+        background: rgb(5, 5, 88);
+      }
+      nav .navi {
+        width: 1001px;
+        margin: 0 auto;
+
+        font-size: 20px;
+        text-align: center;
+      }
+      nav .menu ul li {
+        position: relative;
+        float: left;
+        z-index: 10;
+      }
+      nav .menu ul li:hover a {
+        background: red;
+      }
+      nav .menu ul li a {
+        display: block;
+        color: #fff;
+        padding: 25px 25px;
+      }
+      section {
+        width: 100%;
+        height: 290px;
+        background-color: #bad14e;
+      }
+      section p {
+        position: relative;
+        width: 1001px;
+        height: 360px;
+        margin: 0 auto;
+      }
+      section p a {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: -70px;
+        background-image: url(images/bg_main.png);
+      }
+      article {
+        clear: both;
+        width: 1001px;
+        margin: 0 auto;
+        color: #333;
+      }
+      article .content .title {
+        margin: 15px 0;
+      }
+      article .content p {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      article .content .left {
+        float: left;
+        width: 60%;
+      }
+      article .content .left .con1 {
+        margin-bottom: 70px;
+      }
+      article .content input {
+        float: right;
+        padding: 2px;
+      }
+      article .content .right {
+        float: right;
+        width: 30%;
+      }
+      article .content .right ul li {
+        margin-bottom: 5px;
+      }
+      article .content .right ul li a {
+        color: rgb(13, 158, 191);
+        font-weight: 600;
+      }
+      footer {
+        clear: both;
+        width: 100%;
+        background: #f0f0f0;
+        margin-top: 50px;
+      }
+      footer p {
+        width: 1001px;
+        margin: 0 auto;
+        padding: 50px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>The Growth Clinic Story</h1>
+      </header>
+      <nav>
+        <div class="navi">
+          <div class="menu">
+            <ul class="clearfix">
+              <li><a href="#">Information</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Clinic Test</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contect Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <p><a href="#"></a></p>
+      </section>
+      <article class="clearfix">
+        <div class="content">
+          <div class="left">
+            <div class="con1">
+              <h3 class="title">
+                Food Story For Growth<br />해독 기능이 뛰어난 여름철 수박 껍질
+                차
+              </h3>
+              <p>
+                수박 껍질 차는 아무리 먹어도 살이 찌지 않기 때문에 한여름의
+                갈증을 없애고 스트레스로 갑갑증을 풀어주며 무더위를 날려 주는
+                데는 최고의 식품이다. 수박 껍질 속의 시트룰린 성분은 간에서
+                효소의 생성을 촉진하므로 과잉 생성된 성호르몬의 분해에 도움이
+                되며, 혈압을 낮추는 효과가 있다. 특히 수박 껍질차는 급성만성
+                신장염에 효과가 있으며 시트룰린이 많아 소변도 잘 나오게 한다.
+              </p>
+              <input type="button" value="More Read" />
+            </div>
+            <div class="con2">
+              <h3 class="title">천식에는 오미자차</h3>
+              <p>
+                오미자는 음혈이 허약하고 부족하며 심신이 불안하여 유발된 불면증
+                치료에 좋은 효과가 있으며, 각종 알레르기 증세로 인해 숙면을
+                취하지 못하는 경우에도 많이 응용되고 있다.
+              </p>
+              <input type="button" value="More Read" />
+            </div>
+          </div>
+          <div class="right">
+            <div class="cate1">
+              <h3 class="title">Clinic Category</h3>
+              <ul>
+                <li><a href="#">자가진단</a></li>
+                <li><a href="#">성장 장애</a></li>
+                <li><a href="#">발육 표준치</a></li>
+                <li><a href="#">성장 상식</a></li>
+                <li><a href="#">예상키 검사</a></li>
+                <li><a href="#">비만도 검사</a></li>
+                <li><a href="#">키크는 식품</a></li>
+                <li><a href="#">키크는 운동</a></li>
+                <li><a href="#">음식 백과</a></li>
+                <li><a href="#">성장 장애 예방법</a></li>
+                <li><a href="#">성장 장애 FAQ</a></li>
+                <li><a href="#">상담실</a></li>
+              </ul>
+            </div>
+            <div class="cate2">
+              <h3 class="title">Link Site</h3>
+              <ul>
+                <li><a href="#">보건 복지부</a></li>
+                <li><a href="#">의료 보험 공단</a></li>
+                <li><a href="#">질병 관리 보험 본부</a></li>
+                <li><a href="#">국립 보건 연구원</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer>
+        <p>Copyright ⓒ 2012. The Growth Clinic Story. Since 1998.</p>
+      </footer>
+    </div>
+  </body>
+</html>

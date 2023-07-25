@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트 태그</title>
+    <style>
+      /* "*"는 모든 요소를 선택할 때 쓰임" */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body > ul {
+        list-style: upper-roman;
+      }
+      body > ul > li > ul {
+        list-style-type: disc;
+      }
+      ul li {
+        border: 1px solid #000;
+      }
+      /* "+"는 선택 요소보다 하나 아래있는 요소 선택할 때 쓰임 */
+      /* ul.second .list1 + li {
+                    color: #f00;
+                  } */
+      /* "~"는 선택 요소 아래있는 모든 요소를 선택할 때 쓰임 */
+      ul.second .list1 ~ li {
+        color: #f00;
+      }
+      /* !important를 붙이면 제일 명령이 쎄짐 */
+      .list2 {
+        color: #0f0 !important;
+      }
+      /* ","는 그룹과 그룹을 한번에 묶어서 선택하고 싶을 때 쓰임" */
+      ul,
+      p {
+        background-color: blanchedalmond;
+      }
+      /* margin은 컨텐츠 바깥여백, padding은 컨텐츠 안쪽여백 */
+      p {
+        /* margin: 10px 20px 30px 40px; <-이렇게 표현할때는 여백이 위에부터 시계방향으로 적기*/
+        /* margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 40px;
+        padding: 50px; <- 이렇게 표현할때는 일일이 margin의 부분을 입력 후 속성값 입력하기*/
+        /* margin을 두값만 줬을 때는 서로 마주 보는 곳이 같은 값으로 적용된다 */
+        margin: 10px 20px;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <ul>
+          <li>리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+      <li>
+        <ul class="second">
+          <li class="list1">리스트1</li>
+          <li class="list2">리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+    </ul>
+    <p>문단태그</p>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation배경만들기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .box {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid #000; */
+      }
+      .sea-wave {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 203px;
+        background-position: 10% top;
+        background-repeat: no-repeat;
+        animation: wave 15s linear infinite alternate;
+      }
+      .wave1 {
+        background-image: url(images/wave2.svg);
+        animation-name: wave;
+      }
+      .wave2 {
+        background-image: url(images/wave.svg);
+        animation-name: wave2;
+      }
+      @keyframes wave {
+        0% {
+          background-position: calc(50% - 15%) top;
+        }
+        50% {
+          background-position: calc(50% + 15%) 50px;
+        }
+        100% {
+          background-position: calc(50% - 15%) top;
+        }
+      }
+      @keyframes wave2 {
+        0% {
+          background-position: calc(50% - 50%) top;
+        }
+        50% {
+          background-position: calc(50% + 30%) 100px;
+        }
+        100% {
+          background-position: calc(50% - 50%) top;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="sea-wave wave1"></div>
+      <div class="sea-wave wave2"></div>
+    </div>
+  </body>
+</html>

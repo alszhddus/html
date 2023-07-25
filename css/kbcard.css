@@ -1,0 +1,57 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, "맑은 고딕", sans-serif;
+}
+section {
+  width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+section ul li {
+  position: relative;
+  float: left;
+  width: calc(100% / 8);
+  height: 50px;
+}
+section ul li a {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  white-space: nowrap;
+}
+section ul li:first-child {
+  background: url(../images/ico_1.png) center top no-repeat;
+}
+section ul li:nth-child(2) {
+  background: url(../images/ico_2.png) center top no-repeat;
+}
+section ul li:nth-child(3) {
+  background: url(../images/ico_3.png) center top no-repeat;
+}
+section ul li:nth-child(4) {
+  background: url(../images/ico_4.png) center top no-repeat;
+}
+section ul li:nth-child(5) {
+  background: url(../images/ico_5.png) center top no-repeat;
+}
+section ul li:nth-child(6) {
+  background: url(../images/ico_6.png) center top no-repeat;
+}
+section ul li:nth-child(7) {
+  background: url(../images/ico_7.png) center top no-repeat;
+}
+section ul li:nth-child(8) {
+  background: url(../images/ico_8.png) center top no-repeat;
+}

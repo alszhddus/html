@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      li {
+        padding: 10px;
+      }
+      p {
+        padding-bottom: 10px;
+        font-weight: 900;
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgb(123, 210, 25);
+        animation-name: motion;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .one {
+        animation-timing-function: linear;
+      }
+      .two {
+        animation-timing-function: ease;
+      }
+      .three {
+        animation-timing-function: ease-in;
+      }
+      .four {
+        animation-timing-function: ease-out;
+      }
+      .five {
+        animation-timing-function: ease-in-out;
+      }
+      .six {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      @keyframes motion {
+        from {
+          transform: translateX(0px);
+        }
+        to {
+          transform: translateX(300px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>animation-timing-function: linear</p>
+        <div class="one"></div>
+      </li>
+      <li>
+        <p>animation-timing-function: easy</p>
+        <div class="two"></div>
+      </li>
+      <li>
+        <p>animation-timing-function: east-in</p>
+        <div class="three"></div>
+      </li>
+      <li>
+        <p>animation-timing-function: easy-out</p>
+        <div class="four"></div>
+      </li>
+      <li>
+        <p>animation-timing-function: easy-in-out</p>
+        <div class="five"></div>
+      </li>
+      <li>
+        <p>animation-timing-function: cubic-bezier</p>
+        <div class="six"></div>
+      </li>
+    </ul>
+  </body>
+</html>

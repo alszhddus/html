@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>font꾸미기(white-space태그)</title>
+    <style>
+      p {
+        width: 500px;
+        border: 1px solid #000;
+      }
+      p.normal {
+        /* opacity: 0; : 컨텐츠는 있지만 투명도를 조절해서 안보이게 할 수 있음 */
+        opacity: 0.5;
+        white-space: normal;
+      }
+      p.nowrap {
+        white-space: nowrap;
+        /* overflow: hidden; - 넘치는 컨텐츠들을 숨겨주는 기능 */
+        overflow: hidden;
+        /* text-overflow: ellipsis - 넘치는 부분을 생략표시"..."로 바꿔주는 기능" */
+        text-overflow: ellipsis;
+        /* visibility: hidden; - 안보이게 해주는 기능 */
+        visibility: hidden;
+      }
+      p.pre {
+        white-space: pre;
+      }
+      p.pre-wrap {
+        white-space: pre-wrap;
+      }
+      p.pre-line {
+        white-space: pre-line;
+      }
+      span img {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 공백, 줄바꿈 무시, 길면 줄바꿈 일어남 -->
+    <p class="normal">
+      <strong>normal</strong> 국회가 재적의원 과반수의 찬성으로 계엄의 해제를
+      요구한 때에는 대통령은 이를 해제하여야 한다. 국회는 헌법 또는 법률에
+      특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로
+      의결한다. 가부동수인 때에는 부결된 것으로 본다.
+    </p>
+    <!-- 공백, 줄바꿈 무시, 넓이를 줬음에도 랩핑을 하지 않음 -->
+    <p class="nowrap">
+      <strong>nowrap</strong> 국회가 재적의원 과반수의 찬성으로 계엄의 해제를
+      요구한 때에는 대통령은 이를 해제하여야 한다. 국회는 헌법 또는 법률에
+      특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로
+      의결한다. 가부동수인 때에는 부결된 것으로 본다.
+    </p>
+    <!-- 공백, 줄바꿈등 내가 쓴 그대로 표현 넓이에 개입x-->
+    <p class="pre">
+      <strong>pre</strong> 국회가 재적의원 과반수의 찬성으로 계엄의 해제를
+      요구한 때에는 대통령은 이를 해제하여야 한다. 국회는 헌법 또는 법률에
+      특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로
+      의결한다. 가부동수인 때에는 부결된 것으로 본다.
+    </p>
+    <!-- 공백, 줄바꿈등 쓴 그대로 표현하지만 넓이에 개입하면서 상자를 넘어가면 줄바꿈이 생김 -->
+    <p class="pre-wrap">
+      <strong>pre-wrap</strong> 국회가 재적의원 과반수의 찬성으로 계엄의 해제를
+      요구한 때에는 대통령은 이를 해제하여야 한다. 국회는 헌법 또는 법률에
+      특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로
+      의결한다. 가부동수인 때에는 부결된 것으로 본다.
+    </p>
+    <!-- 공백, 줄바꿈은 무시, 넓이에 개입하면서 상자를 넘어가면 줄바꿈이 생김 -->
+    <p class="pre-line">
+      <strong>pre-line</strong> 국회가 재적의원 과반수의 찬성으로 계엄의 해제를
+      요구한 때에는 대통령은 이를 해제하여야 한다. 국회는 헌법 또는 법률에
+      특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로
+      의결한다. 가부동수인 때에는 부결된 것으로 본다.
+    </p>
+    <span>이미지<img src="images/menu1.jpg" alt="menu1" /></span>
+  </body>
+</html>

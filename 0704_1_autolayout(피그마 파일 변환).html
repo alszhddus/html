@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>autolayout(피그마 파일 변환)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .col {
+        /* calc(연산태그)를 쓸때는 연산자 앞뒤로 꼭 공백주기 */
+        width: calc(180px * 4 + 60px);
+        overflow: hidden;
+        margin: 0 auto;
+        /* float을 줬을때는 높이값을 잃어버려서 높이값을 주거나 overflow:hidden;을 줘야 백그라운드 컬러를 넣을 수 있음 */
+        background: #ccc;
+      }
+      .col > div {
+        float: left;
+        margin-left: 20px;
+      }
+      .col > div:first-child {
+        margin-left: 0;
+      }
+      .user {
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .title {
+        width: 180px;
+        height: 35px;
+        background: #a259ff;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #fff;
+        margin: 10px 0;
+      }
+      .title p {
+        /* 글자와 이미지 수직정렬 */
+        line-height: 35px;
+      }
+      .title p:first-child {
+        float: left;
+        margin-left: 20px;
+      }
+      .title p:last-child {
+        float: right;
+        margin-right: 20px;
+      }
+      .title img {
+        vertical-align: middle;
+      }
+      .desc {
+        width: 180px;
+        font-size: 12px;
+        text-align: justify;
+        display: -webkit-box;
+        /* 표시할 줄의 수 */
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 20px;
+        line-height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col">
+      <div>
+        <p class="user"><img src="images/user.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div>
+        <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+        <div class="title">
+          <p>List Title</p>
+          <p><img src="images/arrow.png" alt="arrow" /></p>
+        </div>
+        <p class="desc">
+          So yes, the alcohol (ethanol) in hand sanitizers can be absorbed
+          through the skin, but no, it would Even factoring differences in body
+          weight between children and adults into account, it would still n
+        </p>
+      </div>
+      <div id="wrap"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background: rgb(123, 210, 25);
+        animation-name: motion;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes motion {
+        0 {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(0, 500px);
+        }
+        50% {
+          transform: translate(500px, 500px);
+        }
+        75% {
+          transform: translate(500px, 0) rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

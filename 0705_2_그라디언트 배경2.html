@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그라디언트 배경</title>
+    <style>
+      p.bg {
+        width: 500px;
+        height: 500px;
+      }
+      .bg1 {
+        background-image: radial-gradient(at 30% 20%, purple, blue);
+      }
+      .bg2 {
+        background-image: radial-gradient(
+          closest-side at 30% 20%,
+          purple,
+          blue
+        );
+      }
+      .bg3 {
+        background-image: radial-gradient(
+          farthest-side at 30% 20%,
+          purple,
+          blue
+        );
+      }
+      .bg4 {
+        background-image: radial-gradient(
+          closest-corner at 30% 20%,
+          purple,
+          blue
+        );
+      }
+      .bg5 {
+        background-image: radial-gradient(
+          farthest-corner at 30% 20%,
+          purple,
+          blue
+        );
+      }
+      .bg6 {
+        background-image: conic-gradient(purple, blue, red, yellow);
+      }
+      .bg7 {
+        /* from 각도deg 로 각도 조절 가능 */
+        background-image: conic-gradient(from 90deg, purple, blue, red, yellow);
+      }
+      .bg8 {
+        background-image: conic-gradient(
+          purple 0deg,
+          purple 90deg,
+          blue 90deg,
+          blue 180deg,
+          red 180deg,
+          red 270deg,
+          yellow 270deg
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>at 30% 20%</h1>
+    <p class="bg bg1"></p>
+    <h1>closest-side at 30% 20%</h1>
+    <p class="bg bg2"></p>
+    <h1>farthest-side at 30% 20%</h1>
+    <p class="bg bg3"></p>
+    <h1>closest-corner at 30% 20%</h1>
+    <p class="bg bg4"></p>
+    <h1>farthest-corner at 30% 20%</h1>
+    <p class="bg bg5"></p>
+    <p class="bg bg6"></p>
+    <p class="bg bg7"></p>
+    <p class="bg bg8"></p>
+  </body>
+</html>

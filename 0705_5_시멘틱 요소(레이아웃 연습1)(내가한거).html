@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 연습1 (내가한거)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap2 {
+        width: 1280px;
+        background: #ccc;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+      header {
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        line-height: 100px;
+        margin: 20px 0;
+      }
+      #wrap section {
+        height: 500px;
+        float: left;
+      }
+      section nav {
+        float: left;
+        width: 30%;
+        height: 500px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 20px 20px;
+      }
+      section section {
+        float: left;
+        width: calc(50% - 40px);
+        height: 500px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 20px 20px;
+        margin: 0 20px 20px 20px;
+      }
+      section aside {
+        float: left;
+        width: 20%;
+        height: 500px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      footer {
+        height: 100px;
+        clear: both;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap2">
+      <header>header</header>
+      <section>
+        <nav>nav</nav>
+        <section>section</section>
+        <aside>aside</aside>
+      </section>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

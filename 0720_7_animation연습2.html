@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multimedia</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+      }
+      .circle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #000;
+        transform: translateX(-50%);
+        border-radius: 65% 92% 70% 95%/65% 92% 70% 95%;
+        box-sizing: border-box;
+      }
+      .one {
+        animation: rotate1 10s linear infinite;
+      }
+      .two {
+        animation: rotate2 5s linear infinite;
+      }
+      .three {
+        animation: rotate1 8s linear reverse infinite;
+      }
+      @keyframes rotate1 {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(1080deg);
+        }
+      }
+      @keyframes rotate2 {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(-1080deg);
+        }
+      }
+      .wrap:hover > .one {
+        background: rgb(145, 43, 255);
+        border: none;
+      }
+      .wrap:hover > .two {
+        background: rgb(199, 146, 255);
+        border: none;
+      }
+      .wrap:hover > .three {
+        background: rgb(170, 91, 255);
+        border: none;
+      }
+      p {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        color: #fff;
+        opacity: 0;
+        z-index: 10;
+        font-size: 20px;
+      }
+      .wrap:hover p {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>Html</p>
+      <div class="circle one"></div>
+      <div class="circle two"></div>
+      <div class="circle three"></div>
+    </div>
+  </body>
+</html>

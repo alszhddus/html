@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      svg {
+        width: 500px;
+        height: 500px;
+      }
+      .cls-1 {
+        fill: #9b00ff;
+        stroke-miterlimit: 10;
+        transform: scale(10);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/mic.svg" alt="mic" />
+    <svg>
+      <rect x="10" y="10" width="200" height="200" fill="#9b00ff" />
+    </svg>
+    <svg>
+      <polygon
+        x="10"
+        y="10"
+        class="cls-1"
+        points="32.94 0 6.74 0 0 6.74 0 16.28 6.74 23.03 32.94 23.03 39.68 16.28 39.68 6.74 32.94 0"
+      />
+    </svg>
+  </body>
+</html>

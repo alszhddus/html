@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록요소 크기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        /* width는 auto가 디폴트 값이라 auto로 쓸꺼면 안써도 됨 */
+        /* 실질적 가로크기는 500+50+50+10+10 총 620px임(width+padding right/left+border right/left) */
+        width: 500px;
+        background: #ccc;
+        padding: 50px;
+        border: 10px solid #000;
+      }
+      ul {
+        width: 300px;
+        background: #f00;
+      }
+      li {
+        width: 100%;
+        padding: 50px;
+        background: #0f0;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <ul>
+      <li>리스트</li>
+    </ul>
+  </body>
+</html>

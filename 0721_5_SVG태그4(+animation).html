@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {+
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      svg {
+        border: 1px solid #000;
+        width: 500px;
+        height: 500px;
+        stroke-width: 30px;
+        stroke-linecap: round;
+        stroke-dasharray: 628;
+        stroke-dashoffset: 50;
+        animation: ani 1s forwards;
+        transform: rotate(-90deg);
+      }
+      @keyframes ani{
+      0%{
+        stroke-dashoffset: 628;
+       }
+      100%{
+        stroke-dashoffset: 100;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <circle cx="250" cy="250" r="100" fill="none" stroke="#00f" />
+    </svg>
+  </body>
+</html>

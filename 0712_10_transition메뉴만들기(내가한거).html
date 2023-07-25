@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform 속성 연습(내가한거)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .left {
+        width: 495px;
+      }
+      .left h2 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .left ul {
+        width: 465px;
+        margin: 0 auto;
+      }
+      .left ul li {
+        position: relative;
+        float: left;
+        width: 33.333%;
+        height: 306px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .left ul li.first {
+        background: url(images/sample01.jpg);
+      }
+      .left ul li.second {
+        background: url(images/sample02.jpg);
+      }
+      .left ul li.third {
+        background: url(images/sample03.jpg);
+      }
+      .left .title {
+        color: #fff;
+        text-align: center;
+        line-height: 306px;
+        font-size: 20px;
+      }
+      .left .box {
+        position: absolute;
+        width: 300px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        left: 0;
+        top: 0;
+        padding-top: 100px;
+        /* left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        opacity: 0;
+      }
+      .left ul:hover .title {
+        display: none;
+      }
+      .left ul li:hover {
+        width: 60%;
+      }
+      .left ul:hover li:not(:hover) {
+        width: 20%;
+      }
+      .left ul li:hover .box {
+        opacity: 1;
+      }
+      .left ul li .button {
+        display: none;
+        width: 80px;
+        position: relative;
+        left: 150px;
+        text-align: center;
+        padding: 8px 20px;
+        border: 1px solid #fff;
+        color: #fff;
+        box-sizing: border-box;
+        margin-top: 180px;
+        transform: translate(-50%, 0);
+      }
+      .left ul li:hover .button {
+        display: block;
+      }
+      .left ul li .button:hover {
+        background: rgba(255, 255, 255, 0.7);
+        color: #444;
+      }
+      .right {
+        float: left;
+        width: 495px;
+        height: 306px;
+        margin-left: 30px;
+      }
+      .right h2 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .right .box {
+        text-align: center;
+        font-size: 20px;
+      }
+      .right .box .title {
+        transform: translate(-50%, -50%);
+        position: relative;
+        left: 50%;
+        top: 50%;
+      }
+      .right .box p img {
+        width: 100%;
+        height: 306px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <h2>해피바스 선물</h2>
+      <ul>
+        <li class="first">
+          <p class="title">내추럴 성분</p>
+          <div class="box">
+            해피바스가 담고 있는<br />'내추럴 성분'이 궁금하다면?
+          </div>
+          <p class="button">more</p>
+        </li>
+        <li class="second">
+          <p class="title">풍부한 향</p>
+          <div class="box">
+            해피바스에서 펼쳐지는<br />'풍성한 향'이 숭금하다면?
+          </div>
+          <p class="button">more</p>
+        </li>
+        <li class="third">
+          <p class="title">즐거운 경험</p>
+          <div class="box">
+            해피바스가 이끄는<br />'즐거운 경험'이 궁금하다면?
+          </div>
+          <p class="button">more</p>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <h2>해피바스 뷰티톡</h2>
+      <div class="box">
+        <p class="title">피부 고민에 따른 뷰티팁을 드려요</p>
+        <p><img src="images/beautytalk.jpg" alt="beautytalk" /></p>
+      </div>
+      <p class="button">more</p>
+    </div>
+  </body>
+</html>

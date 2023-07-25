@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 720px;
+        list-style: none;
+        text-align: center;
+        margin: 50px auto 0;
+      }
+      ul li {
+        width: 25%;
+        float: left;
+      }
+      li p {
+        margin: 0 auto;
+      }
+      li p:first-child {
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+      li p:last-child {
+        width: 142px;
+        height: 142px;
+      }
+      .one p:last-child {
+        background-image: url(images/DJinfo1.png);
+      }
+      .two p:last-child {
+        background-image: url(images/DJinfo2.png);
+      }
+      .three p:last-child {
+        background-image: url(images/DJinfo3.png);
+      }
+      .four p:last-child {
+        background-image: url(images/DJinfo4.png);
+      }
+      li p:last-child:hover {
+        background-position: 0 -240px;
+        animation-name: motion;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes motion {
+        0 {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="one">
+        <p>대전청년포털</p>
+        <p></p>
+      </li>
+      <li class="two">
+        <p>도시주택정보</p>
+        <p></p>
+      </li>
+      <li class="three">
+        <p>동물보호센터</p>
+        <p></p>
+      </li>
+      <li class="four">
+        <p>보건환경연구원</p>
+        <p></p>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table태그</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      td.bg {
+        background-color: #eee;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="bg">지역별 홍차</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="bg">
+          중국
+          <tr>
+            <td>정산소종</td>
+          </tr>
+          <tr>
+            <td>기문</td>
+          </tr>
+          <tr>
+            <td>운남</td>
+          </tr>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5" class="bg">
+          인도 및 스리랑카
+          <tr>
+            <td>아삼</td>
+          </tr>
+          <tr>
+            <td>실론</td>
+          </tr>
+          <tr>
+            <td>다질링</td>
+          </tr>
+          <tr>
+            <td>닐기리</td>
+          </tr>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

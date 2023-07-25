@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float태그(연습)(쌤이한거)</title>
+    <style>
+      .parent {
+        text-align: center;
+        width: 100%;
+        /* float으로 높이를 잃은 parent에 높이를 주는 방법
+        1. 직접 height값으로 높이를 주기
+        2. overflow:hidden;으로 보이진 않지만 높이가 적용되게 하기 */
+        /* height: 50px; */
+        overflow: hidden;
+        max-width: 1280px;
+        margin: 0 auto;
+        background: #ccc;
+      }
+      .child {
+        width: 25%;
+        background: #000;
+        color: #fff;
+        text-align: left;
+      }
+      .parent > div {
+        float: left;
+      }
+      .left {
+        float: left;
+      }
+      .wrap .right {
+        clear: left;
+      }
+      .wrap1 {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. float속성을 지정하면 부모의 높이값이 없어지기 때문에 height나 overflow:hidden;을 주기
+    2. float을 주게되면 준 요소의 다음요소가 float속성을 안넣었음에도 불구하고 같이 끌려 올라가기 때문에 다음요소에 clear속성으로 지워주거나 float지정된 부모요소에다 overflow:hidden;을 줘도됨 -->
+    <div class="parent">
+      <!-- 부모요소 -->
+      <div class="child">자식요소</div>
+      <div class="child">자식요소</div>
+      <div class="child">자식요소</div>
+      <p class="child">자식요소</p>
+    </div>
+    <div class="wrap">
+      <div class="left">left</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <div class="wrap1">
+      <div class="left">left</div>
+      <div class="right">right</div>
+      <div class="contents">contents</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자모양</title>
+    <!--내부방식-->
+    <style>
+      mark {
+        background-color: #0f0;
+      }
+      #first {
+        background-color: rgb(255, 159, 159);
+      }
+      .txt {
+        background-color: antiquewhite !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p><b>굵은글자</b></p>
+    <p><strong>굵은글자</strong></p>
+    <p><i>기울어진글자</i></p>
+    <p><em>기울어진글자</em></p>
+    <p><small>작은글자</small></p>
+    <!--위 첨자-->
+    <p>x<sub>2</sub></p>
+    <!--아래 첨자-->
+    <p>H<sup>2</sup>O</p>
+    <p><ins>밑줄글자</ins></p>
+    <p><del>취소선글자</del></p>
+    <p>
+      <mark id="first" class="txt">first하이라이트된글자</mark>
+    </p>
+    <!-- 인라인방식  -->
+    <p>
+      <mark id="second" class="txt" style="background-color: skyblue"
+        >하이라이트된글자</mark
+      >
+    </p>
+    <p>
+      <mark id="first" style="background-color: skyblue">하이라이트된글자</mark>
+    </p>
+
+    <!--blockquote에서만 사용 할 수 있는 속성 : cite(인용한 내용이 들어간 출처를 명시할때 쓰임)-->
+
+    <blockquote cite="http://www.naver.com">
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </blockquote>
+    <p>
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </p>
+    <p>네이버 논문 : 환경에 <q cite="http://www.naver.com">관련된 논문</q></p>
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+  </body>
+</html>

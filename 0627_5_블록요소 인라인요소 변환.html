@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록요소 인라인요소 변환</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* p태그에 display로 인라인 속성으로 바꿔줬기 떄문에 text-align이 먹는다 */
+      body {
+        text-align: center;
+        font-size: 0;
+      }
+      /* 부모요소인 body에서는 폰트 사이즈를 0으로 했지만 p태그 안에 글씨를 보이게 하고 싶으면 p태그 안에 폰트 사이즈를 다시 주면 폰트가 보임 */
+      p {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        font-size: 16px;
+      }
+      li {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 인라인 속성의 글자속성으로 여백없애는법
+    1. 태그 입력시 개행(엔터)하지 않음(성가신일)
+    2. 개행한(엔터) 태그를 주석처리하기(성가신일)
+    3. 인라인속성을 준 요소의 부모요소에 폰트 사이즈를 0으로 주기-->
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <ul>
+      <li>
+        <p>문단태그</p>
+      </li>
+      <li>
+        <p>문단태그</p>
+      </li>
+      <li>
+        <p>문단태그</p>
+      </li>
+    </ul>
+  </body>
+</html>

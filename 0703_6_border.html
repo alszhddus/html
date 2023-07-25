@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>border</title>
+    <style>
+      p {
+        border-width: 5px;
+        border-color: #8ac007;
+      }
+      .none {
+        /* 디폵트 값으로 아무것도 표현이 안됨 */
+        border-style: none;
+      }
+      .solid {
+        /* 끊김없는 실선 */
+        border-style: solid;
+      }
+      .dashed {
+        /* 선으로된 점선 */
+        border-style: dashed;
+      }
+      .dotted {
+        /* 점으로된 점선(도트) */
+        border-style: dotted;
+      }
+      .double {
+        /* 두줄선 */
+        border-style: double;
+      }
+
+      .mix {
+        /* mix는 선끼리 혼합하고 싶을때 사용함(위에부터 시계방향으로 적용됨) */
+        border-style: solid dashed dotted double;
+      }
+      /* 3D선들은 #000으로 검은색을 주면 음영이 표현이 안됨 */
+      .groove {
+        /* 3d 음각 */
+        border-style: groove;
+      }
+      .ridge {
+        /* 3d 양각 */
+        border-style: ridge;
+      }
+      .inset {
+        border-style: inset;
+      }
+      .outset {
+        border-style: outset;
+      }
+      span {
+        /* 보더값 한번에 쓸 때 순서 : 크기, 형태, 컬러 */
+        border: 1px solid #8ac007;
+        /* 폰트도 한번에 쓸 수 있음(크기랑 글꼴은 생략 불가 나머지는 생략가능) */
+        font: 12px 궁서;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="none">border: none;</p>
+    <p class="solid">border: solid;</p>
+    <p class="dashed">border: dashed;</p>
+    <p class="dotted">border: dotted;</p>
+    <p class="double">border: double;</p>
+    <p class="mix">border: mix;</p>
+    <p class="groove">border: groove;</p>
+    <p class="ridge">border: ridge;</p>
+    <p class="inset">border: inset;</p>
+    <p class="outset">border: outset;</p>
+    <span>테두리</span>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃(position태그)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* div {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+        top: 100px;
+        left: 100px;
+      } */
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+      }
+      /* ul {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        list-style: none;
+        top: 100px;
+        left: 100px;
+      } */
+      ul:nth-child(2) {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        list-style: none;
+        opacity: 0.5;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div>
+      <ul>
+        <li><a href="#">링크태그1</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">링크태그2</a></li>
+      </ul>
+      <p>새로운 컨텐츠 새로운 컨텐츠 새로운 컨텐츠 새로운 컨텐츠</p>
+    </div>
+  </body>
+</html>

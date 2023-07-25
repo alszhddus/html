@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>수평수직정렬</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        display: table-cell;
+        /* vw - 가로 크기를 100등분으로 해서 100을 크기로 지정한 단위 */
+        width: 100vw;
+        /* vh - 세로 크기를 100등분으로 해서 100을 크기로 지정한 단위 */
+        height: 100vh;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #000;
+      }
+      .inner {
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>크기</title>
+    <style>
+      .wrap {
+        /* 16px=12pt=100% 다른 단위지만 값은 값 */
+        font-size: 150%;
+      }
+      .wrap > div {
+        border: 1px solid #000;
+      }
+      .a {
+        /* em은 부모 요소에 비례한 단위값 */
+        /* 부모요소(.wrap)의 폰트 사이즈를 100%(16px)로했으니까 2em은 16*2=32px임 */
+        width: 2em;
+      }
+      .b {
+        width: 2em;
+        font-size: 2em;
+      }
+      .c {
+        /* rem은 최상위 요소에 비례한 단위값 */
+        width: 2rem;
+      }
+      .d {
+        width: 160px;
+      }
+      .e {
+        width: 10em;
+      }
+      .h {
+        width: 100px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="a">a</div>
+      <div class="b">b</div>
+      <div class="c">c</div>
+      <div class="d">d</div>
+      <div class="e">e</div>
+      <div class="h">h</div>
+    </div>
+  </body>
+</html>

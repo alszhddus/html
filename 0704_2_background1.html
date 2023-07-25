@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      p,
+      span {
+        background: #ccc;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+        /* 컬러값은 16진수, rgba값, html에서 이름을 가지고 있는 컬러(총 140개정도), hsla값 총 네가지로 표현가능 */
+        /* background-color: #f00; */
+        /* opacity값은 단위를 안적어도됨 */
+        /* opacity: 0.5; */
+        /* background-color: rgba(255, 255, 0, 0.5); */
+        /* background-color: hsla(100, 100%, 50%, 1); */
+        /* background에 이미지를 넣으면 바둑판처럼 리핏되서 채워짐 */
+        background-image: url(images/photo1.jpg);
+        /* 크기안에서 이미지의 포지션을 지정해주는 태그 속성값 사이는 공백으로 처리(px, %값으로 써도됨*/
+        /* background-position: center bottom; */
+        background-position: center;
+        /* background-size: 50%; */
+        background-size: contain;
+        /* no-repeat을 주면 리핏이 안됨 */
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <span>인라인태그</span>
+    <div></div>
+  </body>
+</html>

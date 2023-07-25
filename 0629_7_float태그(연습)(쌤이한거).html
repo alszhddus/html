@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float태그(연습)(쌤이한거)</title>
+    <style>
+      .wrap {
+        margin: 0 auto;
+        width: 1200px;
+        overflow: hidden;
+        border: 1px solid #000;
+      }
+      .wrap > div {
+        float: left;
+        /* margin-left: 4%;
+        width: 22%; */
+        width: 10%;
+        margin-left: calc((100% - (10% * 4)) / 3);
+        height: 100px;
+        background-color: #ccc;
+      }
+      .wrap > div:first-child {
+        margin-left: 0;
+        background: #aaa;
+      }
+      .wrap > :nth-child(2) {
+        background: #bbb;
+      }
+      .wrap > :nth-child(3) {
+        background: #ccc;
+      }
+      .wrap > :nth-child(4) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 사이즈</title>
+    <style>
+      p {
+        width: 500px;
+        height: 500px;
+        border: 10px solid #000;
+        padding: 100px;
+      }
+      p:first-child {
+        /* box-shadow : 박스에 그림자를 주는 속성 */
+        box-shadow: 5px 5px 5px 10px rgba(0, 255, 0, 1);
+      }
+      p:last-of-type {
+        /* box-sizing으로 패딩과 보더값을 전체크기에 포함되게 만듬 실제 박스사이즈는 280px이됨 */
+        box-sizing: border-box;
+        box-shadow: inset 5px 5px 5px 10px rgba(0, 255, 0, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+  </body>
+</html>

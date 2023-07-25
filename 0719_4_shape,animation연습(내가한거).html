@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shape,animation연습(내가한거)</title>
+    <style>
+      input[type="radio"] {
+        display: none;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      #wrap {
+        width: 100%;
+        text-align: center;
+      }
+      #wrap > p {
+        width: 0;
+        height: 0;
+        border: 10px solid #000;
+        border-right: none;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        margin: 100px auto 20px;
+      }
+      #wrap > label {
+        display: inline-block;
+        width: 100px;
+        line-height: 40px;
+        border: 1px solid #000;
+        border-radius: 50px;
+      }
+      #start:checked ~ p {
+        animation: move 0.5s linear alternate infinite;
+      }
+      #stop:checked ~ p {
+        animation-play-state: paused;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(-10px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      #start:checked ~ label:first-of-type,
+      #stop:checked ~ label:nth-of-type(2) {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <input type="radio" name="btn" id="start" checked />
+      <input type="radio" name="btn" id="stop" />
+      <p></p>
+      <label for="start">start</label>
+      <label for="stop">stop</label>
+    </div>
+  </body>
+</html>
