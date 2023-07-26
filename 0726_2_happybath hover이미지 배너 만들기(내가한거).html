@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>happybath hover이미지 배너 만들기</title>
+    <style>
+      @font-face {
+        font-family: "나눔 고딕";
+        src: url(webfonts/NanumGothic.otf) format(otf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "나눔 고딕", sans-serif;
+      }
+      .top {
+        width: 960px;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+      }
+      .top .topwrap {
+        width: 527.5px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .top .logo {
+        padding: 15px 0 24px;
+      }
+      .top ul {
+        width: 960px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .top ul li::after {
+        content: url(images/happybath/images2/bg-mobgnblogin.png);
+        padding: 0 14px;
+      }
+      .top ul li:last-child::after {
+        content: "";
+      }
+      .top ul li img {
+        width: 18px;
+        vertical-align: middle;
+      }
+      nav {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+      }
+      nav .menu {
+        width: 960px;
+        margin: 0 auto;
+        padding-bottom: 22px;
+      }
+      nav .menu .gnb {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      nav .menu .gnb > li > a {
+        font-size: 18px;
+        padding-bottom: 20px;
+      }
+      nav .menu .gnb > li:hover > a {
+        border-bottom: 3px solid #333;
+      }
+      nav .menu .gnb li {
+        position: relative;
+      }
+      nav .menu .gnb > li .lnb {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 50px;
+        border: none;
+        z-index: 1;
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+      nav:hover .menu .gnb > li .lnb {
+        height: 150px;
+      }
+      nav .menu .gnb li:nth-child(2) .lnb li ul {
+        position: relative;
+        font-size: 13px;
+        padding-left: 10px;
+      }
+      nav .menu .gnb li:nth-child(2) .lnb li ul li::before {
+        content: url(images/happybath/images2/gnb_3depth_bullet.png);
+        position: absolute;
+        left: -10px;
+        top: 20px;
+      }
+      nav .menu .gnb li .lnb li a {
+        display: block;
+        padding-top: 20px;
+      }
+      nav .menu .gnb > li .lnb li a:hover {
+        text-decoration: underline;
+      }
+      nav .bg {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        transition: height 0.5s;
+      }
+      nav:hover .bg {
+        height: 200px;
+      }
+      .banner {
+        width: 1600px;
+        height: 520px;
+        margin: 0 auto;
+        background: url(images/happybath/images2/banner1.jpg);
+        animation: transition 8s infinite both;
+        cursor: pointer;
+      }
+      @keyframes transition {
+        0% {
+          background: url(images/happybath/images2/banner1.jpg);
+        }
+        25% {
+          background: url(images/happybath/images2/banner2.jpg);
+        }
+        50% {
+          background: url(images/happybath/images2/banner3.jpg);
+        }
+        75% {
+          background: url(images/happybath/images2/banner4.jpg);
+        }
+      }
+      .best {
+        width: 1600px;
+        margin: 0 auto;
+        background-image: url(images/happybath/images2/item-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 310px;
+      }
+      .best .bestwrap {
+        width: 960px;
+        margin: 60px auto 40px;
+      }
+      .best .bestwrap h2 {
+        position: relative;
+        text-align: center;
+      }
+      .best .bestwrap h2::after {
+        position: absolute;
+        left: 0;
+        top: 15px;
+        content: "";
+        width: 350px;
+        height: 1px;
+        background: #ccc;
+      }
+      .best .bestwrap h2::before {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        content: "";
+        width: 350px;
+        height: 1px;
+        background: #ccc;
+      }
+      .best .bestwrap ul {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+      .content {
+        width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .content h2 {
+        text-align: center;
+        margin: 60px 0 20px;
+      }
+      .content .left1 {
+        width: 641px;
+      }
+      .content .left1 .con {
+        display: flex;
+        border: 1px solid #eee9f3;
+        cursor: pointer;
+      }
+      .content .left1 .con p {
+        background: #eee9f3;
+      }
+      .content .left1 .con > ul {
+        width: 348px;
+        margin: 25px 30px;
+      }
+      .content .left1 .con > ul > li:first-child {
+        padding-bottom: 30px;
+      }
+      .content .left1 .con > ul > li:last-child {
+        border-top: 1px solid #ccc;
+        padding-top: 12px;
+        margin-top: 13px;
+      }
+      .content .left1 .con ul li ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .content .left1 .con1 {
+        position: absolute;
+        opacity: 0;
+        animation: con1 6s infinite both;
+      }
+      @keyframes con1 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .content .left1 .con2 {
+        position: absolute;
+        opacity: 1;
+        animation: con2 6s infinite both;
+      }
+      @keyframes con2 {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .content .right1 p {
+        width: 285px;
+        height: 250px;
+        background: url(images/happybath/images2/notice1.jpg);
+        animation: notice 6s infinite both;
+        cursor: pointer;
+      }
+      @keyframes notice {
+        0% {
+          background: url(images/happybath/images2/notice1.jpg);
+        }
+        50% {
+          background: url(images/happybath/images2/notice2.jpg);
+        }
+        0% {
+          background: url(images/happybath/images2/notice1.jpg);
+        }
+      }
+      .happy {
+        width: 960px;
+        margin: 0 auto 100px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .happy div {
+        display: flex;
+        width: 463px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .happy h2 {
+        margin: 60px 0 20px;
+      }
+      .happy ul {
+        width: 100%;
+        height: 306px;
+        display: flex;
+        overflow: hidden;
+      }
+      .happy ul > li {
+        position: relative;
+        flex: 1 1 30%;
+        transition: flex-basis 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+      }
+      .happy ul > li.first {
+        background: url(images/sample01.jpg);
+      }
+      .happy ul > li.second {
+        background: url(images/sample02.jpg);
+      }
+      .happy ul > li.third {
+        background: url(images/sample03.jpg);
+      }
+      .left .title {
+        text-align: center;
+        line-height: 306px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .left .box {
+        width: calc(463px * 0.6);
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 60px;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+        font-size: 20px;
+        box-sizing: border-box;
+      }
+      .left .box p:first-child {
+        padding-bottom: 30px;
+      }
+      .left .box p:last-child {
+        display: inline-block;
+        font-size: 16px;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 5px 20px;
+        cursor: pointer;
+      }
+      .left .box p:last-child:hover {
+        color: #333;
+        background: rgba(255, 255, 255, 0.5);
+        border-color: transparent;
+      }
+      .left > ul:hover {
+        border: 1px solid #333;
+      }
+      .left ul:hover .title {
+        display: none;
+      }
+      .left ul > li:hover .box {
+        opacity: 1;
+      }
+      .left ul:hover > li:hover {
+        flex-basis: 60%;
+      }
+      .left ul:hover > li:not(:hover) {
+        flex-basis: 20%;
+      }
+      .right div {
+        width: 463px;
+        height: 306px;
+        background: url(images/beautytalk.jpg);
+        background-position: center;
+        background-size: 100%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: background-size 0.5s;
+      }
+      .right div > p {
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 30px;
+      }
+      .right div > a {
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 5px 20px;
+      }
+      .right div:hover {
+        background-size: 110%;
+        border: 1px solid #333;
+      }
+      .right div > a:hover {
+        color: #333;
+        background: rgba(255, 255, 255, 0.5);
+        border-color: transparent;
+      }
+      .sns {
+        background: #fafafa;
+        display: flex;
+        justify-content: center;
+      }
+      footer {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0 80px;
+      }
+      footer ul {
+        display: flex;
+        margin-bottom: 3px;
+      }
+      footer ul li::after {
+        content: "|";
+        padding: 0 10px;
+      }
+      footer ul li:last-child::after {
+        content: "";
+      }
+      footer p:last-of-type {
+        margin-top: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="topwrap">
+        <div class="logo">
+          <a href="#"
+            ><img src="images/happybath/images2/happylogo.png" alt="happylogo"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">구매하기</a></li>
+          <li><a href="#">매장찾기</a></li>
+          <li>
+            <a href="#"
+              ><img src="images/happybath/images2/search.png" alt="search" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav>
+      <div class="menu">
+        <ul class="gnb">
+          <li>
+            <a href="#">해피바스 <strong>이야기</strong></a>
+            <ul class="lnb">
+              <li><a href="#">브랜드 히스토리</a></li>
+              <li><a href="#">영상 갤러리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">해피바스 <strong>선물</strong></a>
+            <ul class="lnb">
+              <li>
+                <a href="#">행복의 순간</a>
+                <ul>
+                  <li><a href="#">내추럴 성분</a></li>
+                  <li><a href="#">풍성한 향</a></li>
+                  <li><a href="#">즐거운 경험</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">해피바스 <strong>뷰티톡</strong></a>
+            <ul class="lnb">
+              <li><a href="#">피부고민X뷰티팁</a></li>
+              <li><a href="#">자산화 원료</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">해피바스 <strong>제품</strong></a>
+            <ul class="lnb">
+              <li><a href="#">유형별 제품</a></li>
+              <li><a href="#">고민별 제품</a></li>
+              <li><a href="#">전체 제품 보기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="bg"></div>
+    </nav>
+    <div class="banner">
+      <p><a href="#"></a></p>
+    </div>
+    <div class="best">
+      <div class="bestwrap">
+        <h2>베스트셀러 아이템</h2>
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="images/happybath/images2/product1.png" alt="product1"
+            /></a>
+            <p>해피바스 마이크로미셀라<br />딥 클렌징 폼</p>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/happybath/images2/product2.png" alt="product2"
+            /></a>
+            <p>해피바스 오리지널컬렉션<br />오리지널 바디워시</p>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/happybath/images2/product3.png" alt="product3"
+            /></a>
+            <p>해피바스 오리지널컬렉션<br />베이비파우더 바디워시</p>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/happybath/images2/product4.png" alt="product4"
+            /></a>
+            <p>해피바스 오리지널컬렉션<br />솝 라벤더 바디워시</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="left1">
+        <h2>제품 리뷰</h2>
+        <div class="con con1">
+          <p>
+            <img src="images/happybath/images2/content1.png" alt="content1" />
+          </p>
+          <ul>
+            <li>[오리지널컬렉션 체리블로섬 바디워시]</li>
+            <li>
+              <ul>
+                <li>fkrr*****</li>
+                <li>
+                  <img src="images/happybath/images2/star.png" alt="star" />
+                </li>
+              </ul>
+            </li>
+            <li>
+              정말 오랜만에 향기도 좋고 성분도 착한 바디워시를 만났어요!
+              마일드한 세정력도 좋고 저자극의 바디워시입니다.
+            </li>
+          </ul>
+        </div>
+        <div class="con con2">
+          <p>
+            <img src="images/happybath/images2/content2.png" alt="content2" />
+          </p>
+          <ul>
+            <li>[해피바스 마이크로미셀라 딥 클렌징 폼]</li>
+            <li>
+              <ul>
+                <li>pcs0***</li>
+                <li>
+                  <img src="images/happybath/images2/star.png" alt="star" />
+                </li>
+              </ul>
+            </li>
+            <li>
+              항상 마이크로 미셀라 딥 클렌징 폼을 사용하는데 역시 세정력
+              우수하고 피부가 개운해요 확실히 마무리가 촉촉한 느낌이 있어요!
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right1">
+        <h2>해피바스 소식</h2>
+        <p><a href="#"></a></p>
+      </div>
+    </div>
+    <div class="happy">
+      <div class="left">
+        <h2>해피바스 선물</h2>
+        <ul>
+          <li class="first">
+            <p class="title">내추럴 성분</p>
+            <div class="box">
+              <p>해피바스가 담고 있는<br />'내추럴 성분'이 궁금하다면?</p>
+              <p>more</p>
+            </div>
+          </li>
+          <li class="second">
+            <p class="title">풍성한 향</p>
+            <div class="box">
+              <p>해피바스가 펼쳐지는<br />'풍성한 향'이 궁금하다면?</p>
+              <p>more</p>
+            </div>
+          </li>
+          <li class="third">
+            <p class="title">즐거운 경험</p>
+            <div class="box">
+              <p>해피바스가 이끄는<br />'즐거운 경험'이 궁금하다면?</p>
+              <p>more</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <h2>해피바스 뷰티톡</h2>
+        <div>
+          <p>피부고민에 따른 뷰티팁을 드려요</p>
+          <a href="#">more</a>
+        </div>
+      </div>
+    </div>
+    <div class="sns">
+      <a href="#"
+        ><img
+          src="images/happybath/images2/sns-facebook.png"
+          alt="sns-facebook"
+      /></a>
+      <a href="#"
+        ><img
+          src="images/happybath/images2/sns-youtube_new.png"
+          alt="sns-youtube_new"
+      /></a>
+      <a href="#"
+        ><img src="images/happybath/images2/sns-instar.png" alt="sns-instar"
+      /></a>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="#">서비스 이용약관</a></li>
+        <li>
+          <a href="#"><strong>개인정보처리방침</strong></a>
+        </li>
+        <li><a href="#">영상처리방침</a></li>
+        <li><a href="#">뷰티포인트</a></li>
+        <li><a href="#">사이트맵</a></li>
+      </ul>
+      <p>
+        고객상담팀(수신자 요금 부담) 080-023-5454 | 상담시간 월~금 : AM 09:00 ~
+        PM 06:00
+      </p>
+      <p>© AMOREPACIFIC CORPORATION. All rights reserved.</p>
+      <a href="#"><img src="images/happybath/images2/logo.png" alt="logo" /></a>
+    </footer>
+  </body>
+</html>
