@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>madforgarlic</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: #ccc;
+      }
+      .list {
+        width: 1504px;
+        margin: 100px auto;
+        font-size: 0;
+      }
+      .list > ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .list > ul > li {
+        position: relative;
+        overflow: hidden;
+      }
+      .list > ul > li .over {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        color: #fff;
+        font-size: 17px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .list > ul > li .over span {
+        opacity: 0;
+        transition: 0.5s ease-in 0.1s;
+      }
+      .list > ul > li .over p {
+        font-weight: 600;
+        transition: 0.5s;
+      }
+      .list > ul > li .over a {
+        display: block;
+        padding: 10px 20px;
+        background: #fff;
+        font-size: 14px;
+        margin-top: 20px;
+        opacity: 0;
+        transition-delay: 0.5s ease-in 0.2s;
+      }
+      .list > ul > li .over a:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        transition: 0s;
+      }
+      .list > ul > li:hover .over {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .list > ul > li:hover span {
+        opacity: 1;
+      }
+      .list > ul > li:hover a {
+        opacity: 1;
+      }
+      .list > ul > li .inner {
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover .inner {
+        transform: translateY(-20px);
+      }
+      .list > ul > li > img {
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover > img {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <ul>
+        <li>
+          <img src="images/madforgarlic/images2/img1.png" alt="img1" />
+          <div class="over">
+            <div class="inner">
+              <span
+                ><img src="images/madforgarlic/images2/icon1.png" alt="icon1"
+              /></span>
+              <p>bread & starter</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <img src="images/madforgarlic/images2/img2.png" alt="img2" />
+            </li>
+            <li>
+              <img src="images/madforgarlic/images2/img3.png" alt="img3" />
+            </li>
+          </ul>
+        </li>
+        <li>
+          <img src="images/madforgarlic/images2/img4.jpg" alt="img4" />
+          <div class="over">
+            <div class="inner">
+              <span
+                ><img src="images/madforgarlic/images2/icon2.png" alt="icon2"
+              /></span>
+              <p>salad</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/madforgarlic/images2/img5.png" alt="img5" />
+          <div class="over">
+            <div class="inner">
+              <span
+                ><img src="images/madforgarlic/images2/icon3.png" alt="icon3"
+              /></span>
+              <p>pasta</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/madforgarlic/images2/img6.jpg" alt="img6" />
+          <div class="over">
+            <div class="inner">
+              <span
+                ><img src="images/madforgarlic/images2/icon4.png" alt="icon4"
+              /></span>
+              <p>pizza</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/madforgarlic/images2/img7.jpg" alt="img7" />
+          <div class="over">
+            <div class="inner">
+              <span
+                ><img src="images/madforgarlic/images2/icon5.png" alt="icon5"
+              /></span>
+              <p>rice & risotto</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/madforgarlic/images2/img8.jpg" alt="img8" />
+          <div class="over">
+            <div class="inner">
+              <span
+                ><img src="images/madforgarlic/images2/icon6.png" alt="icon6"
+              /></span>
+              <p>steak</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

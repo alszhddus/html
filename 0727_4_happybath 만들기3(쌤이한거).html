@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해피바스</title>
+    <style>
+      @font-face {
+        font-family: "나눔 고딕";
+        src: url(webfonts/NanumGothic.otf) format(otf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "나눔 고딕", sans-serif;
+      }
+      .foot_sns {
+        background: #f8f8f8;
+      }
+      .foot_sns ul {
+        display: flex;
+        justify-content: center;
+      }
+      .foot_bottom {
+        position: relative;
+        width: 1000px;
+        margin: 0 auto;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .foot_bottom .foot {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .foot_bottom .foot ul {
+        display: flex;
+      }
+      .foot_bottom .foot ul li::after {
+        content: "|";
+        padding: 0 10px;
+      }
+      .foot_bottom .foot ul li:last-child::after {
+        content: "";
+      }
+      .foot_bottom .foot p {
+        font-size: 12px;
+      }
+      .foot_bottom img {
+        width: 66px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="foot_sns">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="images/happybath/images2/sns-facebook.png"
+                alt="sns-facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/happybath/images2/sns-youtube_new.png"
+                alt="sns-youtube_new"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/happybath/images2/sns-instar.png"
+                alt="sns-instar"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="foot_bottom">
+        <div class="foot">
+          <ul>
+            <li><a href="#">서비스 이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">영상처리방침</a></li>
+            <li><a href="#">뷰티포인트</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <ul>
+            <li>고객상담팀(수신자 요금 부담) 080-023-5454</li>
+            <li>상담시간 월~금 : AM 09:00 ~ PM 06:00</li>
+          </ul>
+          <p>© AMOREPACIFIC CORPORATION. All rights reserved.</p>
+        </div>
+        <img src="images/happybath/images2/logo.png" alt="logo" />
+      </div>
+    </footer>
+  </body>
+</html>

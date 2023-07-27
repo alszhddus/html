@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해피바스</title>
+    <style>
+      @font-face {
+        font-family: "나눔 고딕";
+        src: url(webfonts/NanumGothic.otf) format(otf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "나눔 고딕", sans-serif;
+      }
+      .product {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .product h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .product .review .box {
+        border: 1px solid #eee9f3;
+        display: flex;
+        justify-content: center;
+      }
+      .product .review .box:hover {
+        border: 1px solid #333;
+      }
+      .product .review .box .picture {
+        background: #eee9f3;
+      }
+      .product .review .box .desc {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+      }
+      .product .review .box .desc p:first-child {
+        font-size: 20px;
+      }
+      .product .review .box .desc .star {
+        /* position: relative; */
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+      }
+      /* .product .review .box .desc .star span:last-child {
+        position: absolute;
+        right: 2px;
+      } */
+      .product .news .box {
+        width: 285px;
+        height: 250px;
+        background: url(images/happybath/images2/notice1.jpg) no-repeat;
+        animation: news 4s infinite both;
+        border: 1px solid transparent;
+      }
+      .product .news .box:hover {
+        border: 1px solid #333;
+      }
+      @keyframes news {
+        0% {
+          background: url(images/happybath/images2/notice1.jpg) no-repeat;
+        }
+        50% {
+          background: url(images/happybath/images2/notice2.jpg) no-repeat;
+        }
+        100% {
+          background: url(images/happybath/images2/notice1.jpg) no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="review">
+        <h2>제품리뷰</h2>
+        <div class="box">
+          <div class="picture">
+            <img src="images/happybath/images2/content1.png" alt="content" />
+          </div>
+          <div class="desc">
+            <p>[오리지널컬렉션 체리블로섬 바디워시]</p>
+            <p class="star">
+              <span>fkrr</span>
+              <span
+                ><img src="images/happybath/images2/star.png" alt="star"
+              /></span>
+            </p>
+            <p>
+              정말 오랜만에 향기도 좋고 성분도 착한 바디워시를 만났어요!
+              마일드한 세정력도 좋고 저자극의 바디워시입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <h2>해피바스 새소식</h2>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>

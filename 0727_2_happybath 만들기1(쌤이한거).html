@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해피바스</title>
+    <style>
+      @font-face {
+        font-family: "나눔 고딕";
+        src: url(webfonts/NanumGothic.otf) format(otf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "나눔 고딕", sans-serif;
+      }
+      .bestitem {
+        width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: url(images/happybath/images2/item-bg.png) 0 90% repeat-x;
+        text-align: center;
+      }
+      .bestitem h1 {
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 20px;
+      }
+      .bestitem h1::before {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        content: "";
+        width: 280px;
+        height: 1px;
+        background: #ccc;
+      }
+      .bestitem h1::after {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        content: "";
+        width: 280px;
+        height: 1px;
+        background: #ccc;
+      }
+      .bestitem ul {
+        display: flex;
+        justify-content: center;
+      }
+      .bestitem ul li {
+        width: 220px;
+        cursor: pointer;
+      }
+      .bestitem ul li p {
+        letter-spacing: -3px;
+        margin-top: 10px;
+      }
+      .bestitem ul li img {
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .bestitem ul li:hover img {
+        transform: scale(1.05);
+      }
+      .bestitem ul li:hover p {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bestitem">
+      <h1>베스트셀러 아이템</h1>
+      <ul>
+        <li>
+          <a href="#"
+            ><img src="images/happybath/images2/product1.png" alt="product1"
+          /></a>
+          <p>해피바스 마이크로미셀라<br />딥 클렌징 폼</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/happybath/images2/product2.png" alt="product2"
+          /></a>
+          <p>해피바스 오리지널컬렉션<br />오리지널 바디워시</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/happybath/images2/product3.png" alt="product3"
+          /></a>
+          <p>해피바스 오리지널컬렉션<br />베이비파우더 바디워시</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/happybath/images2/product4.png" alt="product4"
+          /></a>
+          <p>해피바스 오리지널컬렉션<br />솝 라벤더 바디워시</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

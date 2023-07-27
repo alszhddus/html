@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>madforgarlic</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: #ccc;
+      }
+      .mad {
+        width: 1504px;
+
+        margin: 100px auto;
+        text-align: center;
+      }
+      .mad .img_top {
+        height: 492px;
+        display: flex;
+      }
+      .mad .img_top .sub,
+      .mad .img_bottom .sub {
+        display: flex;
+        flex-direction: column;
+      }
+      .mad .img_top,
+      .mad .img_bottom {
+        display: flex;
+      }
+      .mad .img_top > li,
+      .mad .img_bottom > li {
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .mad .img_top > li > .con,
+      .mad .img_bottom > li > .con {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        transition: 0.5s;
+        z-index: 1;
+      }
+      .mad .img_top > li > .con > img,
+      .mad .img_bottom > li > .con > img {
+        opacity: 0;
+      }
+      .mad .img_top > li > .con > p,
+      .mad .img_bottom > li > .con > p {
+        font-weight: 600;
+        font-size: 17px;
+        color: #fff;
+      }
+      .mad .img_top > li > .con > a,
+      .mad .img_bottom > li > .con > a {
+        display: inline-block;
+        font-size: 8px;
+        color: #333;
+        padding: 5px 20px;
+        background: #fff;
+        margin-top: 10px;
+        opacity: 0;
+      }
+      .mad .img_top > li > .con > a:hover,
+      .mad .img_bottom > li > .con > a:hover {
+        background: #333;
+        color: #fff;
+      }
+      .mad .img_top > li:hover > .con > img,
+      .mad .img_top > li:hover > .con > a,
+      .mad .img_bottom > li:hover > .con > img,
+      .mad .img_bottom > li:hover > .con > a {
+        opacity: 1;
+        transition: 0.5s;
+      }
+      .mad .img_top > li:hover > .con,
+      .mad .img_bottom > li:hover > .con {
+        top: 42%;
+      }
+      .mad .img_top > li > img,
+      .mad .img_bottom > li > img {
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .mad .img_top > li:hover > img,
+      .mad .img_bottom > li:hover > img {
+        filter: brightness(50%);
+        transform: scale(1.2);
+      }
+      .mad .img_top .food,
+      .mad .img_bottom .food {
+        font-size: 0;
+      }
+      .mad .img_bottom {
+        height: 335px;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mad">
+      <ul class="img_top">
+        <li class="bread">
+          <div class="con">
+            <img src="images/madforgarlic/images2/icon1.png" alt="icon1" />
+            <p>bread & starter</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <img src="images/madforgarlic/images2/img1.png" alt="img1" />
+        </li>
+        <il class="food">
+          <ul class="sub">
+            <li>
+              <img src="images/madforgarlic/images2/img2.png" alt="img2" />
+            </li>
+            <li>
+              <img src="images/madforgarlic/images2/img3.png" alt="img3" />
+            </li>
+          </ul>
+        </il>
+        <li class="salad">
+          <div class="con">
+            <img src="images/madforgarlic/images2/icon2.png" alt="icon2" />
+            <p>salad</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <img src="images/madforgarlic/images2/img4.jpg" alt="img4" />
+        </li>
+        <li class="pasta">
+          <div class="con">
+            <img src="images/madforgarlic/images2/icon3.png" alt="icon3" />
+            <p>pasta</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <img src="images/madforgarlic/images2/img5.png" alt="img5" />
+        </li>
+      </ul>
+      <ul class="img_bottom">
+        <li class="pizza">
+          <div class="con">
+            <img src="images/madforgarlic/images2/icon4.png" alt="icon4" />
+            <p>pizza</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <img src="images/madforgarlic/images2/img6.jpg" alt="img6" />
+        </li>
+        <li class="rice">
+          <div class="con">
+            <img src="images/madforgarlic/images2/icon5.png" alt="icon5" />
+            <p>rice & risotto</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <img src="images/madforgarlic/images2/img7.jpg" alt="img7" />
+        </li>
+        <li class="steak">
+          <div class="con">
+            <img src="images/madforgarlic/images2/icon6.png" alt="icon6" />
+            <p>steak</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <img src="images/madforgarlic/images2/img8.jpg" alt="img8" />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
