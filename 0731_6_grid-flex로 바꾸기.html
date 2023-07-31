@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid 속성 연습(쌤이한거)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .grid {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .grid .head {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .grid .con {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+      }
+      .grid .foot {
+        height: 100px;
+        display: flex;
+      }
+      .grid .head > div:first-child {
+        color: rgb(152, 152, 152);
+        width: 200px;
+        letter-spacing: 5px;
+        border: 3px double rgb(255, 100, 100);
+        border-radius: 50px;
+        padding: 5px;
+        box-sizing: border-box;
+        font-size: 12px;
+      }
+      .grid .head > div:first-child span {
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(255, 100, 100);
+        letter-spacing: 0;
+      }
+      .grid .head > div:nth-child(2) {
+        width: 1000px;
+      }
+      .grid .head > div:nth-child(2) > .gnb {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .grid .head > div:nth-child(2) > .gnb > li > a {
+        display: block;
+        padding: 15px 30px;
+        background: #fff;
+        color: rgb(255, 100, 100);
+        border: 1px solid rgb(255, 46, 46);
+        border-left: none;
+        box-sizing: border-box;
+      }
+      .grid .head > div:nth-child(2) > .gnb > li:first-child > a {
+        border-left: 1px solid rgb(255, 46, 46);
+      }
+      .grid .head > div:nth-child(2) > .gnb > li > a:hover {
+        background: rgb(255, 100, 100);
+        color: #fff;
+      }
+      .grid .head > div:nth-child(2) > .gnb > li .lnb {
+        display: none;
+      }
+      .grid > div:nth-child(2) {
+        background: #aaa;
+        width: 100%;
+        height: 300px;
+      }
+      .grid .con > div:first-child {
+        background: #bbb;
+        width: 33.333%;
+      }
+      .grid .con > div:nth-child(2) {
+        background: #ccc;
+        width: 33.333%;
+      }
+      .grid .con > div:nth-child(3) {
+        background: #ddd;
+        width: 33.333%;
+      }
+      .grid .foot > div:first-child {
+        background: #f00;
+        width: 200px;
+      }
+      .grid .foot > div:nth-child(2) {
+        background: #0f0;
+        width: 800px;
+      }
+      .grid .foot > div:nth-child(3) {
+        background: #00f;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="head">
+        <div class="grid-item">트랜드 리더 <br /><span>JUSTShop</span></div>
+        <div class="grid-item">
+          <ul class="gnb">
+            <li>
+              <a href="#">menu-1</a>
+              <ul class="lnb">
+                <li><a href="#">SubMenu-1</a></li>
+                <li><a href="#">SubMenu-2</a></li>
+                <li><a href="#">SubMenu-3</a></li>
+                <li><a href="#">SubMenu-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu-2</a>
+              <ul class="lnb">
+                <li><a href="#">SubMenu-1</a></li>
+                <li><a href="#">SubMenu-2</a></li>
+                <li><a href="#">SubMenu-3</a></li>
+                <li><a href="#">SubMenu-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu-3</a>
+              <ul class="lnb">
+                <li><a href="#">SubMenu-1</a></li>
+                <li><a href="#">SubMenu-2</a></li>
+                <li><a href="#">SubMenu-3</a></li>
+                <li><a href="#">SubMenu-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu-4</a>
+              <ul class="lnb">
+                <li><a href="#">SubMenu-1</a></li>
+                <li><a href="#">SubMenu-2</a></li>
+                <li><a href="#">SubMenu-3</a></li>
+                <li><a href="#">SubMenu-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-item">slide</div>
+      <div class="con">
+        <div class="grid-item">공지사항/갤러리</div>
+        <div class="grid-item">배너</div>
+        <div class="grid-item">바로가기</div>
+      </div>
+      <div class="foot">
+        <div class="grid-item">logo</div>
+        <div class="grid-item">copyright</div>
+        <div class="grid-item">sns</div>
+      </div>
+    </div>
+  </body>
+</html>

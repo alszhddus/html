@@ -1,0 +1,108 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.firstpage .mainvisualwrap {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #b40100, #5e0100);
+  overflow: hidden;
+}
+.firstpage .mainvisualwrap .mainvisual {
+  transform: rotate(-7.1deg) translate(-100px, -210px);
+}
+.firstpage .mainvisualwrap .mainvisual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.firstpage .mainvisualwrap .mainvisual p:first-child {
+  width: 364px;
+  height: 533px;
+  position: absolute;
+  left: 50%;
+  top: 344px;
+  z-index: 3;
+  transform: translateX(-50%);
+}
+
+.firstpage .mainvisualwrap .mainvisual p:nth-child(2) {
+  width: 878px;
+  height: 407px;
+  position: absolute;
+  left: -30px;
+  top: 469px;
+  z-index: 4;
+  animation: main2 1.5s ease-in forwards;
+}
+.firstpage .mainvisualwrap .mainvisual p:nth-child(3) {
+  width: 950px;
+  height: 231px;
+  position: absolute;
+  left: 1065px;
+  top: 646px;
+  z-index: 2;
+}
+.firstpage .mainvisualwrap .mainvisual p:nth-child(4) {
+  width: 1957px;
+  height: 0;
+  position: absolute;
+  left: 31px;
+  top: 872px;
+  z-index: 7;
+  animation: main1 1.5s ease-in forwards;
+}
+.firstpage .mainvisualwrap .mainvisual p:nth-child(5) {
+  width: 1964px;
+  height: 407px;
+  position: absolute;
+  top: 874px;
+  z-index: 6;
+}
+.firstpage .mainvisualwrap .mainvisual p:nth-child(6) {
+  width: 527px;
+  height: 141px;
+  position: absolute;
+  left: 710px;
+  top: 440px;
+  z-index: 1;
+}
+.firstpage .mainvisualwrap .mainvisual p:first-child img,
+.firstpage .mainvisualwrap .mainvisual p:nth-child(2) img,
+.firstpage .mainvisualwrap .mainvisual p:nth-child(3) img,
+.firstpage .mainvisualwrap .mainvisual p:nth-child(4) img,
+.firstpage .mainvisualwrap .mainvisual p:nth-child(5) img,
+.firstpage .mainvisualwrap .mainvisual p:nth-child(6) img {
+  width: 100%;
+  /* height: 100%; */
+  /* object-fit: contain; */
+}
+@keyframes main1 {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: 115px;
+    overflow: hidden;
+  }
+}
+@keyframes main2 {
+  0% {
+    top: 900px;
+  }
+  100% {
+    top: 469px;
+  }
+}
+.secondpage {
+  height: 100vh;
+  background: #ccc;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid 속성 연습(내가한거)</title>
+    <style>
+      .grid {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+          "logo1 menu menu menu menu"
+          "slide slide slide slide slide"
+          "notice notice banner more more"
+          "logo2 copyright copyright copyright sns";
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-rows: 100px 300px 200px 100px;
+      }
+      .grid > div:first-child {
+        grid-area: logo1;
+        background: #f00;
+      }
+      .grid > div:nth-child(2) {
+        grid-area: menu;
+        background: #0f0;
+      }
+      .grid > div:nth-child(3) {
+        grid-area: slide;
+        background: #aaa;
+      }
+      .grid > div:nth-child(4) {
+        grid-area: notice;
+        background: #bbb;
+      }
+      .grid > div:nth-child(5) {
+        grid-area: banner;
+        background: #ccc;
+      }
+      .grid > div:nth-child(6) {
+        grid-area: more;
+        background: #ddd;
+      }
+      .grid > div:nth-child(7) {
+        grid-area: logo2;
+        background: #f00;
+      }
+      .grid > div:nth-child(8) {
+        grid-area: copyright;
+        background: #0f0;
+      }
+      .grid > div:nth-child(9) {
+        grid-area: sns;
+        background: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid-item">logo</div>
+      <div class="grid-item">menu</div>
+      <div class="grid-item">slide</div>
+      <div class="grid-item">공지사항/갤러리</div>
+      <div class="grid-item">배너</div>
+      <div class="grid-item">바로가기</div>
+      <div class="grid-item">logo</div>
+      <div class="grid-item">copyright</div>
+      <div class="grid-item">sns</div>
+    </div>
+  </body>
+</html>
