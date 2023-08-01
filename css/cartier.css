@@ -1,4 +1,12 @@
 @charset "utf-8";
+@font-face {
+  font-family: "본명조";
+  src: url(../webfonts/SourceHanSerifK-Regular.otf) format(otf);
+}
+@font-face {
+  font-family: "BASKVILL";
+  src: url(../webfonts/BASKVILL.TTF.woff) format(woff);
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +17,47 @@ ul {
 a {
   text-decoration: none;
 }
+body {
+  font-family: "BASKVILL", "본명조", sans-serif;
+  background: #ddd;
+}
+.head {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+.head .headwrap {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 50px auto 0;
+}
+.head .headwrap .headwrap2 {
+  width: 664px;
+  display: flex;
+  justify-content: space-between;
+}
+.head .headwrap .headwrap2 .cartierlogo a img {
+  width: 48px;
+  height: 68px;
+}
+.head .headwrap .headwrap2 .topico ul {
+  display: flex;
+}
+.head .headwrap .headwrap2 .topico ul li {
+  width: 25px;
+  height: 21px;
+  margin-left: 10px;
+}
+.head .headwrap .headwrap2 .topico ul li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .firstpage .mainvisualwrap {
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(-45deg, #b40100, #5e0100);
@@ -25,54 +73,61 @@ a {
 }
 .firstpage .mainvisualwrap .mainvisual p:first-child {
   width: 364px;
-  height: 533px;
+  height: 0;
   position: absolute;
   left: 50%;
-  top: 344px;
+  top: 349px;
   z-index: 3;
   transform: translateX(-50%);
+  opacity: 0;
+  animation: main4 1s ease-in 0.4s forwards;
 }
 
 .firstpage .mainvisualwrap .mainvisual p:nth-child(2) {
   width: 878px;
-  height: 407px;
+  height: 0;
   position: absolute;
   left: -30px;
-  top: 469px;
+  top: 474px;
   z-index: 4;
-  animation: main2 1.5s ease-in forwards;
+  opacity: 0;
+  animation: main2 1s ease-in forwards;
 }
 .firstpage .mainvisualwrap .mainvisual p:nth-child(3) {
   width: 950px;
   height: 231px;
   position: absolute;
   left: 1065px;
-  top: 646px;
+  top: 651px;
   z-index: 2;
+  opacity: 0;
+  animation: main3 1s ease-in forwards;
 }
 .firstpage .mainvisualwrap .mainvisual p:nth-child(4) {
   width: 1957px;
-  height: 0;
+  height: 115px;
   position: absolute;
   left: 31px;
-  top: 872px;
+  top: 877px;
   z-index: 7;
-  animation: main1 1.5s ease-in forwards;
 }
 .firstpage .mainvisualwrap .mainvisual p:nth-child(5) {
   width: 1964px;
   height: 407px;
   position: absolute;
-  top: 874px;
+  left: 30px;
+  top: 879px;
   z-index: 6;
 }
 .firstpage .mainvisualwrap .mainvisual p:nth-child(6) {
   width: 527px;
   height: 141px;
   position: absolute;
-  left: 710px;
-  top: 440px;
+  left: 715px;
+  top: 445px;
   z-index: 1;
+  opacity: 0;
+  animation: main5 1s ease-in 1.2s forwards;
 }
 .firstpage .mainvisualwrap .mainvisual p:first-child img,
 .firstpage .mainvisualwrap .mainvisual p:nth-child(2) img,
@@ -84,25 +139,103 @@ a {
   /* height: 100%; */
   /* object-fit: contain; */
 }
+.firstpage .mainvisualwrap .mainvisual p:nth-child(4) img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-mask-image: url(../images/cartier/mainvisual03mask4.png);
+  mask-image: url(../images/cartier/mainvisual03mask4.png);
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  opacity: 0;
+  animation: main1 1s ease-in forwards;
+}
 @keyframes main1 {
   0% {
-    height: 0;
-    overflow: hidden;
+    top: -120px;
+    opacity: 0;
+    /* height: 0;
+    overflow: hidden; */
   }
   100% {
-    height: 115px;
-    overflow: hidden;
+    top: 0;
+    opacity: 1;
+    /* height: 115px;
+    overflow: hidden; */
   }
 }
 @keyframes main2 {
   0% {
     top: 900px;
+    opacity: 0;
   }
   100% {
-    top: 469px;
+    top: 474px;
+    opacity: 1;
   }
+}
+@keyframes main3 {
+  0% {
+    top: 900px;
+    opacity: 0;
+  }
+  100% {
+    top: 651px;
+    opacity: 1;
+  }
+}
+@keyframes main4 {
+  0% {
+    top: 950px;
+    opacity: 0;
+  }
+  100% {
+    top: 349px;
+    opacity: 1;
+  }
+}
+@keyframes main5 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.firstpage .mainvisualwrap .viewbtn {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.firstpage .mainvisualwrap .viewbtn svg {
+  position: relative;
+  top: 0;
+  width: 40px;
+  height: 80px;
+  animation: viewbtn 1s infinite;
+}
+@keyframes viewbtn {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.firstpage .mainvisualwrap .viewbtn p {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+  padding-top: 10px;
 }
 .secondpage {
   height: 100vh;
-  background: #ccc;
+  background: transparent;
 }
