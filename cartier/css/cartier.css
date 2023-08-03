@@ -1,11 +1,11 @@
 @charset "utf-8";
 @font-face {
   font-family: "본명조";
-  src: url(webfonts/SourceHanSerifK-Regular.otf) format(otf);
+  src: url(../webfonts/SourceHanSerifK-Regular.otf) format("otf");
 }
 @font-face {
   font-family: "BASKVILL";
-  src: url(webfonts/BASKVILL.woff) format(woff);
+  src: url(../webfonts/BASKVILL.woff) format("woff");
 }
 * {
   margin: 0;
@@ -69,7 +69,7 @@ body {
   height: 100vh;
   background: #fff;
 }
-.firstpage .mainvisualwrap{
+.firstpage .mainvisualwrap {
   width: 100%;
   height: 960px;
   position: relative;
@@ -94,7 +94,7 @@ body {
   left: 0;
   /* top: 0; */
 }
-.firstpage .mainvisualwrap .mv_inner .topwrap p:first-of-type{
+.firstpage .mainvisualwrap .mv_inner .topwrap p:first-of-type {
   opacity: 0;
   animation: topwrap03 1s ease-out forwards;
 }
@@ -195,13 +195,12 @@ body {
   height: 100vh;
   background: transparent;
 }
-.secondpage .secondwrap{
+.secondpage .secondwrap {
   position: relative;
   width: 1280px;
   margin: 0 auto;
-  
 }
-.secondpage .secondwrap .second_desc{
+.secondpage .secondwrap .second_desc {
   position: absolute;
   left: 0;
   top: 0;
@@ -212,17 +211,17 @@ body {
   height: 100vh;
   color: #fff;
 }
-.secondpage .secondwrap .second_desc h1{
+.secondpage .secondwrap .second_desc h1 {
   font-size: 30px;
   margin-bottom: 20px;
 }
-.secondpage .secondwrap .second_desc p:first-of-type{
+.secondpage .secondwrap .second_desc p:first-of-type {
   width: 403px;
   text-align: justify;
   font-size: 20px;
   margin-bottom: 20px;
 }
-.secondpage .secondwrap .second_desc p:nth-of-type(2) a{
+.secondpage .secondwrap .second_desc p:nth-of-type(2) a {
   font-size: 14px;
   letter-spacing: 3px;
   color: #fff;
@@ -234,69 +233,69 @@ body {
   animation: second_svg1 1s infinite;
 }
 @keyframes second_svg1 {
-  0%{
+  0% {
     left: -5px;
   }
-  50%{
+  50% {
     left: 10px;
   }
-  100%{
+  100% {
     left: -5px;
   }
 }
-.secondpage .secondbg{
+.secondpage .secondbg {
   width: 100%;
   height: 100%;
   display: flex;
 }
-.secondpage .secondbg div:first-child{
+.secondpage .secondbg div:first-child {
   width: 851px;
   height: 100%;
   background: #770100;
 }
-.secondpage .secondbg div:nth-child(2){
+.secondpage .secondbg div:nth-child(2) {
   width: calc(100% - 851px);
   height: 100%;
   background: #1b1b1b;
 }
-.secondpage .secondbg div:nth-child(2) img{
+.secondpage .secondbg div:nth-child(2) img {
   width: 100%;
   height: 100%;
   opacity: 0.2;
   object-fit: cover;
   object-position: center;
 }
-.scrollwrap{
+.scrollwrap {
   width: 100%;
   position: fixed;
   left: 0;
   bottom: 50px;
 }
-.scrollwrap .scroll{
+.scrollwrap .scroll {
   width: 1280px;
   margin: 0 auto;
   color: #fff;
   display: flex;
   align-items: center;
 }
-.scrollwrap .scroll p{
+.scrollwrap .scroll p {
   font-size: 20px;
   margin-right: 20px;
 }
-.scrollwrap .scroll svg{
+.scrollwrap .scroll svg {
   position: relative;
   width: 80px;
   height: 40px;
   animation: scroll 1.5s infinite;
 }
 @keyframes scroll {
-  0%{
+  0% {
     left: 0;
   }
-  50%{
+  50% {
     left: 10px;
   }
-  100%{
+  100% {
     left: 0;
   }
 }
