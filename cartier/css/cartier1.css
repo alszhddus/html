@@ -82,7 +82,7 @@ body {
   /* mix-blend-mode: normal; */
   overflow: hidden;
 }
-.firstpage .mv_inne .mainvisualwrap {
+.firstpage .mv_inner .mainvisualwrap {
   width: 100%;
   height: 960px;
   position: relative;
@@ -125,10 +125,6 @@ body {
 .firstpage .mainvisualwrap .mv_inner .bottomwrap span:last-of-type {
   mix-blend-mode: screen;
 }
-.secondpage {
-  height: 100vh;
-  background: transparent;
-}
 .topwrap p {
   animation: top 2s forwards;
 }
@@ -150,4 +146,8 @@ body {
   100% {
     top: 0px;
   }
+}
+.secondpage {
+  height: 100vh;
+  background: transparent;
 }
