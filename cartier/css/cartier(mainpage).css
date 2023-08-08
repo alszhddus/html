@@ -27,6 +27,7 @@ body {
 }
 .head {
   width: 100%;
+  height: 100px;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -254,6 +255,7 @@ body {
   font-size: 14px;
   letter-spacing: 3px;
   color: #fff;
+  text-transform: uppercase;
 }
 .secondpage .secondwrap .second_desc svg {
   position: relative;
@@ -375,6 +377,7 @@ body {
   font-size: 14px;
   letter-spacing: 3px;
   color: #fff;
+  text-transform: uppercase;
 }
 .thirdpage .thirdwrap .third_desc svg {
   position: relative;
@@ -418,7 +421,7 @@ body {
   object-fit: cover;
   object-position: center;
 }
-.fourthpage{
+.fourthpage {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -426,81 +429,82 @@ body {
 }
 .fourthpage .fourthwrap {
   width: 1280px;
-  margin: 0 auto ;
-  padding-top: 200px;
+  margin: 0 auto;
+  padding-top: 180px;
   text-align: center;
 }
-.fourthpage .fourthwrap h2{
+.fourthpage .fourthwrap h2 {
   font-size: 30px;
   font-weight: normal;
   margin-bottom: 70px;
 }
-.fourthpage .fourthwrap ul{
+.fourthpage .fourthwrap ul {
   display: flex;
   justify-content: space-between;
   margin-bottom: 130px;
 }
-.fourthpage .fourthwrap ul li{
+.fourthpage .fourthwrap ul li {
   padding: 10px;
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
 }
-.fourthpage .fourthwrap ul li:hover{
+.fourthpage .fourthwrap ul li:hover {
   border: 1px solid #c9c9c9;
 }
 .fourthpage .fourthwrap ul li a {
   color: #313131;
 }
-.fourthpage .fourthwrap ul li a img{
+.fourthpage .fourthwrap ul li a img {
   width: 276px;
   height: 276px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 20px;
 }
-.fourthpage .fourthwrap ul li .fourth_img{
+.fourthpage .fourthwrap ul li .fourth_img {
   width: 276px;
   height: 276px;
   position: relative;
   margin-bottom: 20px;
 }
-.fourthpage .fourthwrap ul li:hover .fourth_img> a:nth-child(2){
+.fourthpage .fourthwrap ul li:hover .fourth_img > a:nth-child(2) {
   opacity: 0;
 }
-.fourthpage .fourthwrap ul li .fourth_img> a img{
-position: absolute;
-left: 0;
+.fourthpage .fourthwrap ul li .fourth_img > a img {
+  position: absolute;
+  left: 0;
 }
-.fourthpage .fourthwrap ul li .fourth_p > p{
+.fourthpage .fourthwrap ul li .fourth_p > p {
   width: 276px;
   margin-bottom: 20px;
 }
-.fourthpage .fourthwrap ul li .fourth_p> p:nth-child(3){
-  margin-bottom: 0; 
+.fourthpage .fourthwrap ul li .fourth_p > p:nth-child(3) {
+  margin-bottom: 0;
 }
-.fourthpage .fourthwrap ul li .fourth_p >p:nth-child(3) a{
+.fourthpage .fourthwrap ul li .fourth_p > p:nth-child(3) a {
   font-size: 20px;
   font-weight: 600;
 }
-.fourthpage .fourthwrap ul li .fourth_p> p:nth-child(4){
+.fourthpage .fourthwrap ul li .fourth_p > p:nth-child(4) {
   margin-bottom: 0;
 }
-.fourthpage .fourthwrap ul li .fourth_p> p:nth-child(4) a{
+.fourthpage .fourthwrap ul li .fourth_p > p:nth-child(4) a {
   font-size: 10px;
 }
-.fourthpage .fourthwrap span{
+.fourthpage .fourthwrap span {
   display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
-.fourthpage .fourthwrap span a{
+.fourthpage .fourthwrap span a {
   color: #898989;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
-.fourthpage .fourthwrap svg{
+.fourthpage .fourthwrap svg {
   position: absolute;
   left: 50.4%;
   transform: translateX(-50%);
@@ -510,30 +514,43 @@ left: 0;
   animation: fourth_svg1 1s infinite;
 }
 @keyframes fourth_svg1 {
-  0%{
+  0% {
     left: 50.4%;
   }
-  50%{
+  50% {
     left: 50.6%;
   }
-  100%{
+  100% {
     left: 50.4%;
   }
 }
-.fifthpage{
+.fourthpage .fourthbtn {
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: 1480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.fifthpage {
   position: relative;
   width: 100%;
   height: 100vh;
   background: #770100;
 }
-.fifthpage > p{
+.fifthpage > p {
   position: absolute;
   left: 50%;
   top: 55%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 2;
 }
-.fifthpage > p:first-of-type{
+.fifthpage > p:first-of-type {
   position: absolute;
   left: 50%;
   top: 55%;
@@ -541,70 +558,70 @@ left: 0;
   animation: fifth_p 20s linear infinite;
 }
 @keyframes fifth_p {
-  0%{
+  0% {
     position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%) rotate(0);
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%) rotate(0);
   }
-  100%{
+  100% {
     position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%) rotate(360deg);
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-.fifthpage video{
+.fifthpage video {
   width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: center;
   opacity: 0.2;
 }
-.sixthpage{
+.sixthpage {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-.sixthpage .sixthwrap{
+.sixthpage .sixthwrap {
   width: 1920px;
   height: 100vh;
   color: #fff;
   font-size: 0;
 }
-.sixthpage .sixthwrap > div h2{
+.sixthpage .sixthwrap > div h2 {
   font-size: 30px;
   font-weight: normal;
   margin-bottom: 20px;
 }
-.sixthpage .sixthwrap > div img{
+.sixthpage .sixthwrap > div img {
   width: 960px;
   height: 100%;
   object-fit: cover;
 }
-.sixthpage .sixthwrap > .sixth_top{
+.sixthpage .sixthwrap > .sixth_top {
   display: flex;
 }
-.sixthpage .sixthwrap > div > div svg{
+.sixthpage .sixthwrap > div > div svg {
   position: relative;
   left: 5px;
   top: -15px;
-  width: 120px;
+  width: 140px;
   height: 20px;
   animation: sixth_svg1 1s infinite;
 }
 @keyframes sixth_svg1 {
-  0%{
+  0% {
     left: 5px;
   }
-  50%{
+  50% {
     left: 10px;
   }
-  100%{
+  100% {
     left: 5px;
   }
 }
-.sixthpage .sixthwrap > .sixth_top > div:nth-child(2){
+.sixthpage .sixthwrap > .sixth_top > div:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -613,10 +630,10 @@ left: 0;
   height: 50vh;
   background: #770100;
 }
-.sixthpage .sixthwrap > .sixth_bottom{
+.sixthpage .sixthwrap > .sixth_bottom {
   display: flex;
 }
-.sixthpage .sixthwrap > .sixth_bottom > div:first-child{
+.sixthpage .sixthwrap > .sixth_bottom > div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -625,10 +642,15 @@ left: 0;
   height: 50vh;
   background: #1b1b1b;
 }
-.sixthpage .sixthwrap > div p a{
+.sixthpage .sixthwrap > div p {
+  position: relative;
+  z-index: 2;
+}
+.sixthpage .sixthwrap > div p a {
   font-size: 14px;
   color: #fff;
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 .eightpage {
   width: 100%;
@@ -648,6 +670,10 @@ left: 0;
 }
 .eightpage .eightwrap p:first-child {
   margin-bottom: 20px;
+}
+.eightpage .eightwrap p:nth-child(2) {
+  position: relative;
+  z-index: 2;
 }
 .eightpage .eightwrap p:nth-child(2) a {
   color: #fff;
@@ -676,6 +702,8 @@ left: 0;
   }
 }
 .eightpage .eightwrap ul {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-content: space-between;
@@ -722,6 +750,8 @@ left: 0;
 }
 .eightpage .eight_btn {
   position: relative;
+  cursor: pointer;
+  z-index: 1;
 }
 .eightpage .eight_btn img:first-child {
   position: absolute;

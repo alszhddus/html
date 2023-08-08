@@ -1,0 +1,35 @@
+@charset "utf-8";
+@font-face {
+  font-family: "본명조";
+  src: url(../webfonts/SourceHanSerifK-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "BASKVILL";
+  src: url(../webfonts/BASKVILL.woff) format("woff");
+}
+@font-face {
+  font-family: Noto;
+  src: url(../webfonts/NotoSansKR-Medium.otf) format("otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  font-family: "BASKVILL", "본명조", sans-serif;
+  background: #1b1b1b;
+}
+nav img {
+  width: 182px;
+  height: 143px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
