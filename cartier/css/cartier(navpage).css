@@ -70,11 +70,11 @@ nav .navwrap .onedepth > li:hover span::before {
   content: url(../images/navicohover01.png);
 }
 nav .navwrap .onedepth li .twodepth {
-  display: flex;
   width: 100%;
   justify-content: flex-start;
 }
 nav .navwrap .onedepth li .twodepth > li {
+  float: left;
   margin-bottom: 30px;
 }
 nav .navwrap .onedepth li .twodepth > li a {
