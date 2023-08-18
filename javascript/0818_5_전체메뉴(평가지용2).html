@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "본명조";
+        src: url(../webfonts/SourceHanSerifK-Regular.otf) format("opentype");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        background: url(../images/collection.jpg) top/cover no-repeat;
+        background-color: #780103;
+        font-family: Arial, "본명조", sans-serif;
+      }
+      header {
+        position: relative;
+        background: #1b1b1b;
+      }
+      .menu {
+        width: 1600px;
+        margin: 0 auto;
+      }
+      .menu ul {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu ul li {
+        flex: 1 1 10%;
+        text-align: center;
+        line-height: 50px;
+      }
+      .menu ul li a:hover,
+      .menu ul li a.on {
+        background: #780103;
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-weight: 500;
+      }
+      /* .menu ul li a:hover::after,
+      .menu ul li a.active::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        right: 30%;
+      } */
+      .submenu {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+      /* .submenu.on {
+        height: 200px;
+      } */
+      .submenu .lnb {
+        width: 1600px;
+        margin: 0 auto;
+      }
+      .submenu .lnb > ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .submenu .lnb > ul > li {
+        flex: 1 1 20%;
+        line-height: 40px;
+        text-align: center;
+      }
+      .submenu .lnb > ul > li a {
+        color: #aaa;
+      }
+      .submenu .lnb > ul > li a:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <ul>
+          <li><a href="#">여름</a></li>
+          <li><a href="#">하이 주얼리</a></li>
+          <li><a href="#">주얼리</a></li>
+          <li><a href="#">시계</a></li>
+          <li><a href="#">백 & 액세서리</a></li>
+          <li><a href="#">향수</a></li>
+          <li><a href="#">라이프 스타일</a></li>
+          <li><a href="#">새로운 소식</a></li>
+          <li><a href="#">메종</a></li>
+        </ul>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">영감</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운 컬렉션</a></li>
+                <li><a href="#">머스트해브 스타일</a></li>
+                <li><a href="#">팬더</a></li>
+                <li><a href="#">고유의 유산</a></li>
+                <li><a href="#">희귀한 스톤</a></li>
+                <li><a href="#">고유의 노하우</a></li>
+                <li><a href="#">모든 제품</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">브레이슬릿</a></li>
+                <li><a href="#">링</a></li>
+                <li><a href="#">네크리스</a></li>
+                <li><a href="#">이어링</a></li>
+                <li><a href="#">웨딩 링</a></li>
+                <li><a href="#">웨딩 밴드</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">워치 선택하기</a></li>
+                <li><a href="#">까르띠에 워치메이킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">백 및 가죽 소품</a></li>
+                <li><a href="#">패션 액세서리</a></li>
+                <li><a href="#">선글라스</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">향수</a></li>
+                <li><a href="#">오뜨 퍼퓨머리</a></li>
+                <li><a href="#">레 네쎄세르 아 퍼퓸 까르띠에</a></li>
+                <li><a href="#">세트</a></li>
+                <li><a href="#">향초</a></li>
+                <li><a href="#">향수 선택하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">필기구 & 스테이셔너리</a></li>
+                <li><a href="#">홈</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">까르띠에 파티</a></li>
+                <li><a href="#">특별한 만남</a></li>
+                <li><a href="#">노하우</a></li>
+                <li><a href="#">메종</a></li>
+                <li><a href="#">모든 스토리</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">디자인 문화</a></li>
+                <li><a href="#">역사</a></li>
+                <li><a href="#">노하우 & 계승</a></li>
+                <li><a href="#">메종의 약속</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <script>
+      let subMenu = document.querySelectorAll(".submenu");
+      let sub = document.querySelectorAll(".lnb");
+      let gnb = document.querySelectorAll(".menu ul li a");
+      let Lnb = document.querySelectorAll(".lnb");
+      let ht = Lnb[2].offsetHeight;
+      console.log("ht : " + ht);
+      // for (let i = 0; i < 4; i++) {
+      //   subMenu[i].style.opacity = "0";
+      // }
+      gnb.forEach(function (item, keys) {
+        item.addEventListener("mouseenter", function (e) {
+          let j = Array.from(gnb).indexOf(e.target);
+          function others(item) {
+            return item !== j;
+          }
+          let otherItem = Array.from(subMenu).filter(others);
+          otherItem.forEach(function (item) {
+            item.style.height = "0px";
+            item.style.opacity = "0";
+          });
+          sub.forEach(function () {
+            let subht = sub[j].offsetHeight;
+            console.log("subht : " + subht);
+            subMenu[j].style.height = subht + "px";
+            subMenu[j].style.opacity = "1";
+          });
+        });
+
+        item.addEventListener("mouseleave", function () {
+          //subMenu.style.height = 0 + "px";
+        });
+      });
+      subMenu.forEach(function (item, keys) {
+        item.addEventListener("mouseenter", function () {
+          //subMenu.style.height = ht + "px";
+          gnb[keys].classList.add("on", "active");
+        });
+        item.addEventListener("mouseleave", function (e) {
+          let j = Array.from(subMenu).indexOf(e.target);
+          subMenu[j].style.height = 0 + "px";
+          /* for (let i = 0; i <= 4; i++) {
+              subMenu[i].style.height = 0 + "px";
+            }*/
+          gnb[keys].classList.remove("on", "active");
+        });
+      });
+    </script>
+  </body>
+</html>
