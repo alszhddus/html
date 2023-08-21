@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    <style>
+      p {
+        display: none;
+      }
+      button:hover ~ p {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>body요소의 배경색이 변경됩니다.</p>
+    <!-- <button onmouseover="show()" onmouseout="hide()">배경색 바꾸기</button> -->
+    <button>배경색 바꾸기</button>
+    <div>
+      <p>body요소의 배경색이 변경됩니다.</p>
+    </div>
+    <script>
+      /* function show() {
+        document.getElementsByTagName("p")[0].style.display = "block";
+      }
+      function hide() {
+        document.getElementsByTagName("p")[0].style.display = "none";
+      } */
+      document.getElementsByTagName("button")[0].onmouseover = function () {
+        document.getElementsByTagName("p")[0].style.display = "block";
+      };
+      document.getElementsByTagName("button")[0].onmouseout = function () {
+        document.getElementsByTagName("p")[0].style.display = "none";
+      };
+    </script>
+  </body>
+</html>
