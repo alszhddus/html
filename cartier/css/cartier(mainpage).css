@@ -25,6 +25,120 @@ body {
   font-family: "BASKVILL", "본명조", sans-serif;
   background: #ddd;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/navbg01.png), url(../images/navbgtxt.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #1b1b1b;
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+nav.on {
+  opacity: 1;
+}
+nav img {
+  width: 182px;
+  height: 143px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+nav .navwrap {
+  position: absolute;
+  left: 30%;
+  width: 990px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+nav .navwrap .onedepth {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+nav .navwrap .onedepth > li {
+  padding: 10px 0;
+}
+nav .navwrap .onedepth > li span {
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+nav .navwrap .onedepth > li span::before {
+  content: url(../images/navico01.png);
+  margin-right: 10px;
+}
+nav .navwrap .onedepth > li:hover span::before {
+  content: url(../images/navicohover01.png);
+}
+nav .navwrap .onedepth .lnb {
+  display: none;
+}
+nav .navwrap .onedepth li:hover .lnb {
+  display: block;
+}
+nav .navwrap .onedepth .twodepth {
+  display: flex;
+  justify-content: flex-start;
+}
+nav .navwrap .onedepth .twodepth li {
+  margin: 0 30px 15px 0;
+}
+nav .navwrap .onedepth .twodepth li a {
+  color: #fff;
+}
+nav .navwrap .onedepth .twodepth li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #dd1d1c;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+nav .navwrap .onedepth .threedepth {
+  display: flex;
+  justify-content: flex-start;
+}
+nav .navwrap .onedepth .threedepth li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+nav .navwrap .onedepth .threedepth li a {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+nav .navwrap .onedepth .threedepth li:last-child img {
+  width: 18px;
+  height: 35px;
+  object-fit: cover;
+  margin-top: 55px;
+  margin-left: 10px;
+}
+nav .navwrap .onedepth > li > img {
+  width: 411px;
+  height: 822px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  position: absolute;
+  left: -571px;
+}
+nav .navwrap .onedepth > li:hover img {
+  opacity: 1;
+}
 .head {
   width: 100%;
   height: 100px;
@@ -42,9 +156,23 @@ body {
   width: 1280px;
   margin: 50px auto 0;
 }
-.head .headwrap .menubtn svg {
+.head .headwrap .menubtn span {
+  display: block;
   width: 30px;
-  height: 33px;
+  height: 1px;
+  background: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.bar1 {
+  transform: translate(0, 11px) rotate(45deg);
+}
+.bar2 {
+  opacity: 0;
+}
+.bar3 {
+  transform: translate(0, -11px) rotate(-45deg);
 }
 .head .headwrap .headwrap2 {
   width: 664px;
@@ -323,6 +451,7 @@ body {
 .scrollwrap .scroll p {
   font-size: 20px;
   margin-right: 20px;
+  text-transform: capitalize;
 }
 .scrollwrap .scroll svg {
   position: relative;
@@ -496,6 +625,7 @@ body {
   display: block;
   position: absolute;
   left: 50%;
+  bottom: 60px;
   transform: translateX(-50%);
   z-index: 2;
 }
@@ -507,6 +637,7 @@ body {
 .fourthpage .fourthwrap svg {
   position: absolute;
   left: 50.4%;
+  bottom: 55px;
   transform: translateX(-50%);
   width: 270px;
   height: 20px;

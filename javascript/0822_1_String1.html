@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+  </head>
+  <body>
+    <script>
+      // String : 문자열을 다루는 객체
+      // let str = "nice to meet you";
+      let str = new String("nice to meet to meet you");
+      document.write(str.search("M") + "<br>");
+      document.write(str.replace("nice", "happy") + "<br>");
+      document.write(str.indexOf("to") + "<br>");
+      document.write(str.lastIndexOf("to") + "<br>");
+      document.write("match : " + str.match("to") + "<br>");
+      document.write("match : " + str.match("Nice") + "<br>");
+      document.write("charAt : " + str.charAt(3) + "<br>");
+      document.write("substr : " + str.substr(0, 3) + "<br>");
+      document.write("substr : " + str.substr(-3, 3) + "<br>");
+      document.write("substring : " + str.substring() + "<br>");
+      document.write("substring : " + str.substring(0, 4) + "<br>");
+      document.write("substring : " + str.substring(-3, 4) + "<br>");
+      let txt = "123456-1234567";
+      document.write("길이 : " + txt.length + "<br>");
+      document.write(
+        txt.replace(txt.substr(txt.length - 6), "******") + "<br>"
+      );
+      document.write(txt.replace(txt.substr(8), "******") + "<br>");
+      document.write(txt.replace(txt.substr(8, 13), "******") + "<br>");
+      document.write(txt.substring(0, 8) + "******" + "<br>");
+      document.write(txt.substring(0, txt.length - 6) + "******" + "<br>");
+      document.write(txt.slice() + "<br>");
+      document.write(txt.slice(0, 8) + "<br>");
+      document.write(txt.slice(-2) + "<br>");
+      document.write(txt.slice(-5, -2) + "<br>");
+      document.write(str.split(" ") + "<br>");
+      let arr = str.split(" ");
+      document.write(arr[0] + "<br>");
+      let txt2 = "nice,to,meet,you";
+      let arr2 = txt2.split(",");
+      let n = arr2.length;
+      for (let i = 0; i < n; i++) {
+        document.write(arr2[i] + "<br>");
+      }
+      document.write(txt2.toUpperCase() + "<br>");
+      let txt3 = "Microsoft and microsoft and microsoft";
+      document.write(txt3.replaceAll("microsoft", "마이크로소프트") + "<br>");
+      document.write(txt3.replace(/microsoft/i, "마이크로소프트") + "<br>");
+      document.write(txt3.replace(/microsoft/g, "마이크로소프트") + "<br>");
+    </script>
+  </body>
+</html>
