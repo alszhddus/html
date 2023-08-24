@@ -26,6 +26,7 @@ body {
   background: #ddd;
 }
 nav {
+  visibility: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -36,9 +37,10 @@ nav {
   background-color: #1b1b1b;
   z-index: 9;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: 0.5s;
 }
 nav.on {
+  visibility: visible;
   opacity: 1;
 }
 nav img {
@@ -155,6 +157,7 @@ nav .navwrap .onedepth > li:hover img {
   justify-content: space-between;
   width: 1280px;
   margin: 50px auto 0;
+  cursor: pointer;
 }
 .head .headwrap .menubtn span {
   display: block;
@@ -162,7 +165,6 @@ nav .navwrap .onedepth > li:hover img {
   height: 1px;
   background: #fff;
   margin: 10px 0;
-  cursor: pointer;
   transition: 0.5s;
 }
 .bar1 {
