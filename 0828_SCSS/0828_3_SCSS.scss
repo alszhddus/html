@@ -1,0 +1,15 @@
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+  nav {
+    width: 100%;
+    ul {
+      display: flex;
+      li {
+        a {
+          color: #00f;
+        }
+      }
+    }
+  }
+}

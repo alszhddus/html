@@ -206,6 +206,31 @@ nav .navwrap .onedepth > li:hover img {
   height: 100vh;
   background-image: linear-gradient(45deg, #5e0100, #b30100);
 }
+#main_swiper .swiper-pagination-bullet {
+  position: relative !important;
+  left: -570px;
+  bottom: 52px;
+  width: 7px;
+  height: 7px;
+  margin: 0 6px !important;
+  background: #fff !important;
+  opacity: 1;
+}
+#main_swiper .swiper-pagination::after {
+  position: absolute;
+  top: 10px !important;
+  width: 15px;
+  height: 15px;
+}
+#main_swiper .swiper-pagination-bullet-active {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  content: url(../images/pgnt02.png);
+  bottom: 48px;
+  opacity: 1 !important;
+  background: transparent !important;
+}
 .first {
   position: relative;
 }
@@ -416,14 +441,10 @@ nav .navwrap .onedepth > li:hover img {
 .secondpage .secondbg .collection {
   width: 100%;
   height: 100%;
-}
-.secondpage .secondbg .collection ul {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
 }
-.secondpage .secondbg .collection ul li {
+.secondpage .secondbg .collection img {
   margin: 0 10px;
 }
 .secondpage .secondbg div:first-child {
@@ -438,7 +459,7 @@ nav .navwrap .onedepth > li:hover img {
 }
 .scrollwrap {
   position: absolute;
-  left: 0;
+  left: 60px;
   bottom: 50px;
   width: 100%;
 }
@@ -556,7 +577,7 @@ nav .navwrap .onedepth > li:hover img {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #fff;
+  background: #1b1b1b;
 }
 .fourthpage .fourthwrap {
   width: 1280px;
@@ -568,6 +589,7 @@ nav .navwrap .onedepth > li:hover img {
   font-size: 30px;
   font-weight: normal;
   margin-bottom: 70px;
+  color: #fff;
 }
 .fourthpage .fourthwrap ul {
   display: flex;
@@ -581,14 +603,15 @@ nav .navwrap .onedepth > li:hover img {
   flex-direction: column;
 }
 .fourthpage .fourthwrap ul li:hover {
-  border: 1px solid #c9c9c9;
+  border: 1px solid #474747;
 }
 .fourthpage .fourthwrap ul li a {
-  color: #313131;
+  color: #fff;
 }
 .fourthpage .fourthwrap ul li a img {
   width: 276px;
   height: 276px;
+  border-radius: 5px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 20px;
@@ -948,6 +971,7 @@ nav .navwrap .onedepth > li:hover img {
 .ninthpage .ninthwrap .ninthright p {
   font-size: 60px;
   text-align: right;
+  cursor: pointer;
 }
 .ninthpage .ninthwrap .ninthright svg {
   position: relative;

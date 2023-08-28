@@ -1,0 +1,6 @@
+@for $i from 1 through 3 {
+  //1~3까지 반복하겠다는 뜻
+  .sub:nth-child(#{$i}) {
+    width: 50px * $i;
+  }
+}

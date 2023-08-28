@@ -426,7 +426,7 @@
     </nav>
     <div class="head">
       <div class="headwrap">
-        <div class="menubtn">
+        <div class="menubtn" onclick="change">
           <span class="bar01"></span>
           <span class="bar02"></span>
           <span class="bar03"></span>
@@ -434,34 +434,49 @@
         <div class="headwrap2">
           <div class="cartierlogo">
             <a href="cartier(mainpage).html"
-              ><img src="images/cartierlogo.svg" alt="cartier logo"
+              ><img src="images/cartierlogoWine.svg" alt="cartier logo"
             /></a>
           </div>
           <div class="topico">
             <ul>
               <li>
                 <a href="#"
-                  ><img src="images/topicon01.svg" alt="관심상품 아이콘"
+                  ><img
+                    src="images/topicongray01.svg"
+                    alt="관심상품 아이콘"
+                    class="topico"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon02.svg" alt="마이페이지 아이콘"
+                  ><img
+                    src="images/topicongray02.svg"
+                    alt="마이페이지 아이콘"
+                    class="topico"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon03.svg" alt="장소 아이콘"
+                  ><img
+                    src="images/topicongray03.svg"
+                    alt="장소 아이콘"
+                    class="topico"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon04.svg" alt="장바구니 아이콘"
+                  ><img
+                    src="images/topicongray04.svg"
+                    alt="장바구니 아이콘"
+                    class="topico"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon05.svg" alt="검색 아이콘"
+                  ><img
+                    src="images/topicongray05.svg"
+                    alt="검색 아이콘"
+                    class="topico"
                 /></a>
               </li>
             </ul>
@@ -480,8 +495,7 @@
       <div class="prd_left">
         <ul class="category">
           <li>
-            <h4>SORT BY</h4>
-            <ul class="lnb">
+            <h4>SORT BY</h4><ul class="lnb">
               <li>
                 <label>
                   <span>낮은 가격 순</span>
@@ -503,8 +517,7 @@
             </ul>
           </li>
           <li>
-            <h4>FILTER</h4>
-            <ul class="lnb">
+            <h4>FILTER</h4><ul class="lnb">
               <li>
                 <label>
                   <span>온라인 구매 가능</span>
@@ -514,8 +527,7 @@
             </ul>
           </li>
           <li>
-            <p>CATEGORY</p>
-            <ul class="lnb">
+            <p>CATEGORY</p><ul class="lnb">
               <li>
                 <label>
                   <span>브로치</span>
@@ -591,8 +603,7 @@
             </ul>
           </li>
           <li>
-            <p>COLLECTION FOR</p>
-            <ul class="lnb">
+            <p>COLLECTION FOR</p><ul class="lnb">
               <li>
                 <label>
                   <span>남성</span>
@@ -608,8 +619,7 @@
             </ul>
           </li>
           <li>
-            <p>METAL</p>
-            <ul class="lnb">
+            <p>METAL</p><ul class="lnb">
               <li>
                 <label>
                   <span>화이트 골드</span>
@@ -643,8 +653,7 @@
             </ul>
           </li>
           <li>
-            <p>PAVE SETTING</p>
-            <ul class="lnb">
+            <p>PAVE SETTING</p><ul class="lnb">
               <li>
                 <label>
                   <span>No 파베세팅</span>
@@ -666,8 +675,7 @@
             </ul>
           </li>
           <li>
-            <p>BRACELET TYPE</p>
-            <ul class="lnb">
+            <p>BRACELET TYPE</p><ul class="lnb">
               <li>
                 <label>
                   <span>강성</span>
@@ -1756,7 +1764,14 @@
         document.querySelector(".menubtn .bar01").classList.toggle("bar1");
         document.querySelector(".menubtn .bar02").classList.toggle("bar2");
         document.querySelector(".menubtn .bar03").classList.toggle("bar3");
+        document
+          .querySelector(".cartierlogo a img")
+          .classList.toggle("active1");
+        document
+          .getElementsByClassName("topico")[0]
+          .classList.toggle("active1");
       };
+
       let categoryBtn = document.querySelectorAll(".category > li > p");
       let lnb = document.querySelector(".lnb");
       let status = true;
@@ -1765,15 +1780,16 @@
           let j = Array.from(categoryBtn).indexOf(e.target);
           console.log(j);
           if (status) {
-            this.nextSibling.style.display = "none";
+            this.nextSibling.classList.add("on");
             this.classList.add("on");
           } else {
-            this.nextSibling.style.display = "block";
+           this.nextSibling.classList.remove("on");
             this.classList.remove("on");
           }
           status = !status;
         };
       });
+
       var swiper = new Swiper(".mySwiper", {
         direction: "horizontal",
         effect: "fade",
