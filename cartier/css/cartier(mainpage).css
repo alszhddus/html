@@ -23,7 +23,7 @@ a {
 }
 body {
   font-family: "BASKVILL", "본명조", sans-serif;
-  background: #ddd;
+  background: #fff;
 }
 nav {
   visibility: hidden;
@@ -966,6 +966,37 @@ nav .navwrap .onedepth > li:hover img {
   100% {
     right: 0;
   }
+}
+.Subscribe {
+  font-family: "본명조";
+  background: #fff;
+}
+.Subscribe > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.Subscribe > ul > li > ul {
+  position: relative;
+  text-align: center;
+  margin: 0 40px;
+  color: #313131;
+}
+.Subscribe > ul > li > ul > li:first-child {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.Subscribe > ul > li > ul > li:nth-child(2) a {
+  font-size: 14px;
+  color: #313131;
+  letter-spacing: 4px;
+}
+.Subscribe > ul > li > ul > li:nth-child(3) {
+  position: absolute;
+  left: 52%;
+  top: 40px;
+  transform: translateX(-50%);
 }
 .foot .footwrap1 {
   width: 100%;
