@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <title>aos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      section:nth-child(2) {
+        background: #ccc;
+      }
+      section:nth-child(3) {
+        background: orange;
+      }
+      section > div {
+        width: 200px;
+        height: 200px;
+        background: skyblue;
+        margin: 100px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background: greenyellow;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <section>
+      <!-- <div data-aos="fade-up" data-aos-offset="500"></div> -->
+      <div class="box" data-aos="fade-down"></div>
+      <div class="box" data-aos="fade-right"></div>
+      <div class="box" data-aos="fade-left"></div>
+    </section>
+    <section>
+      <div data-aos="flip-left"></div>
+      <div data-aos="flip-right"></div>
+      <div data-aos="flip-up"></div>
+      <div data-aos="flip-down"></div>
+    </section>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 500, //기본 옵셋값은 120px임(단위 생략가능)
+        duration: 1000, // 효과가 나타나는 시간, 기본값은 400임, 단위는 밀리세컨드
+        delay: 1000, //지연시간, 단위는 밀리세컨드
+        easing: "ease", //모션감
+        once: false, //한번만 할꺼면 true, 아니면 false
+      });
+    </script>
+  </body>
+</html>

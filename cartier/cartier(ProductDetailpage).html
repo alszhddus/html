@@ -396,34 +396,34 @@
         <div class="headwrap2">
           <div class="cartierlogo">
             <a href="cartier(mainpage).html"
-              ><img src="images/cartierlogo.svg" alt="cartier logo"
+              ><img src="images/cartierlogoWine.svg" alt="cartier logo"
             /></a>
           </div>
           <div class="topico">
             <ul>
               <li>
                 <a href="#"
-                  ><img src="images/topicon01.svg" alt="관심상품 아이콘"
+                  ><img src="images/topicongray01.svg" alt="관심상품 아이콘"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon02.svg" alt="마이페이지 아이콘"
+                  ><img src="images/topicongray02.svg" alt="마이페이지 아이콘"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon03.svg" alt="장소 아이콘"
+                  ><img src="images/topicongray03.svg" alt="장소 아이콘"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon04.svg" alt="장바구니 아이콘"
+                  ><img src="images/topicongray04.svg" alt="장바구니 아이콘"
                 /></a>
               </li>
               <li>
                 <a href="#"
-                  ><img src="images/topicon05.svg" alt="검색 아이콘"
+                  ><img src="images/topicongray05.svg" alt="검색 아이콘"
                 /></a>
               </li>
             </ul>
@@ -695,6 +695,12 @@
         document.querySelector(".menubtn .bar01").classList.toggle("bar1");
         document.querySelector(".menubtn .bar02").classList.toggle("bar2");
         document.querySelector(".menubtn .bar03").classList.toggle("bar3");
+        document
+          .querySelector(".cartierlogo a img")
+          .classList.toggle("active1");
+        document
+          .getElementsByClassName("topico")[0]
+          .classList.toggle("active1");
       };
       document.getElementsByTagName("button")[0].onclick = function () {
         document.querySelector(".prd_desc").classList.toggle("on");

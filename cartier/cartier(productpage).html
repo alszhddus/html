@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/cartier(productpage).css" />
     <link rel="stylesheet" href="css/swiper_bundle2.css" />
+    <link rel="stylesheet" href="css/cartieraos.css" />
     <title>Cartier</title>
     <style>
       html,
@@ -694,7 +695,7 @@
       </div>
       <div class="prd_right">
         <div class="rightwrap">
-          <ul>
+          <ul data-aos="fade-up">
             <li>
               <div class="prd_right_img">
                 <div class="heart">
@@ -929,7 +930,7 @@
               </div>
             </li>
           </ul>
-          <ul>
+          <ul  data-aos="fade-up">
             <li>
               <div class="prd_right_img">
                 <div class="heart">
@@ -1163,7 +1164,7 @@
               </div>
             </li>
           </ul>
-          <ul>
+          <ul data-aos="fade-up">
             <li>
               <div class="prd_right_img">
                 <div class="heart">
@@ -1397,7 +1398,7 @@
               </div>
             </li>
           </ul>
-          <ul>
+          <ul data-aos="fade-up">
             <li>
               <div class="prd_right_img">
                 <div class="heart">
@@ -1757,6 +1758,7 @@
       </div>
     </div>
     <script src="js/swiper_bundle2.js"></script>
+    <script src="js/cartieraos.js"></script>
     <script>
       let navBtn = document.querySelector(".menubtn");
       navBtn.onclick = function () {
@@ -1783,11 +1785,18 @@
             this.nextSibling.classList.add("on");
             this.classList.add("on");
           } else {
-           this.nextSibling.classList.remove("on");
+            this.nextSibling.classList.remove("on");
             this.classList.remove("on");
           }
           status = !status;
         };
+      });
+
+      AOS.init({
+        offset: 120,
+        duration: 500,
+        delay: 300,
+        easing: "ease-in",
       });
 
       var swiper = new Swiper(".mySwiper", {

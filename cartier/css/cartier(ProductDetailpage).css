@@ -164,18 +164,20 @@ nav .navwrap .onedepth > li:hover img {
   display: block;
   width: 30px;
   height: 1px;
-  background: #fff;
+  background: #313131;
   margin: 10px 0;
   transition: 0.5s;
 }
-.bar1 {
+.head .headwrap .menubtn .bar1 {
   transform: translate(0, 11px) rotate(45deg);
+  background: #fff;
 }
-.bar2 {
+.head .headwrap .menubtn .bar2 {
   opacity: 0;
 }
-.bar3 {
+.head .headwrap .menubtn .bar3 {
   transform: translate(0, -11px) rotate(-45deg);
+  background: #fff;
 }
 .head .headwrap .headwrap2 {
   width: 664px;
@@ -185,6 +187,9 @@ nav .navwrap .onedepth > li:hover img {
 .head .headwrap .headwrap2 .cartierlogo a img {
   width: 48px;
   height: 68px;
+}
+.active1 {
+  opacity: 0;
 }
 .head .headwrap .headwrap2 .topico ul {
   display: flex;

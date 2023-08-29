@@ -1373,22 +1373,7 @@
         </div>
       </div>
       <div class="section sec3">
-        <div class="Subscribe">
-          <ul>
-            <li><img src="images/래오파드left.png" alt="래오파드left" /></li>
-            <li>
-              <ul>
-                <li>까르띠에 뉴스레터 구독하기</li>
-                <li><a href="#">REGISTRATION</a></li>
-                <li>
-                  <img src="images/구독하기arrow.png" alt="구독하기arrow" />
-                </li>
-              </ul>
-            </li>
-            <li><img src="images/래오파드right.png" alt="래오파드right" /></li>
-          </ul>
-        </div>
-        <div id="foot">
+        <div id="foot" class="fp-auto-height">
           <div class="foot">
             <div class="footwrap1">
               <div class="foot_top">
@@ -1522,6 +1507,12 @@
         document.querySelector(".menubtn .bar01").classList.toggle("bar1");
         document.querySelector(".menubtn .bar02").classList.toggle("bar2");
         document.querySelector(".menubtn .bar03").classList.toggle("bar3");
+        document
+          .querySelector(".cartierlogo a img")
+          .classList.toggle("active1");
+        document
+          .getElementsByClassName("topico")[0]
+          .classList.toggle("active1");
       };
 
       $(document).ready(function () {

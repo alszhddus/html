@@ -276,7 +276,7 @@ nav .navwrap .onedepth > li:hover img {
 .product .prd_left .category > li:last-child {
   border-bottom: none;
 }
-.product .prd_left .category li .lnb.on{
+.product .prd_left .category li .lnb.on {
   display: none;
 }
 .product .prd_left .category li .lnb li {

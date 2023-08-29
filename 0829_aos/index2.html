@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <title>aos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      section:first-child {
+        background: #ccc;
+      }
+      section:nth-child(2) {
+        background: pink;
+      }
+      section:nth-child(3) {
+        background: orange;
+      }
+      section:nth-child(4) {
+        background: pink;
+      }
+      section:nth-child(5) {
+        background: orange;
+      }
+      section:nth-child(6) {
+        background: pink;
+      }
+      section div {
+        background: skyblue;
+        margin: 10px;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        background: greenyellow;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <section>
+      <!-- <div data-aos="fade-up" data-aos-offset="500"></div> -->
+      <div class="box" data-aos="fade-down">fade-up</div>
+      <div class="box" data-aos="fade-right">fade-down</div>
+      <div class="box" data-aos="fade-left">fade-left</div>
+      <div class="box" data-aos="fade-right">fade-right</div>
+    </section>
+    <section>
+      <div class="box" data-aos="flip-left">flip-left</div>
+      <div class="box" data-aos="flip-right">flip-right</div>
+      <div class="box" data-aos="flip-up">flip-up</div>
+      <div class="box" data-aos="flip-down">flip-down</div>
+    </section>
+    <section>
+      <div class="box" data-aos="slide-left">slide-left</div>
+      <div class="box" data-aos="slide-right">slide-right</div>
+      <div class="box" data-aos="slide-up">slide-up</div>
+      <div class="box" data-aos="slide-down">slide-down</div>
+    </section>
+    <section>
+      <div class="box" data-aos="zoom-in">zoom-in</div>
+      <div class="box" data-aos="zoom-in-up">zoom-in-up</div>
+      <div class="box" data-aos="zoom-in-down">zoom-in-down</div>
+      <div class="box" data-aos="zoom-in-left">zoom-in-left</div>
+      <div class="box" data-aos="zoom-in-right">zoom-in-right</div>
+    </section>
+    <section>
+      <div class="box" data-aos="zoom-out">zoom-out</div>
+      <div class="box" data-aos="zoom-out-up">zoom-out-up</div>
+      <div class="box" data-aos="zoom-out-down">zoom-out-down</div>
+      <div class="box" data-aos="zoom-out-right">zoom-out-right</div>
+      <div class="box" data-aos="zoom-out-left">zoom-out-left</div>
+    </section>
+    <section></section>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        duration: 1000,
+        delay: 500,
+        easing: "ease-in",
+      });
+    </script>
+  </body>
+</html>
