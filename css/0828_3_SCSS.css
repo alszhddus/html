@@ -1,0 +1,13 @@
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+#wrap nav {
+  width: 100%;
+}
+#wrap nav ul {
+  display: flex;
+}
+#wrap nav ul li a {
+  color: #00f;
+}

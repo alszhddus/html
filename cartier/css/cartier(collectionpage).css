@@ -168,6 +168,9 @@ nav .navwrap .onedepth > li:hover img {
   margin: 10px 0;
   transition: 0.5s;
 }
+.head .headwrap .menubtn span.on {
+  background: #000;
+}
 .head .headwrap .menubtn .bar1 {
   transform: translate(0, 11px) rotate(45deg);
   background: #fff;
@@ -292,30 +295,31 @@ section {
 .con_bg li:nth-child(6),
 .con_bg li:nth-child(8) {
   right: 0;
+  top: 170px;
 }
 .con_bg li:first-child {
-  top: 140px;
+  top: 210px;
 }
 .con_bg li:nth-child(2) {
-  top: 900px;
+  top: 1070px;
 }
 .con_bg li:nth-child(3) {
-  top: 1970px;
+  top: 2040px;
 }
 .con_bg li:nth-child(4) {
-  top: 2680px;
+  top: 2850px;
 }
 .con_bg li:nth-child(5) {
-  top: 3940px;
+  top: 4110px;
 }
 .con_bg li:nth-child(6) {
-  top: 4610px;
+  top: 4780px;
 }
 .con_bg li:nth-child(7) {
-  top: 5780px;
+  top: 5950px;
 }
 .con_bg li:nth-child(8) {
-  top: 6480px;
+  top: 6630px;
 }
 .conwrap {
   width: 1280px;
@@ -328,6 +332,7 @@ section {
   font-size: 40px;
   font-weight: normal;
   margin-bottom: 60px;
+  padding-top: 170px;
 }
 .conwrap h1 span {
   color: #770100;

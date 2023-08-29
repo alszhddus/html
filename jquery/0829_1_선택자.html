@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      /* $(document).ready(function () {
+        $("p").text("변경되었습니다");
+      }); */
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <div>
+      <p>문단태그</p>
+      <p>문단태그</p>
+      <p>문단태그</p>
+      <p>문단태그</p>
+      <p>문단태그</p>
+      <p>문단태그</p>
+    </div>
+
+    <script>
+      /* $("p").text("변경되었습니다"); // body에 쓸때는 ready를 해줄 필요가 없음 */
+      /* for (let i = 0; i <= 5; i++) {
+        document.getElementsByTagName("p")[i].textContent = "변경되었습니다.";
+      } */
+      // p의 첫번째를 제이쿼리로 선택하는 여러 방법
+      // $("p:first-child").text("변경되었습니다");
+      // $("p").eq(0).text("변경되었습니다");
+      // $("p:eq(0)").text("변경되었습니다"); // eq(인덱스 번호)는 인덱스 번호에 해당하는애
+      // $("p:gt(0)").text("변경되었습니다"); // gt는 0보다 큰애
+      // $("p:lt(2)").text("변경되었습니다"); // lt는 2보다 작은애
+      // $("p:even()").text("변경되었습니다"); // even는 인덱스 번호가 짝수인애만
+      // $("p:odd()").text("변경되었습니다"); // odd는 인덱스 번호가  홀수인애만
+      // $("div + p").text("변경되었습니다"); // +는 바로 옆에있는 형제 선택자
+      // $("div ~ p").text("변경되었습니다"); // ~는 형제 전부다 선택
+      $(":empty").html("<h1>제목태그</h1>"); // :empty는 비어져있는 태그를 전부 선택
+      $(":header").text("h1태그"); // :header는 h태그를 전부 선택
+      $("h1:contains('h1')").css("color", "red"); // h1:contains('h1')는 내가 지정한 태그(h1)안에서 "h1"이라는 글자가 포함된 모든 태그를 선택
+    </script>
+  </body>
+</html>

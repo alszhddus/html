@@ -1,0 +1,22 @@
+body {
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  background-color: #ccc;
+}
+
+header .headwrap {
+  width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headwrap .top_logo {
+  width: 250px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .headwrap .topmenu {
+  display: flex;
+  justify-content: flex-end;
+}
