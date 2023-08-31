@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".parent")
+          .focusin(function () {
+            $(this).css("backgroundColor", "#ccc");
+          })
+          .focusout(function () {
+            $(this).css("backgroundColor", "#fff");
+          });
+        $(".parent1")
+          .focus(function () {
+            $(this).css("backgroundColor", "#ccc");
+          })
+          .blur(function () {
+            $(this).css("backgroundColor", "#fff");
+          });
+      });
+    </script>
+    <title>jquery</title>
+    <style>
+      .parent,
+      .parent1 {
+        padding: 50px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <input type="text" value="focusin/focusout" /><br />
+      <input type="text" />
+    </div>
+    <div class="parent1">
+      <input type="text" value="focus/blur" /><br />
+      <input type="text" />
+    </div>
+  </body>
+</html>

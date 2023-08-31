@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let i = 0;
+        /* $("button").on("click", function () {
+          console.log(++i);
+        });*/
+        /* $("button").one("click", function () {
+          console.log(++i); // i += 1, i = i + 1이랑 같은뜻
+        }); */
+        $("button").on("click", function () {
+          console.log(++i);
+          if (i >= 5) {
+            $(this).off("click");
+          }
+        });
+      });
+    </script>
+    <title>jquery</title>
+  </head>
+  <body>
+    <button>클릭</button>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("ul").append('<li class="page">page</li>'); // .append()는 선택한 자식요소 제일 뒤에다가 입력값을 추가해줌
+        // $("ul").prepend('<li class="page">page</li>'); // .prepend()는 선택한 자식요소 제일 앞에다가 입력값을 추가해줌
+        // $('<li class="page">page</li>').appendTo("ul"); // .appendTo()는 입력값의 자식요소 제일 뒤에다가 선택자를을 추가해줌
+        // $('<li class="page">page</li>').prependTo("ul"); // .prependTo()는 입력값의 자식요소 제일 앞에다가 선택자를을 추가해줌
+        // $("ul").clone().prependTo("body"); // .clone()은 선택자를 그대로 복제해준 뒤 두번째 입력값인 body 앞에 추가해줌
+        // $("ul").clone().appendTo("body"); // .clone()은 선택자를 그대로 복제해준 뒤 두번째 입력값인 body 뒤에 추가해줌
+        // $("ul:first").wrap("<div class='wrap'></div>"); //.wrap()은 입력값으로 선택자를 묶어줌(wrap해줌)
+        // $("ul li").wrapInner("<div class='wrap'></div>"); //.wrapInner()은 선택자의 inner부분을 입력값으로 묶어줌(wrap해줌)
+        // $("ul").wrapAll("<div class='wrap'></div>"); //.wrapAll()ul의 전체를 div로 묶어줌(wrap해줌)
+        // $(".html").after("<li class='page'>page</li>"); //.after()는 선택 요소에 다음에 입력값을 추가해줌
+        // $(".html").before("<li class='page'>page</li>"); //.before()는 선택 요소에 전에 입력값을 추가해줌
+        // $('<li class="css3">css3</li>').insertAfter(".css"); // .insertAfter()는 선택자 전에 입력값을 추가해줌
+        // $('<li class="css3">css3</li>').insertBefore(".css"); // .insertBefore()는 선택자 다음에에 입력값을 추가해줌
+        // $(".css").replaceWith('<li id="con">변경</li>'); // .replaceWith()는 선택자를 입력값으로 바꿔줌
+        let txt = $(".html").text();
+        console.log(txt);
+        // let txt2 = txt.replace("html", "페이지");
+        // let txt3 = txt.slice(start,end);
+        // let txt3 = txt.substr(start, length);
+        // let txt3 = txt.substring(start, end);
+        let txt3 = txt.slice(-2); //"ml"라는 두 글자 추출
+        console.log(txt3);
+        let txt4 = txt.substr(-2, 2); //"ml"라는 두 글자 추출
+        console.log(txt4);
+        let txt5 = txt.substring(0, 2); //"ht"라는 두 글자 추출
+        console.log(txt5);
+        $(".html").text(txt2);
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li class="html">html</li>
+      <li class="css">css</li>
+      <li class="css3">css3</li>
+      <li class="javascript">javascript</li>
+      <li class="jquery">jquery</li>
+    </ul>
+  </body>
+</html>
