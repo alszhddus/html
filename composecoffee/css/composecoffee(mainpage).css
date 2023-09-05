@@ -25,7 +25,7 @@ header .headwrap .top .top_left .top_logo a img {
   width: 250px;
   height: 50px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   margin-right: 30px;
 }
 header .headwrap .top .top_left .topmenu {
@@ -146,14 +146,13 @@ header .headwrap .top .top_right .top_sns {
 header .headwrap .top .top_right .top_sns li a svg {
   width: 18px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   padding: 0 8px;
 }
 header .headwrap .top .top_right .top_sns li a:hover svg path {
   fill: #fed900;
 }
-header .headwrap .top .top_right .top_sns li:nth-child(3) a svg,
-header .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
+header .headwrap .top .top_right .top_sns li:nth-child(3) a svg, header .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
   width: 23px;
 }
 header .headwrap .top .top_right .menu_bar {
@@ -259,7 +258,7 @@ header .lnbwrap .top_lnb > ul > li:first-child::after {
   width: 250px;
   height: 50px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   margin-right: 30px;
 }
 .head_light .headwrap .top .top_left .topmenu {
@@ -375,7 +374,7 @@ header .lnbwrap .top_lnb > ul > li:first-child::after {
 .head_light .headwrap .top .top_right .top_sns li a svg {
   width: 18px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   padding: 0 8px;
 }
 .head_light .headwrap .top .top_right .top_sns li a svg path {
@@ -384,8 +383,7 @@ header .lnbwrap .top_lnb > ul > li:first-child::after {
 .head_light .headwrap .top .top_right .top_sns li a:hover svg path {
   fill: #fed900;
 }
-.head_light .headwrap .top .top_right .top_sns li:nth-child(3) a svg,
-.head_light .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
+.head_light .headwrap .top .top_right .top_sns li:nth-child(3) a svg, .head_light .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
   width: 23px;
 }
 .head_light .headwrap .top .top_right .menu_bar {
@@ -527,14 +525,62 @@ nav .navwrap .nav_logo img {
   width: 100%;
   height: 963px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   z-index: -10;
 }
-.mainvisual .null {
-  position: absolute;
-  top: 963px;
-  width: 100%;
-  height: 1000px;
-  background: #ccc;
-  z-index: -999;
+.mainvisual .mainwrap1 {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.mainvisual .mainwrap1 .maininner h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+.mainvisual .mainwrap1 .maininner > p {
+  font-size: 24px;
+  margin-top: 25px;
+}
+.mainvisual .mainwrap1 .maininner1 {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.mainvisual .mainwrap1 .maininner1 .countwrap {
+  width: 33.333%;
+  margin: 0 17px;
+}
+.mainvisual .mainwrap1 .maininner1 .countwrap .innerwrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.mainvisual .mainwrap1 .maininner1 .countwrap .innerwrap > div {
+  font-size: 40px;
+  font-weight: 900;
+}
+.mainvisual .mainwrap1 .maininner1 .countwrap .innerwrap span {
+  font-size: 17px;
+}
+.mainvisual .mainwrap1 .maininner1 .countwrap p {
+  color: #3e3a38;
+  margin-top: 20px;
+  padding: 15px 34px;
+  background: rgba(255, 217, 0, 0.6);
+  border-radius: 30px;
+}
+.mainvisual .mainwrap1 .maininner2 svg {
+  width: 8.5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.mainvisual .mainwrap1 .maininner2 svg path {
+  fill: #fff;
+}
+.mainvisual .mainwrap1 .maininner2 p {
+  text-transform: capitalize;
 }

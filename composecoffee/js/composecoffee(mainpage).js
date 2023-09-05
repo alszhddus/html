@@ -86,5 +86,28 @@ $(function () {
     }
     menu_bar = !menu_bar;
   });
+
   // menu_bar click event end
+
+  // main count event start
+  let c_ountup; //전역
+
+  $(function () {
+    init_count(); //카운트 모션 동작
+  });
+
+  function init_count() {
+    const options = {
+      duration: 4, //모션 동작 시간
+      price: 9334887,
+    };
+    c_ountup = new countUp.CountUp("count3", options.price, options.duration);
+    c_ountdown = new countUp.CountUp("count3", 0, options);
+    if (!c_ountup.error) {
+      c_ountup.start(); //스타트
+    } else {
+      console.error(c_ountup.error);
+    }
+  }
+  // main count event end
 });
