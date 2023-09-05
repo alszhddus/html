@@ -3,81 +3,79 @@ body {
   background-color: #bbb;
 }
 
-.head {
-  position: relative;
-}
-.head header {
-  position: absolute;
+header {
+  position: fixed;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
-.head header .headwrap .top {
+header .headwrap .top {
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.head header .headwrap .top .top_left {
+header .headwrap .top .top_left {
   width: 50%;
   display: flex;
   align-items: center;
 }
-.head header .headwrap .top .top_left .top_logo a img {
+header .headwrap .top .top_left .top_logo a img {
   width: 250px;
   height: 50px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-right: 30px;
 }
-.head header .headwrap .top .top_left .topmenu {
+header .headwrap .top .top_left .topmenu {
   width: 600px;
   display: flex;
   text-transform: uppercase;
 }
-.head header .headwrap .top .top_left .topmenu .top_gnb {
+header .headwrap .top .top_left .topmenu .top_gnb {
   width: 100%;
   display: flex;
 }
-.head header .headwrap .top .top_left .topmenu .top_gnb li {
+header .headwrap .top .top_left .topmenu .top_gnb li {
   width: 20%;
   padding: 0 17px;
   box-sizing: border-box;
 }
-.head header .headwrap .top .top_left .topmenu .top_gnb li a {
+header .headwrap .top .top_left .topmenu .top_gnb li a {
   font-size: 17px;
   font-weight: 400;
   color: #fff;
   line-height: 90px;
 }
-.head header .headwrap .top .top_left .topmenu .top_gnb li a:hover {
+header .headwrap .top .top_left .topmenu .top_gnb li a:hover {
   color: #fed900;
 }
-.head header .headwrap .top .top_right {
+header .headwrap .top .top_right {
   width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.head header .headwrap .top .top_right .language {
+header .headwrap .top .top_right .language {
   margin: 0 8px;
 }
-.head header .headwrap .top .top_right .language > li svg {
+header .headwrap .top .top_right .language > li svg {
   width: 9px;
   margin-left: 8px;
 }
-.head header .headwrap .top .top_right .language > li svg path {
+header .headwrap .top .top_right .language > li svg path {
   fill: #fff;
   transition: fill 1s;
 }
-.head header .headwrap .top .top_right .language > li svg:hover path {
+header .headwrap .top .top_right .language > li svg:hover path {
   fill: #fed900;
 }
-.head header .headwrap .top .top_right .language > li svg path.on {
+header .headwrap .top .top_right .language > li svg path.on {
   transform: rotate(180deg);
   transform-origin: center;
 }
-.head header .headwrap .top .top_right .language > li .language_con {
+header .headwrap .top .top_right .language > li .language_con {
   width: 70px;
   height: 120px;
   display: flex;
@@ -90,122 +88,130 @@ body {
   box-sizing: border-box;
   transition: 0.5s;
 }
-.head header .headwrap .top .top_right .language > li .language_con li {
+header .headwrap .top .top_right .language > li .language_con li {
   font-size: 0;
 }
-.head header .headwrap .top .top_right .language > li:first-child {
+header .headwrap .top .top_right .language > li:first-child {
   display: flex;
   align-items: center;
 }
-.head header .headwrap .top .top_right .top_desc {
+header .headwrap .top .top_right .top_desc {
   display: flex;
   margin: 0 8px;
   text-transform: uppercase;
 }
-.head header .headwrap .top .top_right .top_desc li a {
+header .headwrap .top .top_right .top_desc li a {
   color: white;
 }
-.head header .headwrap .top .top_right .top_desc li a:hover {
+header .headwrap .top .top_right .top_desc li a:hover {
   color: #fed900;
 }
-.head header .headwrap .top .top_right .top_desc li:nth-child(3) {
+header .headwrap .top .top_right .top_desc li:nth-child(3) {
   display: flex;
 }
-.head header .headwrap .top .top_right .top_desc li:nth-child(3) a {
+header .headwrap .top .top_right .top_desc li:nth-child(3) a {
   display: flex;
   align-items: center;
 }
-.head header .headwrap .top .top_right .top_desc li:nth-child(3) svg {
+header .headwrap .top .top_right .top_desc li:nth-child(3) svg {
   width: 15px;
   margin-right: 3px;
 }
-.head header .headwrap .top .top_right .top_desc li:nth-child(3) svg path {
+header .headwrap .top .top_right .top_desc li:nth-child(3) svg path {
   fill: #fff;
 }
-.head header .headwrap .top .top_right .top_desc li:nth-child(3):hover svg path {
+header .headwrap .top .top_right .top_desc li:nth-child(3):hover svg path {
   fill: #fed900;
 }
-.head header .headwrap .top .top_right .top_desc li::before {
+header .headwrap .top .top_right .top_desc li::before {
   content: "|";
   color: #fff;
   margin: 0 10px;
 }
-.head header .headwrap .top .top_right .top_desc li:first-child::before {
+header .headwrap .top .top_right .top_desc li.con_color::before {
+  content: "|";
+  color: #333;
+  margin: 0 10px;
+}
+header .headwrap .top .top_right .top_desc li:first-child::before {
   content: "";
 }
-.head header .headwrap .top .top_right .top_sns {
+header .headwrap .top .top_right .top_sns {
   height: 90px;
   display: flex;
   align-items: center;
   padding-right: 17px;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
-.head header .headwrap .top .top_right .top_sns li a svg {
+header .headwrap .top .top_right .top_sns li a svg {
   width: 18px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 0 8px;
 }
-.head header .headwrap .top .top_right .top_sns li a:hover svg path {
+header .headwrap .top .top_right .top_sns li a:hover svg path {
   fill: #fed900;
 }
-.head header .headwrap .top .top_right .top_sns li:nth-child(3) a svg, .head header .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
+header .headwrap .top .top_right .top_sns li:nth-child(3) a svg,
+header .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
   width: 23px;
 }
-.head header .headwrap .top .top_right .menu_bar {
+header .headwrap .top .top_right .menu_bar {
   padding-left: 34px;
+  cursor: pointer;
+  z-index: 3;
 }
-.head header .headwrap .top .top_right .menu_bar .bar_top {
+header .headwrap .top .top_right .menu_bar .bar_top {
   width: 15px;
   height: 2px;
   background: #fff;
   transition: 0.5s;
 }
-.head header .headwrap .top .top_right .menu_bar .bar_top.on1 {
+header .headwrap .top .top_right .menu_bar .bar_top.on1 {
   transform: rotate(45deg) translate(6px, 3.5px);
 }
-.head header .headwrap .top .top_right .menu_bar .bar_middle {
+header .headwrap .top .top_right .menu_bar .bar_middle {
   width: 30px;
   height: 2px;
   background: #fff;
   margin: 10px 0;
   transition: 0.5s;
 }
-.head header .headwrap .top .top_right .menu_bar .bar_middle.on2 {
+header .headwrap .top .top_right .menu_bar .bar_middle.on2 {
   transform: rotate(-45deg);
 }
-.head header .headwrap .top .top_right .menu_bar .bar_bottom {
+header .headwrap .top .top_right .menu_bar .bar_bottom {
   width: 15px;
   height: 2px;
   background: #fff;
   margin-left: 15px;
   transition: 0.5s;
 }
-.head header .headwrap .top .top_right .menu_bar .bar_bottom.on3 {
+header .headwrap .top .top_right .menu_bar .bar_bottom.on3 {
   transform: rotate(45deg) translate(-6px, -3.5px);
 }
-.head header .lnbwrap {
+header .lnbwrap {
   height: 0;
   overflow: hidden;
   background: rgba(255, 217, 0, 0.95);
   transition: 0.5s;
 }
-.head header .lnbwrap .top_lnb {
+header .lnbwrap .top_lnb {
   width: 90%;
   margin: 0 auto;
 }
-.head header .lnbwrap .top_lnb > ul {
+header .lnbwrap .top_lnb > ul {
   width: calc(50% - 280px);
   display: flex;
   margin-left: 280px;
   padding-top: 17px;
   text-transform: uppercase;
 }
-.head header .lnbwrap .top_lnb > ul > li {
+header .lnbwrap .top_lnb > ul > li {
   position: relative;
   width: 20%;
 }
-.head header .lnbwrap .top_lnb > ul > li ul li a {
+header .lnbwrap .top_lnb > ul > li ul li a {
   font-size: 15px;
   font-weight: 400;
   color: #333;
@@ -214,10 +220,10 @@ body {
   letter-spacing: -0.5px;
   transition: 0.3s;
 }
-.head header .lnbwrap .top_lnb > ul > li ul li a:hover {
+header .lnbwrap .top_lnb > ul > li ul li a:hover {
   color: #fff;
 }
-.head header .lnbwrap .top_lnb > ul > li::after {
+header .lnbwrap .top_lnb > ul > li::after {
   content: "";
   position: absolute;
   top: -17px;
@@ -225,80 +231,85 @@ body {
   height: 490px;
   background: rgba(228, 194, 0, 0.95);
 }
-.head header .lnbwrap .top_lnb > ul > li:first-child::after {
+header .lnbwrap .top_lnb > ul > li:first-child::after {
   display: none;
 }
-.head .head_light {
-  background: #fff;
+
+.head_light {
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: #fff;
+  visibility: hidden;
+  transition: 0.3s;
 }
-.head .head_light .headwrap .top {
+.head_light .headwrap .top {
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.head .head_light .headwrap .top .top_left {
+.head_light .headwrap .top .top_left {
   width: 50%;
   display: flex;
   align-items: center;
 }
-.head .head_light .headwrap .top .top_left .top_logo a img {
+.head_light .headwrap .top .top_left .top_logo a img {
   width: 250px;
   height: 50px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-right: 30px;
 }
-.head .head_light .headwrap .top .top_left .topmenu {
+.head_light .headwrap .top .top_left .topmenu {
   width: 600px;
   display: flex;
   text-transform: uppercase;
 }
-.head .head_light .headwrap .top .top_left .topmenu .top_gnb {
+.head_light .headwrap .top .top_left .topmenu .top_gnb {
   width: 100%;
   display: flex;
 }
-.head .head_light .headwrap .top .top_left .topmenu .top_gnb li {
+.head_light .headwrap .top .top_left .topmenu .top_gnb li {
   width: 20%;
   padding: 0 17px;
   box-sizing: border-box;
 }
-.head .head_light .headwrap .top .top_left .topmenu .top_gnb li a {
+.head_light .headwrap .top .top_left .topmenu .top_gnb li a {
   font-size: 17px;
   font-weight: 400;
   color: #333;
   line-height: 90px;
 }
-.head .head_light .headwrap .top .top_left .topmenu .top_gnb li a:hover {
+.head_light .headwrap .top .top_left .topmenu .top_gnb li a:hover {
   color: #fed900;
 }
-.head .head_light .headwrap .top .top_right {
+.head_light .headwrap .top .top_right {
   width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.head .head_light .headwrap .top .top_right .language {
+.head_light .headwrap .top .top_right .language {
   margin: 0 8px;
 }
-.head .head_light .headwrap .top .top_right .language > li svg {
+.head_light .headwrap .top .top_right .language > li svg {
   width: 9px;
   margin-left: 8px;
 }
-.head .head_light .headwrap .top .top_right .language > li svg path {
+.head_light .headwrap .top .top_right .language > li svg path {
   fill: #333;
   transition: fill 1s;
 }
-.head .head_light .headwrap .top .top_right .language > li svg:hover path {
+.head_light .headwrap .top .top_right .language > li svg:hover path {
   fill: #fed900;
 }
-.head .head_light .headwrap .top .top_right .language > li svg path.on {
+.head_light .headwrap .top .top_right .language > li svg path.on {
   transform: rotate(180deg);
   transform-origin: center;
 }
-.head .head_light .headwrap .top .top_right .language > li .language_con {
+.head_light .headwrap .top .top_right .language > li .language_con {
   width: 70px;
   height: 120px;
   display: flex;
@@ -311,122 +322,128 @@ body {
   box-sizing: border-box;
   transition: 0.5s;
 }
-.head .head_light .headwrap .top .top_right .language > li .language_con li {
+.head_light .headwrap .top .top_right .language > li .language_con li {
   font-size: 0;
 }
-.head .head_light .headwrap .top .top_right .language > li:first-child {
+.head_light .headwrap .top .top_right .language > li:first-child {
   display: flex;
   align-items: center;
 }
-.head .head_light .headwrap .top .top_right .top_desc {
+.head_light .headwrap .top .top_right .top_desc {
   display: flex;
   margin: 0 8px;
   text-transform: uppercase;
 }
-.head .head_light .headwrap .top .top_right .top_desc li a {
+.head_light .headwrap .top .top_right .top_desc li a {
   color: #333;
 }
-.head .head_light .headwrap .top .top_right .top_desc li a:hover {
+.head_light .headwrap .top .top_right .top_desc li a:hover {
   color: #fed900;
 }
-.head .head_light .headwrap .top .top_right .top_desc li:nth-child(3) {
+.head_light .headwrap .top .top_right .top_desc li:nth-child(3) {
   display: flex;
 }
-.head .head_light .headwrap .top .top_right .top_desc li:nth-child(3) a {
+.head_light .headwrap .top .top_right .top_desc li:nth-child(3) a {
   display: flex;
   align-items: center;
 }
-.head .head_light .headwrap .top .top_right .top_desc li:nth-child(3) svg {
+.head_light .headwrap .top .top_right .top_desc li:nth-child(3) svg {
   width: 15px;
   margin-right: 3px;
 }
-.head .head_light .headwrap .top .top_right .top_desc li:nth-child(3) svg path {
+.head_light .headwrap .top .top_right .top_desc li:nth-child(3) svg path {
   fill: #333;
 }
-.head .head_light .headwrap .top .top_right .top_desc li:nth-child(3):hover svg path {
+.head_light .headwrap .top .top_right .top_desc li:nth-child(3):hover svg path {
   fill: #fed900;
 }
-.head .head_light .headwrap .top .top_right .top_desc li::before {
+.head_light .headwrap .top .top_right .top_desc li::before {
   content: "|";
   color: #333;
   margin: 0 10px;
 }
-.head .head_light .headwrap .top .top_right .top_desc li:first-child::before {
+.head_light .headwrap .top .top_right .top_desc li:first-child::before {
   content: "";
 }
-.head .head_light .headwrap .top .top_right .top_sns {
+.head_light .headwrap .top .top_right .top_sns {
   height: 90px;
   display: flex;
   align-items: center;
   padding-right: 17px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
-.head .head_light .headwrap .top .top_right .top_sns li a svg {
+.head_light .headwrap .top .top_right .top_sns li a svg {
   width: 18px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 0 8px;
 }
-.head .head_light .headwrap .top .top_right .top_sns li a:hover svg path {
+.head_light .headwrap .top .top_right .top_sns li a svg path {
+  fill: #333;
+}
+.head_light .headwrap .top .top_right .top_sns li a:hover svg path {
   fill: #fed900;
 }
-.head .head_light .headwrap .top .top_right .top_sns li:nth-child(3) a svg, .head .head_light .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
+.head_light .headwrap .top .top_right .top_sns li:nth-child(3) a svg,
+.head_light .headwrap .top .top_right .top_sns li:nth-child(4) a svg {
   width: 23px;
 }
-.head .head_light .headwrap .top .top_right .menu_bar {
+.head_light .headwrap .top .top_right .menu_bar {
   padding-left: 34px;
+  cursor: pointer;
+  z-index: 10;
 }
-.head .head_light .headwrap .top .top_right .menu_bar .bar_top {
+.head_light .headwrap .top .top_right .menu_bar .bar_top {
   width: 15px;
   height: 2px;
   background: #333;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-.head .head_light .headwrap .top .top_right .menu_bar .bar_top.on1 {
+.head_light .headwrap .top .top_right .menu_bar .bar_top.on1 {
   transform: rotate(45deg) translate(6px, 3.5px);
 }
-.head .head_light .headwrap .top .top_right .menu_bar .bar_middle {
+.head_light .headwrap .top .top_right .menu_bar .bar_middle {
   width: 30px;
   height: 2px;
   background: #333;
   margin: 10px 0;
   transition: 0.5s;
 }
-.head .head_light .headwrap .top .top_right .menu_bar .bar_middle.on2 {
+.head_light .headwrap .top .top_right .menu_bar .bar_middle.on2 {
   transform: rotate(-45deg);
 }
-.head .head_light .headwrap .top .top_right .menu_bar .bar_bottom {
+.head_light .headwrap .top .top_right .menu_bar .bar_bottom {
   width: 15px;
   height: 2px;
   background: #333;
   margin-left: 15px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-.head .head_light .headwrap .top .top_right .menu_bar .bar_bottom.on3 {
+.head_light .headwrap .top .top_right .menu_bar .bar_bottom.on3 {
   transform: rotate(45deg) translate(-6px, -3.5px);
 }
-.head .head_light .lnbwrap {
+.head_light .lnbwrap {
   height: 0;
   overflow: hidden;
   background: rgba(255, 217, 0, 0.95);
   transition: 0.5s;
 }
-.head .head_light .lnbwrap .top_lnb {
+.head_light .lnbwrap .top_lnb {
   width: 90%;
   margin: 0 auto;
 }
-.head .head_light .lnbwrap .top_lnb > ul {
+.head_light .lnbwrap .top_lnb > ul {
   width: calc(50% - 280px);
   display: flex;
   margin-left: 280px;
   padding-top: 17px;
   text-transform: uppercase;
 }
-.head .head_light .lnbwrap .top_lnb > ul > li {
+.head_light .lnbwrap .top_lnb > ul > li {
   position: relative;
   width: 20%;
 }
-.head .head_light .lnbwrap .top_lnb > ul > li ul li a {
+.head_light .lnbwrap .top_lnb > ul > li ul li a {
   font-size: 15px;
   font-weight: 400;
   color: #333;
@@ -435,10 +452,10 @@ body {
   letter-spacing: -0.5px;
   transition: 0.3s;
 }
-.head .head_light .lnbwrap .top_lnb > ul > li ul li a:hover {
+.head_light .lnbwrap .top_lnb > ul > li ul li a:hover {
   color: #fff;
 }
-.head .head_light .lnbwrap .top_lnb > ul > li::after {
+.head_light .lnbwrap .top_lnb > ul > li::after {
   content: "";
   position: absolute;
   top: -17px;
@@ -446,15 +463,78 @@ body {
   height: 490px;
   background: rgba(228, 194, 0, 0.95);
 }
-.head .head_light .lnbwrap .top_lnb > ul > li:first-child::after {
+.head_light .lnbwrap .top_lnb > ul > li:first-child::after {
   display: none;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  background-color: #fed900;
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: -1;
+}
+nav .navwrap {
+  width: 1320px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+nav .navwrap .nav_gnb {
+  display: flex;
+  padding: 270px 12px 0 12px;
+  margin-bottom: 150px;
+}
+nav .navwrap .nav_gnb > li {
+  width: 20%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+nav .navwrap .nav_gnb > li > a {
+  display: block;
+  font-size: 21px;
+  font-weight: 600;
+  padding-bottom: 17px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #333;
+  color: #333;
+}
+nav .navwrap .nav_gnb > li > a:hover {
+  color: #fff;
+}
+nav .navwrap .nav_gnb > li .nav_lnb li {
+  margin-bottom: 10px;
+}
+nav .navwrap .nav_gnb > li .nav_lnb li a {
+  font-size: 15px;
+  color: #333;
+}
+nav .navwrap .nav_gnb > li .nav_lnb li a:hover {
+  color: #fff;
+}
+nav .navwrap .nav_logo {
+  width: 250px;
+  margin: 0 auto;
+}
+nav .navwrap .nav_logo img {
+  width: 250px;
 }
 
 .mainvisual video {
   position: absolute;
   top: 0;
   width: 100%;
+  height: 963px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -10;
+}
+.mainvisual .null {
+  position: absolute;
+  top: 963px;
+  width: 100%;
+  height: 1000px;
+  background: #ccc;
+  z-index: -999;
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper_bundle.js"></script>
+    <title>jquery</title>
+    <link rel="stylesheet" href="css/swiper_bundle.css" />
+    <style>
+      .mySwiper {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+      .swiper-slide {
+        padding: 20px 0;
+      }
+      .swiper-slide:nth-child(odd) {
+        background: pink;
+      }
+      .swiper-slide:nth-child(even) {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        speed: 5000, // 슬라이드의 속도 입력부분
+        loop: true, // 끝나면 다시 처음으로 돌아가게 할지 입력 부분
+        slidesPerView: 5, //한번에 몇개가 보이게 할지 입력부분
+        spaceBetween: 0, // 슬라이드 사이 간격값 입력부분
+        // centeredSlides: true, //처음이 아닌 가운데부터 보이게 해주는 속성
+        autoplay: {
+          delay: 0, //몇초 기다렸다 다음 슬라이드를 나오게 할지 입력부분
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

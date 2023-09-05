@@ -4,17 +4,21 @@ $(function () {
     function () {
       console.log("g");
       $("header .lnbwrap").css("height", "490px");
+      $(".head_light .lnbwrap").css("height", "490px");
     },
     function () {
       $("header .lnbwrap").css("height", "0px");
+      $(".head_light .lnbwrap").css("height", "0px");
     }
   );
   $(".top_lnb > ul > li").hover(
     function () {
       $("header .lnbwrap").css("height", "490px");
+      $(".head_light .lnbwrap").css("height", "490px");
     },
     function () {
       $("header .lnbwrap").css("height", "0px");
+      $(".head_light .lnbwrap").css("height", "0px");
     }
   );
   // gnb hover event end
@@ -23,11 +27,11 @@ $(function () {
   window.onscroll = function () {
     let ht = document.documentElement.scrollTop;
     if (ht > 50) {
-      $("header").css("visibility", "visible");
-      $(".head_light").slideDown(300);
+      $("header").css("visibility", "hidden").css("opacity", "0");
+      $(".head_light").css("visibility", "visible").css("opacity", "1");
     } else {
-      $("header").css("visibility", "hidden");
-      $(".head_light").slideUp(300);
+      $("header").css("visibility", "visible").css("opacity", "1");
+      $(".head_light").css("visibility", "hidden").css("opacity", "0");
     }
   };
   // gnb scroll event end
@@ -60,10 +64,25 @@ $(function () {
       $(".bar_top").addClass("on1");
       $(".bar_middle").addClass("on2");
       $(".bar_bottom").addClass("on3");
+      $("nav").css("height", "100vh");
+      $(".top_logo, .language, .top_desc, .top_sns").css("opacity", "0");
+      $(".topmenu").css("visibility", "hidden");
+      $("header").css("border-bottom", "none");
+      $(".head_light").css("border-bottom", "none");
+      $(".head_light").css("background", "transparent");
     } else {
       $(".bar_top").removeClass("on1");
       $(".bar_middle").removeClass("on2");
       $(".bar_bottom").removeClass("on3");
+      $("nav").css("height", "0vh");
+      $(".top_logo, .language, .top_desc, .top_sns").css("opacity", "1");
+      $(".topmenu").css("visibility", "visible");
+      $("header").css("border-bottom", "1px solid rgba(255, 255, 255, 0.3)");
+      $(".head_light").css(
+        "border-bottom",
+        "1px solid rgba(255, 255, 255, 0.3"
+      );
+      $(".head_light").css("background", "#fff");
     }
     menu_bar = !menu_bar;
   });

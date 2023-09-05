@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>jquery</title>
+    <style>
+      .photo {
+        position: relative;
+        width: 600px;
+        height: 500px;
+        overflow: hidden;
+      }
+      .photo img {
+        width: 600px;
+        height: 500px;
+        object-fit: cover;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let ease = $(this).data("ease");
+          $(".photo").slideUp(1000, ease, function () {
+            $(this).slideDown(1000, ease);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="photo"><img src="images/photo1.jpg" alt="photo1" /></div>
+    <button data-ease="swing">swing</button>
+    <button data-ease="linear">linear</button>
+    <button data-ease="easeOutBounce">easeOutBounce</button>
+    <button data-ease="easeInQuad">easeInQuad</button>
+    <button data-ease="easeInOutQuint">easeInOutQuint</button>
+    <button data-ease="easeOutExpo">easeOutExpo</button>
+  </body>
+</html>
