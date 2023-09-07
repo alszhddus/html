@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>jquery</title>
+    <style>
+      .addbg {
+        background: #ccc;
+      }
+      .addon {
+        color: #f00;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button").hover(
+          function () {
+            // $("p").remove(".top"); // remove는 요소 자체가 사라짐
+            // $("p").empty(".top"); // empty는 요소는 있지만 안이 비워짐
+            // $("p").remove(".top,.bottom");
+            /* $("#top").addClass("addbg");
+          $(".middle").removeClass();
+          $(".bottom").addClass("addbg addon"); */
+            $("#top").addClass("addbg");
+            $(".middle").addClass("addbg");
+            $(".bottom").addClass("addbg addon");
+          },
+          function () {
+            $("#top").removeClass("addbg");
+            $(".middle").removeClass("addbg");
+            $(".bottom").removeClass("addbg addon");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <button>클릭</button>
+    <div class="info">
+      <p id="top">위에 요소</p>
+      <p class="middle">중간 요소</p>
+      <p class="bottom">아래 요소</p>
+    </div>
+  </body>
+</html>

@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
     <link rel="stylesheet" href="css/xeicon.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/swiper-bundle.css" />
     <link rel="stylesheet" href="css/composecoffee(mainpage).css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -24,7 +22,10 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/countUp.min.js"></script>
     <script src="js/composecoffee(mainpage).js"></script>
-    <script src="js/swiper-bundle.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="js/particles.js"></script>
+
     <title>컴포즈커피</title>
   </head>
   <body>
@@ -541,225 +542,7 @@
         </li>
       </ul>
     </div>
-    <div class="mainvisual">
-      <video loop autoplay muted>
-        <source src="images/mainvideo.mp4" type="video/mp4" />
-      </video>
-      <div class="mainwrap">
-        <div class="maininner">
-          <h1>대한민국 국민 카페</h1>
-          <p>스페셜티 블렌딩, 컴포즈커피</p>
-        </div>
-        <div class="maininner1">
-          <div class="countwrap">
-            <div class="innerwrap">
-              <div id="count1">0</div>
-              <span>년</span>
-            </div>
-            <p>함께한 시간</p>
-          </div>
-          <div class="countwrap">
-            <div class="innerwrap">
-              <div id="count2">0</div>
-              <span>개</span>
-            </div>
-            <p>가맹점 수</p>
-          </div>
-          <div class="countwrap">
-            <div class="innerwrap">
-              <div id="count3">0</div>
-              <span>명</span>
-            </div>
-            <p>컴포즈 공식 App 회원</p>
-          </div>
-        </div>
-        <div class="maininner2">
-          <svg
-            class="svg-inline--fa fa-long-arrow-alt-down fa-w-8 arrow"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="long-arrow-alt-down"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 512"
-            data-fa-i2svg=""
-          >
-            <path
-              fill="currentColor"
-              d="M168 345.941V44c0-6.627-5.373-12-12-12h-56c-6.627 0-12 5.373-12 12v301.941H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.569 9.373 33.941 0l86.059-86.059c15.119-15.119 4.411-40.971-16.971-40.971H168z"
-            ></path>
-          </svg>
-          <p>scroll down</p>
-        </div>
-      </div>
-      <div class="point">
-        <div class="pt">
-          <p>social network</p>
-          <p>SNS</p>
-        </div>
-        <div class="pt">
-          <p>compose mall</p>
-          <p><span>e-Shop</span></p>
-        </div>
-        <div class="pt">
-          <p>contact</p>
-          <p>contact us</p>
-        </div>
-      </div>
-    </div>
-    <div class="rollingbanner">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/rollingbanner01.jpg" alt="rollingbanner01" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/rollingbanner02.jpg" alt="rollingbanner02" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/rollingbanner03.jpg" alt="rollingbanner03" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/rollingbanner04.jpg" alt="rollingbanner04" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/rollingbanner05.jpg" alt="rollingbanner05" />
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-    <div class="franchisee">
-      <div class="franchiseewrap">
-        <h1>컴포즈커피 가맹점</h1>
-        <div class="fcsunderline"></div>
-        <p>늘 가까이 함께하겠습니다.</p>
-        <a href="#">가까운 매장 찾기</a>
-        <ul class="store">
-          <li>
-            <a href="#"
-              ><img src="images/서귀포신시가지점.jpg" alt="서귀포신시가지점"
-            /></a>
-            <a href="#">서귀포신시가지점</a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/하남감일지구점.jpg" alt="서귀포신시가지점"
-            /></a>
-            <a href="#">하남감일지구점</a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/원주중앙점.jpg" alt="서귀포신시가지점"
-            /></a>
-            <a href="#">원주중앙점</a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/안산일동점.jpg" alt="서귀포신시가지점"
-            /></a>
-            <a href="#">안산일동점</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="story">
-      <div class="storybg"><img src="images/storybg.jpg" alt="storybg" /></div>
-      <div class="storywrap">
-        <h1>고품질 커피브랜드, 컴포즈</h1>
-        <div class="storyunderline"></div>
-        <p>성공창업, 컴포즈커피가 함께합니다.</p>
-        <a href="#">+ 더보기</a>
-      </div>
-    </div>
-    <div class="content1">
-      <div class="con1">
-        <p class="subtitle">1999년부터 시작된 전문성</p>
-        <p class="title">20년 이상의 노하우와 첨단 기술력!</p>
-      </div>
-      <div class="conwrap">
-        <div class="con2">
-          <p class="subtitle">생두 수입부터 로스팅까지</p>
-          <p class="title">국내 최대 규모 자체 로스팅 공장 및 설비 보유!</p>
-        </div>
-        <div class="con3">
-          <p class="subtitle">이탈리아 100년 전통의 명맥</p>
-          <p class="title">브루그네띠 공식 수입 AGENCY</p>
-        </div>
-      </div>
-    </div>
-    <div class="notice">
-      <div class="noticebg">
-        <img src="images/noticebg.jpg" alt="storybg" />
-      </div>
-      <div class="noticewrap">
-        <h1>공지사항</h1>
-        <div class="noticeunderline"></div>
-        <p>컴포즈 소식을 전해드립니다.</p>
-        <ul>
-          <li>
-            <a href="#"
-              >컴포즈커피 디카페인 원두(에스프레소) 취급 가맹점 안내</a
-            >
-            <p>2023.07.14</p>
-          </li>
-          <li>
-            <a href="#">2023 원산지 및 주요성분 안내</a>
-            <p>2023.05.22</p>
-          </li>
-          <li>
-            <a href="#">2023 신메뉴 및 개선 메뉴 안내</a>
-            <p>2023.04.10</p>
-          </li>
-          <li>
-            <a href="#"
-              >컴포즈커피 일부 메뉴 판매가 인상 안내 (시행일: 2023. 04. 11)</a
-            >
-            <div>
-              컴포즈커피를 사랑해주시는 고객님들께 진심으로 감사드립니다. 2014년
-              론칭된 컴포즈커피는 고품질 재료와 합리적인 가격으로 보다 나은
-              서비스를 제공해 드리기 위해 최선을 다하고 있습니다. 그러나 당사의
-              다양한 지원정책과 노력에도 불구하고 코로나 팬데믹에 따른 여파로
-              지속적인 원부자재가 상승, 임대료 및 인건비 상승 등 끊임없는
-              외부적인 요인들이 누적된 부담으로 부득이하게 일부 품목의 판매가
-              인상을 결정하게 되었습니다. 금번 판매가 인상 책정 시 원자재 인상률
-              범위 내에서 조정하였으며, 특히 아메리카노는 기존 판매가와 동일하게
-              판매될 예정입니다. 컴포즈커피를 사랑해 주시는 고객 여러분들께 너른
-              양해 부탁드립니다. 변화는 있어도 변함이 없는 컴포즈커피가
-              되겠습니다. 감사합니다.
-            </div>
-            <p>2023.03.27</p>
-          </li>
-        </ul>
-        <a href="#">+ 더보기</a>
-      </div>
-    </div>
-    <footer>
-      <div class="footwrap">
-        <ul>
-          <li>상호 : 주식회사 컴포즈커피</li>
-          <li>
-            서울사무소 : 서울특별시 송파구 법원로9길 26, H비지니스파크 C동
-            1206호-1209호
-          </li>
-          <li>부산본사 : 부산시 기장군 기장읍 대변3길 11</li>
-          <li>
-            TEL : 1899-5685 / FAX : 02-5236-9635 / e-mail :
-            compose@composecoffee.com
-          </li>
-          <li>
-            사업자등록번호 : 521-81-02386 / 통신판매업신고증 :
-            제2023-부산기장-0326호 | 대표 : 김진성
-          </li>
-          <li>ⓒ 2021. COMPOSECOFFEE. ALL RIGHTS RESERVED.</li>
-        </ul>
-        <ul>
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보처리방침</a></li>
-        </ul>
-      </div>
-    </footer>
+    <div id="particles-js"></div>
+    <div class="null"></div>
   </body>
 </html>
