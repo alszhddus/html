@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@font-face {
+  font-family: NanumGothic;
+  src: url(../webfonts/NanumGothic.otf);
+}
+body {
+  font-family: "Cairo", "Noto Sans KR", "NanumGothic", "돋움", Dotum, Arial, sans-serif;
+}
