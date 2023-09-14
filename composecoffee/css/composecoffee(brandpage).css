@@ -10,7 +10,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -713,6 +713,7 @@ nav .navwrap .nav_logo img {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-top: none;
   box-sizing: border-box;
+  background: #fff;
 }
 .sub_header .sub_lnb > ul > li ul li a {
   display: block;
@@ -723,7 +724,6 @@ nav .navwrap .nav_logo img {
   line-height: 40px;
   padding: 0 20px;
   box-sizing: border-box;
-  background: #fff;
 }
 .sub_header .sub_lnb > ul > li ul li a:hover {
   color: #fed900;

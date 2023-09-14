@@ -9,7 +9,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -742,6 +742,7 @@ nav {
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-top: none;
           box-sizing: border-box;
+          background: #fff;
           li {
             a {
               display: block;
@@ -752,7 +753,7 @@ nav {
               line-height: 40px;
               padding: 0 20px;
               box-sizing: border-box;
-              background: #fff;
+
               &:hover {
                 color: #fed900;
               }
