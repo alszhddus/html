@@ -1,8 +1,9 @@
-@font-face {
-  font-family: NanumGothic;
-  src: url(../webfonts/NanumGothic.otf);
-}
-body {
-  font-family: "Cairo", "Noto Sans KR", "NanumGothic", "돋움", Dotum, Arial,
-    sans-serif;
+video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
 }
