@@ -1,4 +1,96 @@
 $(function () {
+  // nav_language click event start
+  $(".nav_language li").eq(0).find("a").addClass("on");
+  $(".nav_language li").click(function () {
+    $(".nav_language li a").removeClass("on");
+    $(this).find("a").addClass("on");
+  });
+  // nav_language click event end
+
+  // nav menu hover event start
+
+  $(".nav_bottom_left >ul >li ul li, .nav_bottom_left >ul >li h1 a").hover(
+    function () {
+      let i = $(this).parent().parent().index();
+      $(".nav_bottom_left >ul >li h1 a").removeClass("on");
+      $(".nav_bottom_left > ul > li").eq(i).find("h1").find("a").addClass("on");
+    },
+    function () {
+      $(".nav_bottom_left >ul >li h1 a").removeClass("on");
+    }
+  );
+  // nav menu hover event end
+
+  // nav li hover event start
+  if ($(window).width() > 1024) {
+    $(".nav_bottom_left >ul >li").hover(
+      function () {
+        let i = $(this).index();
+        console.log(i);
+        $(this).find(".nav_lnb").css({ visibility: "visible", opacity: "1" });
+      },
+      function () {
+        $(".nav_lnb").css({ visibility: "hidden", opacity: "0" });
+      }
+    );
+  } else {
+    $(".nav_lnb").css({ visibility: "visible", opacity: "1", display: "none" });
+  }
+  // nav li hover event end
+
+  // nav slide event start
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 0,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    dotsEach: true,
+    animateIn: "fadeIn",
+    animateOut: "fadeOut",
+  });
+  // nav slide event end
+
+  // nav close_btn click event start
+  $(".close_btn").click(function () {
+    $("nav").css({ visibility: "hidden", opacity: "0", zIndex: "-1" });
+    if ($(window).width() <= 1024) {
+      $("nav").css("top", "-963px");
+    }
+  });
+  $(".site_map_btn").click(function () {
+    $("nav").css({ visibility: "visible", opacity: "1", zIndex: "2" });
+    if ($(window).width() <= 1024) {
+      $("nav").css("top", "0px");
+    }
+  });
+
+  // nav close_btn click event end
+
+  // nav lnb click event start
+  if ($(window).width() <= 1024) {
+    let lnb = true;
+    $(".nav_bottom_left > ul > li").click(function () {
+      if (lnb) {
+        $(this).find(".nav_lnb").css("display", "block");
+        $(this).find("h1").find("a").css({
+          fontWeight: "700",
+          color: "#bf1e2e",
+        });
+      } else {
+        $(".nav_bottom_left > ul > li .nav_lnb").css("display", "none");
+        $(".nav_bottom_left > ul > li h1 a").css({
+          fontWeight: "300",
+          color: "#707070",
+        });
+      }
+      lnb = !lnb;
+    });
+  }
+  // nav lnb click event end
+
   // language click event start
   let langBtn1 = true;
   $(".language li > a, .language li > i").click(function () {
@@ -78,40 +170,4 @@ $(function () {
     }
   });
   // top_menu scroll event end
-
-  //nav_language click event start
-  $(".nav_language li").eq(0).find("a").addClass("on");
-  $(".nav_language li").click(function () {
-    $(".nav_language li a").removeClass("on");
-    $(this).find("a").addClass("on");
-  });
-  //nav_language click event end
-
-  //nav menu hover event start
-
-  $(".nav_bottom_left >ul >li ul li, .nav_bottom_left >ul >li h1 a").hover(
-    function () {
-      let i = $(this).parent().parent().index();
-      console.log("i : " + i);
-      $(".nav_bottom_left >ul >li h1 a").removeClass("on");
-      $(".nav_bottom_left > ul > li").eq(i).find("h1").find("a").addClass("on");
-    },
-    function () {
-      $(".nav_bottom_left >ul >li h1 a").removeClass("on");
-    }
-  );
-  //nav menu hover event end
-
-  //nav slide event start
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    margin: 0,
-    nav: true,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    dotsEach: true,
-  });
-  //nav slide event end
 });
