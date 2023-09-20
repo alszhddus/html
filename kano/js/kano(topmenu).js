@@ -26,7 +26,6 @@ $(function () {
     $(".nav_bottom_left >ul >li").hover(
       function () {
         let i = $(this).index();
-        console.log(i);
         $(this).find(".nav_lnb").css({ visibility: "visible", opacity: "1" });
       },
       function () {
@@ -114,7 +113,6 @@ $(function () {
 
   // top_menu_lnb hover event start
   let lnbHt = $(".top_menu_lnb ul").height();
-  console.log(lnbHt);
   $(".top_menu_gnb li, .top_menu_lnb > ul > li").hover(
     function () {
       let ht = $(window).scrollTop();
@@ -144,7 +142,6 @@ $(function () {
   // top_menu scroll event start
   $(window).scroll(function (e) {
     let ht = $(window).scrollTop();
-    console.log(ht);
     if (ht > 50) {
       $(".top_menu").css({ height: "102px", backgroundColor: "#fff" });
       $(".top_menu_gnb li a").css({ color: "#000", lineHeight: "102px" });
