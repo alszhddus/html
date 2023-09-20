@@ -253,30 +253,30 @@
 .main_history_con .history_item .swiper .swiper-wrapper .swiper-slide {
   width: 434px !important;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item {
   width: 434px;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_top {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_top {
   position: relative;
   display: flex;
   align-items: center;
   height: 86px;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_top h2 {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_top h2 {
   font-size: 30px;
   font-weight: 700;
   color: #424242;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_top .history_icon img {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_top .history_icon img {
   position: absolute;
   top: 0;
   left: 280px;
   z-index: 1;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_top .history_icon img:last-child {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_top .history_icon img:last-child {
   opacity: 0;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_top::after {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_top::after {
   content: "";
   position: absolute;
   top: 84px;
@@ -284,7 +284,7 @@
   height: 2px;
   background: #dedede;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_top::before {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_top::before {
   content: "";
   position: absolute;
   top: 79px;
@@ -296,19 +296,78 @@
   box-sizing: border-box;
   z-index: 1;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_bottom {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_bottom {
   margin-top: 35px;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_bottom > li h3 {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_bottom > li h3 {
   font-size: 18px;
   font-weight: 700;
   color: #6b6b6b;
   margin-top: 16px;
 }
-.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .item .history_item_bottom > li .history_lnb li {
+.main_history_con .history_item .swiper .swiper-wrapper .swiper-slide .his_item .history_item_bottom > li .history_lnb li {
   font-size: 18px;
   font-weight: 300;
   color: #6b6b6b;
   margin-top: 12px;
   letter-spacing: -1px;
+}
+
+.main_news_con {
+  width: 100%;
+  padding-top: 220px;
+  background: #fbfbfb;
+}
+.main_news_con .main_news_con_wrap {
+  width: 1300px;
+  margin: 0 auto;
+}
+.main_news_con .main_news_con_wrap .news_con_title {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.main_news_con .main_news_con_wrap .news_con_title h1 {
+  font-size: 54px;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  padding-top: 170px;
+  margin-bottom: 80px;
+}
+.main_news_con .main_news_con_wrap .news_con_title span {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+}
+.main_news_con .main_news_con_wrap .news_con_title span a {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+.main_news_con .main_news_con_wrap .news_con_title span a:hover {
+  color: #bf1e2e;
+}
+.main_news_con .main_news_con_wrap #mySwiper2 .swiper-wrapper .swiper-slide img {
+  width: 397px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_news_con .main_news_con_wrap #mySwiper2 .swiper-wrapper .swiper-slide p {
+  margin-top: 25px;
+  width: 397px;
+  font-size: 22px;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main_news_con .main_news_con_wrap #mySwiper2 .swiper-wrapper .swiper-slide span {
+  display: block;
+  font-size: 15px;
+  margin-top: 15px;
+  color: #939393;
 }

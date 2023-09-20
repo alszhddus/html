@@ -122,4 +122,21 @@ $(function () {
     },
   });
   // history slide event end
+
+  //news slide event start
+  var swiper2 = new Swiper(".mySwiper2", {
+    direction: "horizontal",
+    slidesPerView: 3,
+    spaceBetween: 20,
+    centeredSlides: false,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+  //news slide event end
 });
