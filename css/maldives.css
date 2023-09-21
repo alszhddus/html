@@ -339,7 +339,7 @@ header #gnb li i {
     display: none;
   }
 }
-@media screen and (max-width: 779px) {
+@media screen and (max-width: 768px) {
   #contents article:first-child {
     width: 100%;
   }
@@ -410,5 +410,5 @@ header #gnb li i {
     font-size: 150px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
 }

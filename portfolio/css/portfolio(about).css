@@ -1,0 +1,65 @@
+body {
+  font-family: "Teko", "Noto Sans KR", sans-serif;
+}
+
+.aboutbg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/aboutbg.png);
+  z-index: -1;
+}
+
+.about_content .about_con_wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+.about_content .about_con_wrap .title {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 300px;
+}
+.about_content .about_con_wrap .title p {
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.about_content .about_con_wrap .title p span {
+  position: relative;
+}
+.about_content .about_con_wrap .title p span::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+.about_content .about_con_wrap .title h1 {
+  font-size: 60px;
+}
+.about_content .about_con_wrap .title h1 span {
+  color: #00ffc0;
+  font-weight: 700;
+}
+.about_content .about_con_wrap .about_me {
+  width: 100%;
+  margin-top: 150px;
+}
+.about_content .about_con_wrap .about_me .about_me_con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_content .about_con_wrap .about_me .about_me_con .me_con_left li {
+  margin-bottom: 15px;
+}
+.about_content .about_con_wrap .about_me .about_me_con .me_con_right li {
+  margin-bottom: 15px;
+}
