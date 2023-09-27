@@ -59,4 +59,46 @@ $(function () {
     menu_btn = !menu_btn;
   });
   // menu_btn click event end
+
+  // nav scroll event start
+  $(window).on("mousewheel", function () {
+    console.log(event.wheelDelta);
+    if (event.wheelDelta < 0) {
+      $("nav").css({ opacity: "0", visibility: "hidden" });
+      $(".menu_btn").css({ opacity: "0", visibility: "hidden" });
+    } else {
+      $("nav").css({
+        opacity: "1",
+        visibility: "visible",
+        height: "100px",
+        backgroundColor: "#363636",
+      });
+      $(".nav_wrap ul li a").css({ lineHeight: "100px" });
+      $(".menu_btn").css({
+        opacity: "1",
+        visibility: "visible",
+        height: "100px",
+      });
+    }
+  });
+
+  $(window).scroll(function (e) {
+    let scrollht = $(window).scrollTop();
+    console.log(scrollht);
+    if (scrollht <= 0) {
+      $("nav").css({
+        opacity: "1",
+        visibility: "visible",
+        height: "180px",
+        backgroundColor: "transparent",
+      });
+      $(".nav_wrap ul li a").css({ lineHeight: "180px" });
+      $(".menu_btn").css({
+        opacity: "1",
+        visibility: "visible",
+        height: "180px",
+      });
+    }
+  });
+  // nav scroll event end
 });
