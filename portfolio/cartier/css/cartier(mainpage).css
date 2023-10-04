@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
   font-family: "본명조";
-  src: url(../webfonts/SourceHanSerifK-Regular.otf) format("otf");
+  src: url(../webfonts/SourceHanSerifK-Regular.otf) format("opentype");
 }
 @font-face {
   font-family: "BASKVILL";
@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: Noto;
-  src: url(../webfonts/NotoSansKR-Medium.otf) format("otf");
+  src: url(../webfonts/NotoSansKR-Medium.otf) format("opentype");
 }
 * {
   margin: 0;
@@ -774,7 +774,7 @@ nav .navwrap .onedepth > li:hover img {
 }
 .sixthpage .sixthwrap > div img {
   width: 960px;
-  height: 100%;
+  height: 50vh;
   object-fit: cover;
 }
 .sixthpage .sixthwrap > .sixth_top {

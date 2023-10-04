@@ -60,7 +60,7 @@ $(function () {
     }
   });
   $(".site_map_btn").click(function () {
-    $("nav").css({ visibility: "visible", opacity: "1", zIndex: "2" });
+    $("nav").css({ visibility: "visible", opacity: "1", zIndex: "3" });
     if ($(window).width() <= 1024) {
       $("nav").css("top", "0px");
     }

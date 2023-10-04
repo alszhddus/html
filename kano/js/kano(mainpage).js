@@ -1,4 +1,12 @@
 $(function () {
+  // aos start
+  AOS.init({
+    offset: 120,
+    duration: 1000,
+    once: true,
+  });
+  // aos end
+
   // scroll down color change event start
   $(window).scroll(function () {
     let scrollht = $(window).scrollTop();
@@ -112,13 +120,106 @@ $(function () {
   // brandcontent hover event end
 
   // history slide event start
+
+  let left_width = $(".history_item .left").width();
+  console.log(left_width);
+  $(".swiper-slide:not(.swiper-slide-active) .history_item_top").hover(
+    function () {
+      let i = $(this).parent().parent().index();
+      console.log(i);
+      $(".swiper-slide").eq(i).find(".history_item_top h2").addClass("active");
+      $(".swiper-slide").eq(i).find(".history_item_top").addClass("circle");
+      $(".swiper-slide").eq(i).find(".history_icon img:last").addClass("red");
+      $(".swiper-slide")
+        .eq(i)
+        .find(".history_item_top .line")
+        .addClass("line_width");
+    },
+    function () {
+      $(
+        ".swiper-slide:not(.swiper-slide-active) .history_item_top h2"
+      ).removeClass("active");
+      $(
+        ".swiper-slide:not(.swiper-slide-active) .history_item_top .line"
+      ).removeClass("line_width");
+      $(
+        ".swiper-slide:not(.swiper-slide-active) .history_item_top"
+      ).removeClass("circle");
+      $(
+        ".swiper-slide:not(.swiper-slide-active) .history_icon img"
+      ).removeClass("red");
+    }
+  );
+
+  $(".swiper-slide").eq(0).find(".history_item_top h2").addClass("active");
+  $(".swiper-slide").eq(0).find(".history_item_top").addClass("circle");
+  $(".swiper-slide").eq(0).find(".history_icon img:last").addClass("red");
+  $(".swiper-slide")
+    .eq(0)
+    .find(".history_item_top .line")
+    .addClass("line_width");
+
   var swiper = new Swiper(".mySwiper", {
+    speed: 1000,
     direction: "horizontal",
-    slidesPerView: 3,
+    slidesPerView: "auto",
     spaceBetween: 0,
+    centeredSlides: false,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        // 뷰포트 너비가 768px 이상인 경우
+      },
+      1024: {
+        // 뷰포트 너비가 1024px 이상인 경우
+        slidesOffsetBefore: 20,
+      },
+      1280: {
+        slidesOffsetBefore: left_width,
+      },
+    },
+    on: {
+      slideChange: function () {
+        $(".history_item_top h2").removeClass("active");
+        $(".history_item_top .line").removeClass("line_width");
+        $(".history_item_top").removeClass("circle");
+        $(".history_icon img").removeClass("red");
+        $(".swiper-slide")
+          .eq(this.realIndex)
+          .find(".history_item_top h2")
+          .addClass("active");
+        $(".swiper-slide")
+          .eq(this.realIndex)
+          .find(".history_item_top")
+          .addClass("circle");
+        $(".swiper-slide")
+          .eq(this.realIndex)
+          .find(".history_icon img:last")
+          .addClass("red");
+        $(".swiper-slide")
+          .eq(this.realIndex)
+          .find(".history_item_top .line")
+          .addClass("line_width");
+        var currentIndex = swiper.activeIndex;
+
+        // 네 번째 슬라이드일 때 다음 버튼을 비활성화합니다.
+        if (currentIndex === 3) {
+          swiper.navigation.nextEl.classList.add("swiper-button-disabled");
+        } else {
+          // 다른 슬라이드에서는 다음 버튼을 활성화합니다.
+          swiper.navigation.nextEl.classList.remove("swiper-button-disabled");
+        }
+      },
+      slideChangeTransitionEnd: function () {
+        $(".history_item .left").css("opacity", "0.5");
+      },
+      slideChangeTransitionStart: function () {
+        $(".history_item .left").css("opacity", "0");
+      },
     },
   });
   // history slide event end

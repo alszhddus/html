@@ -526,29 +526,12 @@ body {
   color: #25c19a;
 }
 
-@-webkit-keyframes skill1 {
-  0% {
-    stroke-dashoffset: -628;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes skill1 {
   0% {
     stroke-dashoffset: -628;
   }
   100% {
     stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes skill2 {
-  0% {
-    stroke-dashoffset: -628;
-  }
-  100% {
-    stroke-dashoffset: -60;
   }
 }
 @keyframes skill2 {
@@ -559,14 +542,6 @@ body {
     stroke-dashoffset: -60;
   }
 }
-@-webkit-keyframes skill3 {
-  0% {
-    stroke-dashoffset: -628;
-  }
-  100% {
-    stroke-dashoffset: -80;
-  }
-}
 @keyframes skill3 {
   0% {
     stroke-dashoffset: -628;
@@ -575,28 +550,12 @@ body {
     stroke-dashoffset: -80;
   }
 }
-@-webkit-keyframes skill4 {
-  0% {
-    stroke-dashoffset: -628;
-  }
-  100% {
-    stroke-dashoffset: -120;
-  }
-}
 @keyframes skill4 {
   0% {
     stroke-dashoffset: -628;
   }
   100% {
     stroke-dashoffset: -120;
-  }
-}
-@-webkit-keyframes skill5 {
-  0% {
-    stroke-dashoffset: -628;
-  }
-  100% {
-    stroke-dashoffset: -250;
   }
 }
 @keyframes skill5 {

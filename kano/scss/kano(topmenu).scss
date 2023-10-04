@@ -49,6 +49,12 @@
 .xi-arrow-right:before {
   content: "\e907";
 }
+.xi-arrow-left:before {
+  content: "\e906";
+}
+.xi-mail-o:before {
+  content: "\ea07";
+}
 .owl-prev span {
   position: absolute;
   top: -80px;
@@ -278,7 +284,7 @@ header {
   width: 100%;
   height: 144px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   .top_menu {
     width: 100%;
     height: 144px;
