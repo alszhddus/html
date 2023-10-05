@@ -110,10 +110,20 @@ nav .nav_wrap ul li img {
   width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
-  animation: logoani 1s linear infinite alternate;
+  -webkit-animation: logoani 1s linear infinite alternate;
+          animation: logoani 1s linear infinite alternate;
 }
 nav .nav_wrap ul li:nth-child(3) a::after {
   display: none;
+}
+
+@-webkit-keyframes logoani {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: -5px;
+  }
 }
 
 @keyframes logoani {
@@ -272,7 +282,8 @@ nav .nav_wrap ul li:nth-child(3) a::after {
   nav .nav_wrap ul li a img {
     width: 25px;
     top: 0;
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
   nav .nav_wrap ul li:first-child a, nav .nav_wrap ul li:nth-child(2) a, nav .nav_wrap ul li:nth-child(4) a, nav .nav_wrap ul li:nth-child(5) a {
     display: none;

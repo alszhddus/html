@@ -39,16 +39,19 @@ body {
 }
 .mainvisual .main_wrap .main_text p:first-child {
   top: 230px;
-  animation: texeani1 150s linear infinite;
+  -webkit-animation: texeani1 150s linear infinite;
+          animation: texeani1 150s linear infinite;
 }
 .mainvisual .main_wrap .main_text p:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
-  animation: texeani2 150s linear infinite;
+  -webkit-animation: texeani2 150s linear infinite;
+          animation: texeani2 150s linear infinite;
 }
 .mainvisual .main_wrap .main_text p:last-child {
   bottom: 230px;
-  animation: texeani1 150s linear infinite;
+  -webkit-animation: texeani1 150s linear infinite;
+          animation: texeani1 150s linear infinite;
 }
 .mainvisual .main_wrap .copyright {
   position: absolute;
@@ -67,12 +70,29 @@ body {
   border-radius: 50px;
 }
 
+@-webkit-keyframes texeani1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -7000px;
+  }
+}
+
 @keyframes texeani1 {
   0% {
     left: 0;
   }
   100% {
     left: -7000px;
+  }
+}
+@-webkit-keyframes texeani2 {
+  0% {
+    left: -7000px;
+  }
+  100% {
+    left: 0;
   }
 }
 @keyframes texeani2 {

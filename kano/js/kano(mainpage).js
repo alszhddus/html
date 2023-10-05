@@ -23,7 +23,6 @@ $(function () {
   // maincontent hover event start
   $(".main_item li").hover(
     function () {
-      console.log("d22222");
       $(this).css({
         backgroundColor: "#bf1e2e",
         top: "-10px",
@@ -34,6 +33,21 @@ $(function () {
       $(this).find(".main_icon").find("img:last").css("opacity", "1");
       $(this).find("h2").css("color", "#fff");
       $(this).find("p").css("color", "rgba(255,255,255,0.6)");
+
+      let window_width = $(window).width();
+      if (window_width < 1024) {
+        $(this).css({
+          backgroundColor: "transparent",
+          top: "0px",
+          left: "0px",
+          boxShadow: "none",
+        });
+        $(this).find(".main_icon").find("img:first").css("opacity", "1");
+        $(this).find(".main_icon").find("img:last").css("opacity", "0");
+        $(this).find("h2").css("color", "#000");
+        $(this).find("p").css("color", "#939393");
+        $(this).find("a").css("color", "#000");
+      }
     },
     function () {
       $(this).css({
@@ -225,6 +239,7 @@ $(function () {
   // history slide event end
 
   //news slide event start
+  let window_width = $(window).width();
   var swiper2 = new Swiper(".mySwiper2", {
     direction: "horizontal",
     slidesPerView: 3,
@@ -237,6 +252,15 @@ $(function () {
     },
     scrollbar: {
       el: ".swiper-scrollbar",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 55,
+      },
     },
   });
   //news slide event end

@@ -95,6 +95,9 @@ footer {
           margin-bottom: 30px;
         }
         .foot_desc {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           margin-bottom: 30px;
         }
         span {

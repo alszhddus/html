@@ -3,9 +3,11 @@ body {
 }
 
 .maincon_wrap .scrolldown_btn {
+  position: -webkit-sticky;
   position: sticky;
   opacity: 1;
-  animation: scroll 1.3s infinite;
+  -webkit-animation: scroll 1.3s infinite;
+          animation: scroll 1.3s infinite;
 }
 .maincon_wrap .scrolldown_btn img {
   width: 16px;
@@ -33,6 +35,20 @@ body {
      object-position: center;
   z-index: -1;
 }
+@-webkit-keyframes scroll {
+  0% {
+    top: 50%;
+    opacity: 1;
+  }
+  50% {
+    top: calc(50% + 15px);
+    opacity: 0.3;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
 @keyframes scroll {
   0% {
     top: 50%;
@@ -52,7 +68,8 @@ body {
   background: url(../images/main_business_bg.jpg) right/106% no-repeat;
 }
 .maincon_wrap .main_con .main_con_wrap {
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .maincon_wrap .main_con .main_con_wrap h1 {
@@ -74,6 +91,7 @@ body {
   box-sizing: border-box;
   border-radius: 20px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .maincon_wrap .main_con .main_con_wrap .main_item li .main_icon img {
   position: absolute;
@@ -532,10 +550,20 @@ body {
   height: 200%;
   background: rgba(255, 255, 255, 0.3);
   transform: rotate(20deg);
-  animation: contact_btn 0.8s forwards;
+  -webkit-animation: contact_btn 0.8s forwards;
+          animation: contact_btn 0.8s forwards;
 }
 .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .contact_btn ul:last-child li {
   background: #424242;
+}
+
+@-webkit-keyframes contact_btn {
+  0% {
+    right: 110%;
+  }
+  100% {
+    right: -20%;
+  }
 }
 
 @keyframes contact_btn {
@@ -544,5 +572,259 @@ body {
   }
   100% {
     right: -20%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .maincon_wrap .scrolldown_btn {
+    display: none;
+  }
+  .maincon_wrap .main_con {
+    width: 100%;
+    background: none;
+  }
+  .maincon_wrap .main_con .main_con_wrap {
+    width: 70%;
+  }
+  .maincon_wrap .main_con .main_con_wrap h1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .maincon_wrap .main_con .main_con_wrap h1 span {
+    line-height: 70px;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item {
+    flex-wrap: wrap;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item li {
+    text-align: center;
+    flex: 1 0 48%;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item li .main_icon img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .maincon_wrap .main_brand_con {
+    background-size: 60%;
+    background-position: center 30%;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap {
+    width: 96%;
+    height: 1500px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap h1 {
+    text-align: center;
+    margin-bottom: 200px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item {
+    width: 100%;
+    margin-top: 600px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li {
+    position: inherit;
+    width: 100%;
+  }
+  .maincon_wrap .main_history_con .main_history_con_wrap {
+    width: 96%;
+  }
+  .maincon_wrap .main_history_con .history_item {
+    padding-left: 20px;
+  }
+  .maincon_wrap .main_history_con .history_item .swiper .swiper-button-prev {
+    display: none !important;
+  }
+  .maincon_wrap .main_history_con .history_item .swiper .swiper-button-next {
+    display: none !important;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap {
+    width: 96%;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap .news_con_title {
+    flex-direction: column;
+    text-align: center;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap .news_con_title h1 {
+    width: 68%;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap .news_con_title h1 p:last-child {
+    display: none;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap .news_con_title span {
+    position: inherit;
+    margin-top: 30px;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap #mySwiper2 .swiper-button-next {
+    display: none;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap #mySwiper2 .swiper-button-prev {
+    display: none;
+  }
+  .maincon_wrap .main_contact_con {
+    background-position: center 10%;
+    height: 1000px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap {
+    position: relative;
+    top: 550px;
+    width: 80%;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left {
+    width: 100%;
+    text-align: center;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .mail {
+    justify-content: center;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .contact_btn {
+    width: 100%;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .contact_btn ul {
+    width: 100%;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .contact_btn ul li {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .maincon_wrap .mainvisual {
+    position: relative;
+    top: 80px;
+    height: 20%;
+  }
+  .maincon_wrap .mainvisual video {
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .maincon_wrap .main_con .main_con_wrap h1 {
+    font-size: 36px;
+    padding-top: 120px;
+    margin-bottom: 0;
+  }
+  .maincon_wrap .main_con .main_con_wrap h1 span {
+    line-height: 45px;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item {
+    padding-bottom: 20px;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item li .main_icon img {
+    width: 40px;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item li h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+  .maincon_wrap .main_con .main_con_wrap .main_item li p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .maincon_wrap .main_brand_con {
+    background-position: center 26%;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap {
+    height: 1050px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap h1 {
+    padding-top: 50px;
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item {
+    margin-top: 500px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li {
+    padding: 30px 40px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li .brand_icon img {
+    width: 40px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li .brand_desc h2 {
+    font-size: 19px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li .brand_desc p {
+    font-size: 14px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li .brand_arrow {
+    width: 30px;
+    height: 30px;
+  }
+  .maincon_wrap .main_brand_con .main_brand_con_wrap .brand_item li .brand_arrow i {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .maincon_wrap .main_history_con .main_history_con_wrap .history_con_title {
+    flex-direction: column;
+  }
+  .maincon_wrap .main_history_con .main_history_con_wrap .history_con_title h1 {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+  }
+  .maincon_wrap .main_history_con .main_history_con_wrap .history_con_title span {
+    width: 22%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 400%;
+  }
+  .maincon_wrap .main_history_con .main_history_con_wrap .history_con_title span a {
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 20px 25px;
+  }
+  .maincon_wrap .main_history_con .main_history_con_wrap .history_con_title span a i {
+    margin-left: 10px;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap .news_con_title h1 {
+    width: 52%;
+    font-size: 36px;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap #mySwiper2 {
+    height: 380px;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap #mySwiper2 .swiper-wrapper .swiper-slide img {
+    width: 100%;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap #mySwiper2 .swiper-wrapper .swiper-slide p {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 17px;
+  }
+  .maincon_wrap .main_news_con .main_news_con_wrap #mySwiper2 .swiper-wrapper .swiper-slide span {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  .maincon_wrap .main_contact_con {
+    background-size: contain;
+    padding: 0;
+    height: 850px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap {
+    width: 96%;
+    padding: 0;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .mail {
+    margin-bottom: 40px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .mail span {
+    font-size: 15px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .contact_btn ul li {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .maincon_wrap .main_contact_con .main_contact_con_wrap .contact_con_left .contact_btn ul li a {
+    font-size: 13px;
   }
 }

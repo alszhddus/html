@@ -87,6 +87,9 @@ footer .foot_wrap .foot_right .foot_gnb > li .foot_lnb li:hover {
     margin-bottom: 30px;
   }
   footer .foot_wrap .foot_left .foot_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 30px;
   }
   footer .foot_wrap .foot_left span {

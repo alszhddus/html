@@ -8,7 +8,6 @@ $(function () {
   // nav_language click event end
 
   // nav menu hover event start
-
   $(".nav_bottom_left >ul >li ul li, .nav_bottom_left >ul >li h1 a").hover(
     function () {
       let i = $(this).parent().parent().index();

@@ -50,7 +50,8 @@ body {
     width: 100%;
     background: url(../images/main_business_bg.jpg) right/106% no-repeat;
     .main_con_wrap {
-      width: 1300px;
+      width: 100%;
+      max-width: 1300px;
       margin: 0 auto;
       h1 {
         font-size: 54px;
@@ -70,6 +71,7 @@ body {
           box-sizing: border-box;
           border-radius: 20px;
           transition: 0.3s;
+          cursor: pointer;
           .main_icon {
             img {
               position: absolute;
@@ -566,5 +568,307 @@ body {
   }
   100% {
     right: -20%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .maincon_wrap {
+    .scrolldown_btn {
+      display: none;
+    }
+    .main_con {
+      width: 100%;
+      background: none;
+      .main_con_wrap {
+        width: 70%;
+        h1 {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          span {
+            line-height: 70px;
+          }
+        }
+        .main_item {
+          flex-wrap: wrap;
+          li {
+            text-align: center;
+            flex: 1 0 48%;
+            .main_icon {
+              img {
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .main_brand_con {
+      background-size: 60%;
+      background-position: center 30%;
+      .main_brand_con_wrap {
+        width: 96%;
+        height: 1500px;
+        h1 {
+          text-align: center;
+          margin-bottom: 200px;
+        }
+        .brand_item {
+          width: 100%;
+          margin-top: 600px;
+          li {
+            position: inherit;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .main_history_con {
+      .main_history_con_wrap {
+        width: 96%;
+      }
+      .history_item {
+        padding-left: 20px;
+        .swiper {
+          .swiper-button-prev {
+            display: none !important;
+          }
+          .swiper-button-next {
+            display: none !important;
+          }
+        }
+      }
+    }
+    .main_news_con {
+      .main_news_con_wrap {
+        width: 96%;
+        .news_con_title {
+          flex-direction: column;
+          text-align: center;
+          h1 {
+            width: 68%;
+            p {
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+          span {
+            position: inherit;
+            margin-top: 30px;
+          }
+        }
+        #mySwiper2 {
+          .swiper-button-next {
+            display: none;
+          }
+          .swiper-button-prev {
+            display: none;
+          }
+        }
+      }
+    }
+    .main_contact_con {
+      background-position: center 10%;
+      height: 1000px;
+      .main_contact_con_wrap {
+        position: relative;
+        top: 550px;
+        width: 80%;
+        .contact_con_left {
+          width: 100%;
+          text-align: center;
+          .mail {
+            justify-content: center;
+          }
+          .contact_btn {
+            width: 100%;
+            ul {
+              width: 100%;
+              li {
+                width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .maincon_wrap {
+    .mainvisual {
+      position: relative;
+      top: 80px;
+      height: 20%;
+      video {
+        object-fit: contain;
+        object-position: top;
+      }
+    }
+    .main_con {
+      .main_con_wrap {
+        h1 {
+          font-size: 36px;
+          padding-top: 120px;
+          margin-bottom: 0;
+          span {
+            line-height: 45px;
+          }
+        }
+        .main_item {
+          padding-bottom: 20px;
+          li {
+            .main_icon {
+              img {
+                width: 40px;
+              }
+            }
+            h2 {
+              margin-top: 60px;
+              margin-bottom: 20px;
+              font-size: 19px;
+            }
+            p {
+              font-size: 14px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+    .main_brand_con {
+      background-position: center 26%;
+      .main_brand_con_wrap {
+        height: 1050px;
+        h1 {
+          padding-top: 50px;
+          font-size: 36px;
+          margin-bottom: 0px;
+        }
+        .brand_item {
+          margin-top: 500px;
+          li {
+            padding: 30px 40px;
+            .brand_icon {
+              img {
+                width: 40px;
+              }
+            }
+            .brand_desc {
+              h2 {
+                font-size: 19px;
+              }
+              p {
+                font-size: 14px;
+              }
+            }
+            .brand_arrow {
+              width: 30px;
+              height: 30px;
+              i {
+                font-size: 15px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main_history_con {
+      .main_history_con_wrap {
+        .history_con_title {
+          flex-direction: column;
+          h1 {
+            padding-top: 50px;
+            margin-bottom: 50px;
+            font-size: 36px;
+            text-align: center;
+          }
+          span {
+            width: 22%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 400%;
+            a {
+              font-size: 13px;
+              border-radius: 10px;
+              padding: 20px 25px;
+              i {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main_news_con {
+      .main_news_con_wrap {
+        .news_con_title {
+          h1 {
+            width: 52%;
+            font-size: 36px;
+          }
+        }
+        #mySwiper2 {
+          height: 380px;
+          .swiper-wrapper {
+            .swiper-slide {
+              img {
+                width: 100%;
+              }
+              p {
+                margin-top: 15px;
+                width: 100%;
+                font-size: 17px;
+              }
+              span {
+                margin-top: 15px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main_contact_con {
+      background-size: contain;
+      padding: 0;
+      height: 850px;
+      .main_contact_con_wrap {
+        width: 96%;
+        padding: 0;
+        .contact_con_left {
+          h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          .mail {
+            margin-bottom: 40px;
+            span {
+              font-size: 15px;
+            }
+          }
+          .contact_btn {
+            ul {
+              li {
+                padding: 15px;
+                border-radius: 10px;
+                a {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
