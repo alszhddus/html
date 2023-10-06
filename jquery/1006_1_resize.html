@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let wd = $(window).width();
+        $(window).resize(function () {
+          let wd = $(window).width();
+          console.log(wd);
+          if (wd > 1280) {
+            $("button").hover(
+              function () {
+                $("body").css("backgroundColor", "#f00");
+              },
+              function () {
+                $("body").css("backgroundColor", "#fff");
+              }
+            );
+          } else if (wd <= 1280 && wd > 768) {
+            $("button").hover(
+              function () {
+                $("body").css("backgroundColor", "yellow");
+              },
+              function () {
+                $("body").css("backgroundColor", "#fff");
+              }
+            );
+          } else {
+            $("button").hover(
+              function () {
+                $("body").css("backgroundColor", "green");
+              },
+              function () {
+                $("body").css("backgroundColor", "#fff");
+              }
+            );
+          }
+        });
+
+        if (wd > 1280) {
+          $("button").hover(
+            function () {
+              $("body").css("backgroundColor", "#f00");
+            },
+            function () {
+              $("body").css("backgroundColor", "#fff");
+            }
+          );
+        } else if (wd <= 1280 && wd > 768) {
+          $("button").hover(
+            function () {
+              $("body").css("backgroundColor", "yellow");
+            },
+            function () {
+              $("body").css("backgroundColor", "#fff");
+            }
+          );
+        } else {
+          $("button").hover(
+            function () {
+              $("body").css("backgroundColor", "green");
+            },
+            function () {
+              $("body").css("backgroundColor", "#fff");
+            }
+          );
+        }
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click</button>
+  </body>
+</html>
