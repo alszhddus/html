@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/splitting.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <title>scrolla/splitting</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .wrap {
+        position: relative;
+        background: #000;
+        color: #fff;
+      }
+      .visual {
+        padding-top: 150px;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+      .visual .inner {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+      .visual .inner .textbox {
+        width: 70%;
+        line-height: 1.4;
+      }
+      .visual .inner .textbox .title {
+        font-size: 180px;
+        margin-bottom: 20px;
+      }
+      .visual .inner .textbox .title.motion .char {
+        display: inline-block;
+        animation: up 0.4s cubic-bezier(0.5, 0, 0.5, 1) both;
+        animation-delay: calc(100ms * var(--char-index));
+      }
+      @keyframes up {
+        0% {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        30% {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+      }
+      .visual .inner .textbox .txt.motion {
+        animation: up2 1s;
+      }
+      @keyframes up2 {
+        0% {
+          transform: translateY(150px);
+          opacity: 0;
+        }
+        30% {
+          transform: translateY(150px);
+          opacity: 0;
+        }
+      }
+      .work {
+        height: 100vh;
+        position: relative;
+        border: 1px solid #fff;
+        box-sizing: border-box;
+      }
+      .work ul {
+        display: flex;
+        padding: 3% 10%;
+        box-sizing: border-box;
+      }
+      .work ul li {
+        width: 700px;
+        padding: 100px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+      .work ul li a {
+        display: block;
+        width: 100%;
+      }
+      .work ul li a img {
+        width: 100%;
+      }
+      .con03 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .con03 h1 {
+        font-size: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="visual">
+        <div class="inner">
+          <div class="textbox">
+            <p class="title animate" data-animate="motion" data-splitting>
+              MyWork
+            </p>
+            <p class="txt animate" data-animate="motion">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="work">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="imgbox">
+                <img src="images/photo1.jpg" alt="photo1" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="imgbox">
+                <img src="images/photo2.jpg" alt="photo2" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="imgbox">
+                <img src="images/photo3.jpg" alt="photo3" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="imgbox">
+                <img src="images/photo4.jpg" alt="photo4" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="imgbox">
+                <img src="images/photo5.jpg" alt="photo5" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="imgbox">
+                <img src="images/photo6.jpg" alt="photo6" />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="con03">
+        <h1>Thank you</h1>
+      </section>
+    </div>
+    <script>
+      $(function () {
+        $(".animate").scrolla();
+        Splitting();
+        gsap.registerPlugin(ScrollTrigger);
+        let list = gsap.utils.toArray(".work ul li");
+        let tween = gsap.to(list, {
+          xPercent: -100 * (list.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".work",
+            start: "center center",
+            end: "350%",
+            pin: true,
+            scrub: 3,
+            markers: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
